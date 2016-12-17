@@ -28,5 +28,5 @@ mkdir bin
 cd bin
 git clone https://github.com/UtkarshMe/dotfiles
 link ~/bin/dotfiles/zsh/zshrc ~/.zshrc
-link ~/bin/dotfiles/zsh/vimrc ~/.vimrc
+link ~/bin/dotfiles/vim/vimrc ~/.vimrc
 ```
