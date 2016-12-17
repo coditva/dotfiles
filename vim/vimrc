@@ -1,0 +1,18 @@
+" -------------------------------------------------- 
+" Vimrc file
+" Author: UTkarsh Maheshwari (github.com/UtkarshMe)
+" Created: 17 Dec 2016
+" Modified: 17 Dec 2016
+" -------------------------------------------------- 
+
+" Load vundle and plugin stuff
+source ~/bin/dotfiles/vim/plugins.vim
+
+" Load options
+source ~/bin/dotfiles/vim/options.vim
+
+" Load mappings
+source ~/bin/dotfiles/vim/mappings.vim
+
+" Load misc options and settings
+source ~/bin/dotfiles/vim/misc.vim

@@ -1,0 +1,23 @@
+source ~/.antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Load the theme.
+antigen theme agnoster
+
+# Tell antigen that you're done.
+antigen apply
+
+# Setting default user for agnoster theme
+DEFAULT_USER="me"
+
+
+# Setting up aliases
+source ~/bin/dotfiles/zsh/alias.zsh
