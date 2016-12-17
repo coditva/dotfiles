@@ -1,12 +1,10 @@
 # UTkarsh's dotfiles
-------
 
 Contains dotfiles for vim and zsh. Not very awesome like other dotfiles on
 github but a short and sweet one for a noob like me.
 
 
 # Prerequisites
-------
 
 ### zsh
 This assumes that you have zsh with antigen installed.
@@ -21,7 +19,6 @@ This assumes that you have vundle installed.
 
 
 # How to use
-------
 
 Follow these steps:
 
