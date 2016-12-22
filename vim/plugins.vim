@@ -41,7 +41,11 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 
+" JavaScript plugin
+Plugin 'pangloss/vim-javascript'
 
+" NodeJS plugin
+Plugin 'moll/vim-node'
 
 " All of Plugins must be added before the following line
 call vundle#end()            " required
