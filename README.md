@@ -4,21 +4,26 @@ Contains dotfiles for vim and zsh. Not very awesome like other dotfiles on
 github but a short and sweet one for a noob like me.
 
 
-# Prerequisites
+## Prerequisites
 
-### zsh
-This assumes that you have zsh with antigen installed.
+#### zsh
+This assumes that you have zsh with antigen installed.  
 For ubuntu you can use:
 ```
 sudo apt-get install zsh
 sudo apt-get install zsh-antigen
 ```
 
-### vim
-This assumes that you have vundle installed.
+#### vim
+This assumes that you have vim with vundle installed.  
+For ubuntu you can use:
+```
+sudo apt-get install vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
 
-# How to use
+## How to use
 
 Follow these steps:
 
