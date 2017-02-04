@@ -21,3 +21,7 @@ DEFAULT_USER="me"
 
 # Setting up aliases
 source ~/bin/dotfiles/zsh/alias.zsh
+
+
+# Setting up misc things
+source ~/bin/dotfiles/zsh/misc.zsh
