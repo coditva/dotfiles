@@ -47,6 +47,9 @@ Plugin 'pangloss/vim-javascript'
 " NodeJS plugin
 Plugin 'moll/vim-node'
 
+" Vala plugin
+Plugin 'tkztmk/vim-vala'
+
 " All of Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
