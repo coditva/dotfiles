@@ -40,6 +40,9 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 
+" quoting/parenthesizing made simple
+Plugin 'tpope/vim-surround'
+
 " JavaScript plugin
 Plugin 'pangloss/vim-javascript'
 
