@@ -2,22 +2,21 @@
 " Plugins for vimrc file
 " Author: UTkarsh Maheshwari (github.com/UtkarshMe)
 " Created: 17 Dec 2016
-" Modified: 17 Dec 2016
+" Modified: 01 Mar 2017
 " -------------------------------------------------- 
 
 
 "
-" ------- Using vundle to manage plugins ----------- 
+" Using vundle to manage plugins
 "
 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype off            " required for vundle
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Let Vundle manage Vundle, required
+" Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
 " Text-mate like snippets for vim
@@ -26,7 +25,7 @@ Plugin 'SirVer/ultisnips'
 " Plugin 'ervandew/supertab'
 
 " Multiple cursors like sublime-text
-Plugin 'terryma/vim-multiple-cursors'
+" Plugin 'terryma/vim-multiple-cursors'
 
 " Shortcut for commenting
 Plugin 'scrooloose/nerdcommenter'
@@ -51,5 +50,5 @@ Plugin 'moll/vim-node'
 Plugin 'tkztmk/vim-vala'
 
 " All of Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on
