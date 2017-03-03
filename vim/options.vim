@@ -57,16 +57,19 @@ syntax enable           " enable syntax highlighting
 " remember last position in file
 autocmd BufReadPost * if line("'\'") > 0 && line("'\'") <= line("$") | exe "normal g'\"" | endif
 
+" Check spellings in commit message
+autocmd FileType gitcommit setlocal spell
+
 
 " vimrc specific
-augroup vimScript
+augroup vimScript " {
 
     autocmd!
 
     " reload vimrc on save changes in vimrc
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
-augroup end
+augroup END " }
 
 
 " html specific commands
@@ -78,5 +81,4 @@ augroup HtmlCmds
     " larger lines are allowed
     autocmd filetype html setlocal textwidth=0
 
-augroup end
-set shiftwidth=4
+augroup END

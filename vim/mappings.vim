@@ -30,5 +30,8 @@ nnoremap <s-tab> <<
 vnoremap <tab> >
 vnoremap <s-tab> <
 
+" Never ever go to Ex mode
+nnoremap Q <nop>
+
 " shortcut for nerd-tree
 map <F3> :NERDTreeToggle<CR> 
