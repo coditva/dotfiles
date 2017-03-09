@@ -12,6 +12,8 @@ For ubuntu you can use:
 ```
 sudo apt-get install zsh
 sudo apt-get install zsh-antigen
+curl https://cdn.rawgit.com/zsh-users/antigen/v1.4.1/bin/antigen.zsh > .antigen.zsh
+chsh -s $(which zsh)
 ```
 
 #### vim
