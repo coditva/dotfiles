@@ -4,10 +4,10 @@ Contains dotfiles for vim and zsh. Not too awesome like some other dotfiles
 on github but a short and sweet one for a noob like me.
 
 ## Prerequisites
-- git
-- curl
-- zsh
-- vim
+- [git](https://git-scm.com)
+- [curl](https://curl.haxx.se)
+- [zsh](http://www.zsh.org)
+- [vim](http://www.vim.org)
 
 For Ubuntu (or debian based systems) use:
 ```
