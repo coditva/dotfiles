@@ -1,39 +1,24 @@
 # UTkarsh's dotfiles
 
-Contains dotfiles for vim and zsh. Not very awesome like other dotfiles on
-github but a short and sweet one for a noob like me.
-
+Contains dotfiles for vim and zsh. Not too awesome like some other dotfiles
+on github but a short and sweet one for a noob like me.
 
 ## Prerequisites
+- git
+- curl
+- zsh
+- vim
 
-#### zsh
-This assumes that you have zsh with antigen installed.  
-For ubuntu you can use:
+For Ubuntu (or debian based systems) use:
 ```
-sudo apt-get install zsh
-sudo apt-get install zsh-antigen
-curl https://cdn.rawgit.com/zsh-users/antigen/v1.4.1/bin/antigen.zsh > .antigen.zsh
-chsh -s $(which zsh)
-```
-
-#### vim
-This assumes that you have vim with vundle installed.  
-For ubuntu you can use:
-```
-sudo apt-get install vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+sudo apt-get install git-all curl zsh vim
 ```
 
-
-## How to use
-
-Follow these steps:
-
+## How to install
 ```
-cd ~
-mkdir bin
-cd bin
-git clone https://github.com/UtkarshMe/dotfiles
-link ~/bin/dotfiles/zsh/zshrc ~/.zshrc
-link ~/bin/dotfiles/vim/vimrc ~/.vimrc
+git clone https://github.com/UtkarshMe/dotfiles ~/bin/dotfiles
+cd ~/bin/dotfiles && ./install all
 ```
+
+## Author
+[UTkarsh Maheshwari](https://github.com/UtkarshMe)

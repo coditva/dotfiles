@@ -1,0 +1,142 @@
+#!/bin/sh
+
+vim=0
+checkdep=0
+zsh=0
+all=0
+
+usage="Usage: install [option] where option = [all | vim | zsh | checkdep]
+    eg: install all"
+
+if [ "$#" == "0" ]; then
+	echo "$usage"
+	exit 1
+fi
+
+while (( $# )) ; do
+
+    case "$1" in
+        "vim")
+            vim=1
+            ;;
+        "zsh")
+            zsh=1
+            ;;
+        "all")
+            all=1
+            ;;
+        "checkdep")
+            checkdep=1
+            ;;
+    esac
+
+    shift
+done
+
+if [[ $checkdep == 1 || $all == 1 ]] ; then
+
+    echo "Checking dependencies"
+    err=0
+
+    # check git
+    if ! which git > /dev/null ; then
+        echo "git not installed"
+        err=1
+    else
+        echo "git installed"
+    fi
+
+    # check curl
+    if ! which curl > /dev/null ; then
+        echo "curl not installed"
+        err=1
+    else
+        echo "curl installed"
+    fi
+
+    # check zsh
+    if ! which zsh > /dev/null ; then
+        echo "zsh not installed"
+        err=1
+    else
+        echo "zsh installed"
+    fi
+
+    # check antigen
+    if ! ls -a ~ | grep '.antigen.zsh' > /dev/null ; then
+        echo "antigen not installed"
+        echo -n "installing... "
+        curl -L git.io/antigen > ~/.antigen.zsh
+    else
+        echo "antigen installed"
+    fi
+
+    # check vim
+    if ! which vim > /dev/null ; then
+        echo "vim not installed"
+        err=1
+    else
+        echo "vim installed"
+    fi
+
+    # check vundle.vim
+    if ! ls -a ~/.vim/bundle | grep 'Vundle.vim' > /dev/null ; then
+        echo "vundle not installed"
+        echo -n "installing... "
+        git clone https://github.com/VundleVim/Vundle.vim.git \
+            ~/.vim/bundle/Vundle.vim
+    else
+        echo "vundle installed"
+    fi
+
+    # check working dir
+    if [[ "$PWD" != "$HOME/bin/dotfiles" ]]; then
+        echo
+        echo "wrong directory!"
+        echo "copy dotfiles contents into $HOME/bin/dotfiles"
+        echo "and run install script from there"
+        err=1
+    fi
+fi
+
+# exit if error
+if [[ err == 1 ]]; then
+    exit 1
+fi
+
+if [[ $vim == 1 || $all == 1 ]] ; then
+    echo "creating vimrc"
+    if ls -a ~ | grep ".vimrc" > /dev/null; then
+        echo "found a vimrc. backing up... "
+        mv ~/.vimrc ~/.vimrc.old
+        echo "backed up as .vimrc.old"
+    fi
+    link ./vim/vimrc ~/.vimrc
+
+    echo
+    echo "installing vim plugins"
+    vim +PluginInstall +qa
+fi
+
+if [[ $zsh == 1 || $all == 1 ]] ; then
+
+    echo 
+    echo "creating zshrc"
+    if ls -a ~ | grep ".zshrc" > /dev/null; then
+        echo "found a zshrc. backing up... "
+        mv ~/.zshrc ~/.zshrc.old
+        echo "backed up as .zshrc.old"
+    fi
+    link ./zsh/zshrc ~/.zshrc
+
+    echo 
+    echo "changing shell to zsh"
+    chsh -s $(which zsh)
+
+    echo
+    echo "logout once to switch to zsh"
+    echo "plugins will be installed next time you open a terminal"
+fi
+
+echo "done"
+exit 0
