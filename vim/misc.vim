@@ -18,5 +18,7 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
 
-" Enable support for c++11 in syntastic
+" Set syntastic options
+let g:syntastic_check_on_open = 1   " check on open
+let g:syntastic_check_on_wq = 0     " dont check on close
 let g:syntastic_cpp_compiler_options="--std=c++11"
