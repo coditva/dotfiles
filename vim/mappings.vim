@@ -1,8 +1,6 @@
 " -------------------------------------------------- 
 " Mappings file
 " Author: UTkarsh Maheshwari (github.com/UtkarshMe)
-" Created: 17 Dec 2016
-" Modified: 17 Dec 2016
 " -------------------------------------------------- 
 
 " Because jj is easier to type

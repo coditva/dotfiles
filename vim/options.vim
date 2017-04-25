@@ -1,8 +1,6 @@
 " --------------------------------------------------
 " Options for Vimrc file
 " Author: UTkarsh Maheshwari (github.com/UtkarshMe)
-" Created: 17 Dec 2016
-" Modified: 01 Mar 2017
 " --------------------------------------------------
 
 
