@@ -4,24 +4,20 @@ source ~/.antigen.zsh
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
+antigen bundle gitfast
+antigen bundle archlinux
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
-
-# Load the theme.
-if [[ "$TERM" == *"256"* ]]
-then
-    antigen theme agnoster
-else
-    antigen theme fishy
-fi
 
 # Tell antigen that you're done.
 antigen apply
 
 # Setting default user for agnoster theme
 DEFAULT_USER="me"
+
+# Load the theme.
+antigen theme fishy
 
 
 # Setting up aliases
