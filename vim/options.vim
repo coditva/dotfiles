@@ -48,6 +48,13 @@ set background=dark     " dark is good
 syntax enable           " enable syntax highlighting
 
 
+" Keep project directories uncluttered by using a custom
+" directory for all vim stuff
+set backupdir=~/.vim_backup,.,/tmp
+set directory=~/.vim_backup,.,/tmp
+set undodir=~/.vim_backup,.,/tmp
+
+
 "
 " Define autocommands and groups
 "

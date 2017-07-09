@@ -100,7 +100,7 @@ if [[ $checkdep == 1 || $all == 1 ]] ; then
 fi
 
 # exit if error
-if [[ err == 1 ]]; then
+if [[ "$err" == 1 ]]; then
     exit 1
 fi
 
@@ -123,6 +123,9 @@ if [[ $vim == 1 || $all == 1 ]] ; then
         echo "backed up as .vimrc.old"
     fi
     link ./vim/vimrc ~/.vimrc
+
+    echo "making directory for swp, undo files"
+    mkdir -p "$HOME/.vim_backup"
 
     echo
     echo "installing vim plugins"
@@ -151,7 +154,7 @@ if [[ $zsh == 1 || $all == 1 ]] ; then
 
     echo 
     echo "changing shell to zsh"
-    chsh -s $(which zsh)
+    chsh -s "$(which zsh)"
 
     echo
     echo "logout once to switch to zsh"
