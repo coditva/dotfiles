@@ -105,6 +105,17 @@ if [[ err == 1 ]]; then
 fi
 
 if [[ $vim == 1 || $all == 1 ]] ; then
+
+    # check vundle.vim
+    if ! ls -a ~/.vim/bundle | grep 'Vundle.vim' > /dev/null ; then
+        echo "vundle not installed"
+        echo -n "installing... "
+        git clone https://github.com/VundleVim/Vundle.vim.git \
+            ~/.vim/bundle/Vundle.vim
+    else
+        echo "vundle installed"
+    fi
+
     echo "creating vimrc"
     if ls -a ~ | grep ".vimrc" > /dev/null; then
         echo "found a vimrc. backing up... "
@@ -119,6 +130,15 @@ if [[ $vim == 1 || $all == 1 ]] ; then
 fi
 
 if [[ $zsh == 1 || $all == 1 ]] ; then
+
+    # check antigen
+    if ! ls -a ~ | grep '.antigen.zsh' > /dev/null ; then
+        echo "antigen not installed"
+        echo -n "installing... "
+        curl -L git.io/antigen > ~/.antigen.zsh
+    else
+        echo "antigen installed"
+    fi
 
     echo 
     echo "creating zshrc"
