@@ -87,5 +87,6 @@ augroup JSCmds
 
     " needs lesser indentation
     autocmd filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+    autocmd filetype json setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 augroup END
