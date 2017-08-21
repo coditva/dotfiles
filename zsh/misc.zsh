@@ -27,3 +27,8 @@ fi
 
 # use vim as text editor
 export VISUAL="vim"
+
+# add anaconda to path if present
+if [ -d "$HOME/bin/anaconda3" ]; then
+    export PATH="$HOME/bin/anaconda3/bin:$PATH"
+fi
