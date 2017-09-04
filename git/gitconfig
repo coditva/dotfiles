@@ -1,0 +1,14 @@
+[user]
+	name = UTkarsh
+	email = utkarshme96@gmail.com
+[core]
+	editor = vim
+	excludesfile = /home/me/.gitignore
+[http]
+	sslVerify = true
+[push]
+	default = simple
+[credential]
+	helper = store
+[color]
+	ui = auto
