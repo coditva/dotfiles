@@ -16,4 +16,4 @@ source ~/bin/dotfiles/vim/mappings.vim
 source ~/bin/dotfiles/vim/misc.vim
 
 " Set a colorscheme
-colorscheme desert
+colorscheme default
