@@ -14,7 +14,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 DEFAULT_USER="me"
 
 # Load the theme.
-antigen theme avit
+antigen theme fishy
 
 # Tell antigen that you're done.
 antigen apply
