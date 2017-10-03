@@ -11,6 +11,7 @@
 set nocompatible        " improved mode
 
 set number              " line numbers
+set relativenumber      " make the numbers relative for easier nav
 set scrolloff=5         " leave space at start and end
 set wildmenu            " autocomple commands
 set wildmode=full       " show me a menu
@@ -62,8 +63,9 @@ set undodir=~/.vim_backup,.,/tmp
 " remember last position in file
 autocmd BufReadPost * if line("'\'") > 0 && line("'\'") <= line("$") | exe "normal g'\"" | endif
 
-" Check spellings in commit message
+" Check spellings in commit message and readme
 autocmd FileType gitcommit setlocal spell
+autocmd FileType markdown setlocal spell
 
 
 " vimrc specific
