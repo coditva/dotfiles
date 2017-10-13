@@ -40,6 +40,9 @@ Plugin 'moll/vim-node'
 " Vala plugin
 Plugin 'tkztmk/vim-vala'
 
+" Startup page
+Plugin 'mhinz/vim-startify'
+
 " Quoting/parenthesizing made simple
 " Plugin 'tpope/vim-surround'
 
