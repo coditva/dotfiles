@@ -1,6 +1,6 @@
 # setup pyenv
 if which pyenv > /dev/null ; then
-    export PATH="/home/me/.pyenv/bin:$PATH"
+    export PATH="$PATH:$HOME/.pyenv/bin"
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
 fi
@@ -12,12 +12,12 @@ fi
 
 # add ruby gems in the path
 if [ -d "$HOME/.gem/ruby/2.4.0/bin" ]; then
-    PATH=~/.gem/ruby/2.4.0/bin:$PATH
+    export PATH="$PATH:$HOME/.gem/ruby/2.4.0/bin"
 fi
 
 # add local bin directory in the path
 if [ -d "$HOME/.local/bin" ]; then
-    PATH=~/.local/bin:$PATH
+    export PATH="$PATH:$HOME/.local/bin"
 fi
 
 # initialize nvm
@@ -30,5 +30,5 @@ export VISUAL="vim"
 
 # add anaconda to path if present
 if [ -d "$HOME/bin/anaconda3" ]; then
-    export PATH="$HOME/bin/anaconda3/bin:$PATH"
+    export PATH="$PATH:$HOME/bin/anaconda3/bin"
 fi
