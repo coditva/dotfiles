@@ -8,6 +8,7 @@ on github but a short and sweet one for a noob like me.
 - [curl](https://curl.haxx.se)
 - [zsh](http://www.zsh.org)
 - [vim](http://www.vim.org)
+- [antigen](https://github.com/zsh-users/antigen#installation)
 
 For Ubuntu (or debian based systems) use:
 ```

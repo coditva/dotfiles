@@ -63,10 +63,9 @@ if [[ $checkdep == 1 || $all == 1 ]] ; then
     fi
 
     # check antigen
-    if ! ls -a ~ | grep '.antigen.zsh' > /dev/null ; then
+    if ! antigen version > /dev/null ; then
         echo "antigen not installed"
-        echo -n "installing... "
-        curl -L git.io/antigen > ~/.antigen.zsh
+        exit 1
     else
         echo "antigen installed"
     fi
