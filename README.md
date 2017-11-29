@@ -17,8 +17,8 @@ sudo apt-get install git-all curl zsh vim
 
 ## How to install
 ```
-git clone https://github.com/UtkarshMe/dotfiles ~/bin/dotfiles
-cd ~/bin/dotfiles && ./install all
+git clone https://github.com/UtkarshMe/dotfiles ~/.dotfiles
+cd ~/.dotfiles && ./install all
 ```
 
 ## Author

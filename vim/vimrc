@@ -4,16 +4,16 @@
 " -------------------------------------------------- 
 
 " Load vundle and plugin stuff
-source ~/bin/dotfiles/vim/plugins.vim
+source ~/.dotfiles/vim/plugins.vim
 
 " Load options
-source ~/bin/dotfiles/vim/options.vim
+source ~/.dotfiles/vim/options.vim
 
 " Load mappings
-source ~/bin/dotfiles/vim/mappings.vim
+source ~/.dotfiles/vim/mappings.vim
 
 " Load misc options and settings
-source ~/bin/dotfiles/vim/misc.vim
+source ~/.dotfiles/vim/misc.vim
 
 " Set a colorscheme
 colorscheme default
