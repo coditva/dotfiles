@@ -8,7 +8,7 @@ antigen bundle gitfast
 antigen bundle archlinux
 
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zdharma/fast-syntax-highlighting
 
 # Setting default user for agnoster theme
 DEFAULT_USER="me"
