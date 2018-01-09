@@ -1,7 +1,7 @@
-" -------------------------------------------------- 
+" --------------------------------------------------
 " Vimrc file
 " Author: UTkarsh Maheshwari (github.com/UtkarshMe)
-" -------------------------------------------------- 
+" --------------------------------------------------
 
 " Load vundle and plugin stuff
 source ~/.dotfiles/vim/plugins.vim

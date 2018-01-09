@@ -1,7 +1,7 @@
-" -------------------------------------------------- 
+" --------------------------------------------------
 " Mappings file
 " Author: UTkarsh Maheshwari (github.com/UtkarshMe)
-" -------------------------------------------------- 
+" --------------------------------------------------
 
 " Because jj is easier to type
 imap jj <Esc>
@@ -38,4 +38,4 @@ vnoremap <s-tab> <
 nnoremap Q <nop>
 
 " shortcut for nerd-tree
-map <F3> :NERDTreeToggle<CR> 
+map <F3> :NERDTreeToggle<CR>
