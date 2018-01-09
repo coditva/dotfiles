@@ -27,9 +27,12 @@ Plugin 'scrooloose/nerdcommenter'
 " Syntax checking
 Plugin 'vim-syntastic/syntastic'
 
-" Tree for vim
+" Source tree
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+
+" A nice little statusline
+Plugin 'vim-airline/vim-airline'
 
 " JavaScript plugin
 Plugin 'pangloss/vim-javascript'
