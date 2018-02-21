@@ -32,3 +32,6 @@ export VISUAL="vim"
 if [ -d "$HOME/bin/anaconda3" ]; then
     export PATH="$PATH:$HOME/bin/anaconda3/bin"
 fi
+
+# add local bin directory in the path
+export PATH="$PATH:$HOME/.local/bin"
