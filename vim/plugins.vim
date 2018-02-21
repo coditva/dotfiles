@@ -31,9 +31,6 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 
-" A nice little statusline
-Plugin 'vim-airline/vim-airline'
-
 " JavaScript plugin
 Plugin 'pangloss/vim-javascript'
 
@@ -54,6 +51,9 @@ Plugin 'mhinz/vim-startify'
 
 " Multiple cursors like sublime-text
 " Plugin 'terryma/vim-multiple-cursors'
+
+" A nice little statusline
+" Plugin 'vim-airline/vim-airline'
 
 " All of Plugins must be added before the following line
 call vundle#end()
