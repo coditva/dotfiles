@@ -16,6 +16,7 @@ set scrolloff=5         " leave space at start and end
 set wildmenu            " autocomple commands
 set wildmode=full       " show me a menu
 set undofile            " remember undo
+set laststatus=1        " only show statusline when more than 1 window
 
 set hlsearch            " highlight searches
 set incsearch           " search as I type
