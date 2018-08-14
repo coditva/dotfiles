@@ -1,6 +1,6 @@
 " --------------------------------------------------
 " Vimrc file
-" Author: UTkarsh Maheshwari (github.com/UtkarshMe)
+" Author: Utkarsh Maheshwari (github.com/UtkarshMe)
 " --------------------------------------------------
 
 " Load vundle and plugin stuff
@@ -11,9 +11,6 @@ source ~/.dotfiles/vim/options.vim
 
 " Load mappings
 source ~/.dotfiles/vim/mappings.vim
-
-" Load misc options and settings
-source ~/.dotfiles/vim/misc.vim
 
 " Load colors and theme
 source ~/.dotfiles/vim/theme.vim

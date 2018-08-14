@@ -35,3 +35,6 @@ Plugin 'tkztmk/vim-vala'                        " Vala
 " All of Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
+
+" Load plugin options
+source ~/.dotfiles/vim/plugin_options.vim
