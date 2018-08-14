@@ -4,21 +4,21 @@
 " --------------------------------------------------
 
 " Load vundle and plugin stuff
-source ~/.dotfiles/vim/plugins.vim
+source $HOME/.dotfiles/vim/plugins.vim
 
 " Load options
-source ~/.dotfiles/vim/options.vim
+source $HOME/.dotfiles/vim/options.vim
 
 " Load autocmds
-source ~/.dotfiles/vim/autocmds.vim
+source $HOME/.dotfiles/vim/autocmds.vim
 
 " Load mappings
-source ~/.dotfiles/vim/mappings.vim
+source $HOME/.dotfiles/vim/mappings.vim
 
 " Load colors and theme
-source ~/.dotfiles/vim/theme.vim
+source $HOME/.dotfiles/vim/theme.vim
 
 " Load volatile changes which are not needed on every system
-if filereadable('~/.dotfiles/vim/volatile.vim')
-    source ~/.dotfiles/vim/volatile.vim
+if filereadable($HOME . "/.dotfiles/vim/volatile.vim")
+    source $HOME/.dotfiles/vim/volatile.vim
 endif
