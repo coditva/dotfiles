@@ -43,17 +43,14 @@ Plugin 'tkztmk/vim-vala'
 " Startup page
 Plugin 'mhinz/vim-startify'
 
-" Quoting/parenthesizing made simple
-" Plugin 'tpope/vim-surround'
+" Gruvbox theme
+Plugin 'morhetz/gruvbox'
 
-" Use tab for all completion commands
-" Plugin 'ervandew/supertab'
-
-" Multiple cursors like sublime-text
-" Plugin 'terryma/vim-multiple-cursors'
+" Better vim-diffs
+Plugin 'airblade/vim-gitgutter'
 
 " A nice little statusline
-" Plugin 'vim-airline/vim-airline'
+ Plugin 'vim-airline/vim-airline'
 
 " All of Plugins must be added before the following line
 call vundle#end()

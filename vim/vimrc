@@ -15,5 +15,5 @@ source ~/.dotfiles/vim/mappings.vim
 " Load misc options and settings
 source ~/.dotfiles/vim/misc.vim
 
-" Set a colorscheme
-colorscheme default
+" Load colors and theme
+source ~/.dotfiles/vim/theme.vim

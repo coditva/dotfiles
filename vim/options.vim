@@ -44,6 +44,7 @@ set linebreak           " better wrapping
 set showbreak=>\        " show the wrapping
 
 set pastetoggle=<F2>    " enable easy clipboard pasting
+set updatetime=100      " reduce updatetime to 100ms
 
 set background=dark     " dark is good
 
