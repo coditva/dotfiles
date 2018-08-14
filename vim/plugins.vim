@@ -1,56 +1,36 @@
 " --------------------------------------------------
 " Plugins for vimrc file
-" Author: UTkarsh Maheshwari (github.com/UtkarshMe)
+" Author: Utkarsh Maheshwari (github.com/UtkarshMe)
 " --------------------------------------------------
 
-
-"
-" Using vundle to manage plugins
-"
-
-filetype off            " required for vundle
+filetype off                                    " Required for vundle
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'                   " The plugin manager
 
-" Text-mate like snippets for vim
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
+" ----- Workflow -----
+Plugin 'airblade/vim-gitgutter'                 " Live git diff symbols
+Plugin 'SirVer/ultisnips'                       " Snippets engine
+Plugin 'honza/vim-snippets'                     " Snippets
+Plugin 'scrooloose/nerdtree'                    " Source tree
+Plugin 'jistr/vim-nerdtree-tabs'                " Seperate tree from tabs
+Plugin 'vim-syntastic/syntastic'                " Syntax checker
+Plugin 'scrooloose/nerdcommenter'               " Shortcut for commenting
 
-" Shortcut for commenting
-Plugin 'scrooloose/nerdcommenter'
+" ----- Eyecandy -----
+Plugin 'mhinz/vim-startify'                     " Startup page
+Plugin 'vim-airline/vim-airline'                " A nice little statusline
 
-" Syntax checking
-Plugin 'vim-syntastic/syntastic'
+" ----- Themes -----
+Plugin 'morhetz/gruvbox'                        " Gruvbox theme
 
-" Source tree
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-
-" JavaScript plugin
-Plugin 'pangloss/vim-javascript'
-
-" NodeJS plugin
-Plugin 'moll/vim-node'
-
-" Vala plugin
-Plugin 'tkztmk/vim-vala'
-
-" Startup page
-Plugin 'mhinz/vim-startify'
-
-" Gruvbox theme
-Plugin 'morhetz/gruvbox'
-
-" Better vim-diffs
-Plugin 'airblade/vim-gitgutter'
-
-" A nice little statusline
- Plugin 'vim-airline/vim-airline'
+" ----- Language support -----
+Plugin 'pangloss/vim-javascript'                " JavaScript
+Plugin 'moll/vim-node'                          " NodeJS
+Plugin 'tkztmk/vim-vala'                        " Vala
 
 " All of Plugins must be added before the following line
 call vundle#end()
