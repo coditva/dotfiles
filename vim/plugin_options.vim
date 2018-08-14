@@ -27,3 +27,6 @@ let g:airline_theme = 'dark'
 let g:airline_skip_empty_sections = 1
 let g:airline_highlighting_cache = 1
 set noshowmode
+
+" Set shortcut for nerd-tree
+map <F3> :NERDTreeToggle<CR>
