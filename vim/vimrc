@@ -17,3 +17,8 @@ source ~/.dotfiles/vim/misc.vim
 
 " Load colors and theme
 source ~/.dotfiles/vim/theme.vim
+
+" Load volatile changes which are not needed on every system
+if filereadable('~/.dotfiles/vim/volatile.vim')
+    source ~/.dotfiles/vim/volatile.vim
+endif
