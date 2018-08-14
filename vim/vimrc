@@ -9,6 +9,9 @@ source ~/.dotfiles/vim/plugins.vim
 " Load options
 source ~/.dotfiles/vim/options.vim
 
+" Load autocmds
+source ~/.dotfiles/vim/autocmds.vim
+
 " Load mappings
 source ~/.dotfiles/vim/mappings.vim
 
