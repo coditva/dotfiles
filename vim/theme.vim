@@ -21,6 +21,7 @@ if theme == 'material'
     let g:material_theme_style = &background
 elseif theme == 'gruvbox'
     let g:gruvbox_contrast_dark = 'hard'
+    set cursorline
 endif
 
 let g:airline_theme = theme
