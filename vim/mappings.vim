@@ -17,6 +17,3 @@ nnoremap <tab> >>
 nnoremap <s-tab> <<
 vnoremap <tab> >
 vnoremap <s-tab> <
-
-" never ever go to Ex mode
-nnoremap Q <nop>
