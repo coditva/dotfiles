@@ -33,5 +33,10 @@ if [ -d "$HOME/bin/anaconda3" ]; then
     export PATH="$PATH:$HOME/bin/anaconda3/bin"
 fi
 
+# add an askpass program
+if [ -f "/usr/lib/seahorse/ssh-askpass" ]; then
+    export SUDO_ASKPASS="/usr/lib/seahorse/ssh-askpass"
+fi
+
 # add local bin directory in the path
 export PATH="$PATH:$HOME/.local/bin"

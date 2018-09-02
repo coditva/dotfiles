@@ -1,0 +1,2 @@
+RPROMPT="yes"
+PROMPT="$ "
