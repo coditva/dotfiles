@@ -4,7 +4,12 @@
 " --------------------------------------------------
 
 " Load vundle and plugin stuff
-source $HOME/.dotfiles/vim/plugins.vim
+if isdirectory($HOME . "/.vim/bundle/Vundle.vim")
+    let g:has_vundle = v:true
+    source $HOME/.dotfiles/vim/plugins.vim
+else
+    let g:has_vundle = v:false
+endif
 
 " Load options
 source $HOME/.dotfiles/vim/options.vim
