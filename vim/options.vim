@@ -41,6 +41,7 @@ set colorcolumn=80                      " show a guide at column 80
 
 set pastetoggle=<F2>                    " enable easy clipboard pasting
 set updatetime=100                      " reduce updatetime to 100ms
+set hidden                              " allow hiding modified buffers
 
 syntax enable                           " enable syntax highlighting
 
