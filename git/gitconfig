@@ -1,14 +1,18 @@
 [user]
-	name = UTkarsh
+	name = Utkarsh Maheshwari
 	email = utkarshme96@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = /home/me/.gitignore
 [http]
 	sslVerify = true
 [push]
 	default = simple
-[credential]
-	helper = store
 [color]
 	ui = auto
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[commit]
+	gpgsign = true
