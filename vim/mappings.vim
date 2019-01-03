@@ -3,8 +3,8 @@
 " Author: Utkarsh Maheshwari (github.com/UtkarshMe)
 " --------------------------------------------------
 
-" because jj is easier to type
-imap jj <Esc>
+" because jk is easier to type
+imap jk <Esc>
 
 " better navigation in wrap
 nnoremap j gj
