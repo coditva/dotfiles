@@ -29,9 +29,9 @@ Plugin 'vim-airline/vim-airline'                " A nice little statusline
 Plugin 'morhetz/gruvbox'                        " Gruvbox theme
 
 " ----- Language support -----
-Plugin 'pangloss/vim-javascript'                " JavaScript
-Plugin 'moll/vim-node'                          " NodeJS
-Plugin 'tkztmk/vim-vala'                        " Vala
+"Plugin 'pangloss/vim-javascript'                " JavaScript
+"Plugin 'moll/vim-node'                          " NodeJS
+"Plugin 'tkztmk/vim-vala'                        " Vala
 
 " All of Plugins must be added before the following line
 call vundle#end()
