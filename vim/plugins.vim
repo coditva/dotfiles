@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdtree'                    " Source tree
 Plugin 'jistr/vim-nerdtree-tabs'                " Seperate tree from tabs
 Plugin 'vim-syntastic/syntastic'                " Syntax checker
 Plugin 'scrooloose/nerdcommenter'               " Shortcut for commenting
+Plugin 'tpope/vim-fugitive'                     " Git blame
 
 " ----- Eyecandy -----
 Plugin 'mhinz/vim-startify'                     " Startup page
