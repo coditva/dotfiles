@@ -19,10 +19,8 @@ antigen theme nicoulaj
 # Tell antigen that you're done.
 antigen apply
 
-
 # Setting up aliases
 source ~/.dotfiles/zsh/alias.zsh
-
 
 # Setting up misc things
 source ~/.dotfiles/zsh/misc.zsh
