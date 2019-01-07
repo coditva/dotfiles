@@ -14,7 +14,7 @@ antigen bundle zdharma/fast-syntax-highlighting
 DEFAULT_USER="me"
 
 # Load the theme.
-antigen theme nicoulaj
+antigen theme fishy
 
 # Tell antigen that you're done.
 antigen apply
