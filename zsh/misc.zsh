@@ -38,5 +38,7 @@ if [ -f "/usr/lib/seahorse/ssh-askpass" ]; then
     export SUDO_ASKPASS="/usr/lib/seahorse/ssh-askpass"
 fi
 
-# add local bin directory in the path
-export PATH="$PATH:$HOME/.local/bin"
+# add cargo bin directory in the path
+if [ -d "$HOME/.cargo/bin" ]; then
+    export PATH="$PATH:$HOME/.cargo/bin"
+fi
