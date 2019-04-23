@@ -27,3 +27,7 @@ autocmd filetype javascript setlocal
             \ tabstop=2 shiftwidth=2 softtabstop=2      " smaller indent
 autocmd filetype json setlocal 
             \ tabstop=2 shiftwidth=2 softtabstop=2      " smaller indent
+
+" gitcommit specific commands
+autocmd filetype gitcommit setlocal
+            \ colorcolumn=72                            " commit messages are 72 chars
