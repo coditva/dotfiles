@@ -1,6 +1,6 @@
 [user]
 	name = Utkarsh Maheshwari
-	email = utkarshme96@gmail.com
+	email = coditva@gmail.com
 [core]
 	editor = nvim
 	excludesfile = /home/me/.gitignore
@@ -8,6 +8,8 @@
 	sslVerify = true
 [push]
 	default = simple
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
 [color]
 	ui = auto
 [diff]
