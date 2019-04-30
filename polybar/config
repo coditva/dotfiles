@@ -1,0 +1,279 @@
+; vi: ft=dosini
+
+[colors]
+background      = #ddeeeeee
+background-alt  = #eeeeee
+foreground      = #000000
+foreground-alt  = #000000
+
+workspace       = #8B6EFF
+spotify         = #FF6B6B
+wlan            = #9BCAFF
+eth             = #DEFF9B
+volume          = #B5FF6B
+date            = #FFB56B
+
+border              = ${self.background}
+module_foreground   = #000000
+module_background   = #DDDDDD
+
+
+[bar/bottom]
+
+modules-left    = i3 xwindow
+modules-right   = spotify wlan eth volume date
+
+bottom          = true
+height          = 23
+width           = 100%
+radius          = 0.0
+fixed-center    = true
+
+background      = ${colors.background}
+foreground      = ${colors.foreground}
+
+line-size       = 0
+
+border-size     = 5
+border-color    = ${colors.border}
+
+padding-left    = 0
+padding-right   = 0
+
+module-margin-left  = 1
+module-margin-right = 1
+
+tray-position       = left
+tray-padding        = 2
+tray-transparent    = right
+tray-detached       = false
+;tray-background    = #0063ff
+
+override-redirect   = false
+
+font-0          = San Francisco Display:size=12:weight=normal;3
+font-1          = FontAwesome:size=12:weight=normal;3
+font-2          = unifont:fontformat=truetype:size=12:antialias=false;0
+font-3          = siji:pixelsize=12;1
+
+wm-restack      = i3
+
+scroll-up       = i3wm-wsnext
+scroll-down     = i3wm-wsprev
+
+cursor-click    = pointer
+cursor-scroll   = default
+
+separator       =
+enable-ipc      = true
+
+
+; application settings
+[settings]
+throttle-output     = 5
+throttle-output-for = 10
+screenchange-reload = false
+
+[global/wm]
+margin-top          = 0
+margin-bottom       = 0
+
+
+;-------------------------------------------------------------------------------
+; MODULES CONFIG
+;-------------------------------------------------------------------------------
+
+; shows song info from spotify.
+; script from https://github.com/Jvanrhijn/polybar-spotify
+[module/spotify]
+type            = custom/script
+exec            = python $HOME/.dotfiles/polybar/scripts/spotify.py -f '{artist}: {song}'
+interval        = 1
+
+format                      = <label>
+format-padding              = 0
+format-background           = ${colors.module_background}
+format-foreground           = ${colors.module_foreground}
+
+label-padding               = 2
+
+format-prefix               = 
+format-prefix-padding       = 2
+format-prefix-foreground    = ${colors.module_foreground}
+format-prefix-background    = ${colors.spotify}
+
+
+; shows the focused window title
+[module/xwindow]
+type            = internal/xwindow
+label           = %title%
+label-maxlen    = 75
+label-padding   = 2
+
+
+; show info about i3wm workspaces
+[module/i3]
+type            = internal/i3
+format          = <label-mode> <label-state>
+index-sort      = true
+wrapping-scroll = false
+strip-wsnumbers = true
+
+label-mode                  = %mode%
+label-mode-padding          = 0
+label-mode-foreground       = #000000
+label-mode-background       = ${colors.module_background}
+
+; focused = Active workspace on focused monitor
+label-focused               = %index%
+label-focused-foreground    = #000000
+label-focused-background    = ${colors.workspace}
+label-focused-underline     = ${colors.background}
+label-focused-padding       = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused             = %index%
+label-unfocused-foreground  = #000000
+label-unfocused-background  = ${colors.module_background}
+label-unfocused-underline   = ${colors.background}
+label-unfocused-padding     = ${self.label-focused-padding}
+
+; visible = Active workspace on unfocused monitor
+label-visible               = %index%
+label-visible-background    = ${self.label-focused-background}
+label-visible-underline     = ${self.label-focused-underline}
+label-visible-padding       = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent                = %index%
+label-urgent-background     = ${colors.background}
+label-urgent-padding        = ${self.label-focused-padding}
+
+
+; shows info about wireless
+[module/wlan]
+type        = internal/network
+interface   = wlp7s0
+interval    = 3.0
+
+label-connected             = %essid%
+label-connected-padding     = 2
+
+format-disconnected         =
+
+format-connected            = <label-connected>
+format-connected-padding    = 0
+format-connected-background = ${colors.module_background}
+format-connected-foreground = ${colors.module_foreground}
+
+format-connected-prefix               = 
+format-connected-prefix-padding       = 2
+format-connected-prefix-foreground    = ${colors.module_foreground}
+format-connected-prefix-background    = ${colors.wlan}
+
+
+; shows info about ethernet
+[module/eth]
+type        = internal/network
+interface   = enp9s0
+interval    = 3.0
+
+format-connected            = 
+format-connected-padding    = 2
+format-connected-foreground = ${colors.module_foreground}
+format-connected-background = ${colors.eth}
+format-disconnected         =
+
+
+; shows the current date/time
+[module/date]
+type        = internal/date
+interval    = 1
+
+date        =
+date-alt    = %b %d %Y
+time        = %I:%M %P
+time-alt    =
+
+label       = %date% %time%
+format      = <label>
+
+format-padding              = 0
+format-background           = ${colors.module_background}
+format-foreground           = ${colors.module_foreground}
+
+label-padding               = 2
+
+format-prefix               = 
+format-prefix-padding       = 2
+format-prefix-foreground    = ${colors.module_foreground}
+format-prefix-background    = ${colors.date}
+
+
+; shows info about volume level
+[module/volume]
+type                    = internal/volume
+format-volume           = <label-volume>
+format-muted            = <label-muted>
+
+label-muted             = 
+label-muted-foreground  = ${colors.module_foreground}
+label-muted-background  = ${colors.volume}
+label-muted-padding     = 3
+
+label-volume            = %percentage%
+label-volume-foreground = ${colors.module_foreground}
+label-volume-background = ${colors.module_background}
+label-volume-padding    = 2
+
+format-volume-prefix               = 
+format-volume-prefix-padding       = 2
+format-volume-prefix-foreground    = ${colors.module_foreground}
+format-volume-prefix-background    = ${colors.volume}
+
+
+; shows info about bspwm things
+[module/bspwm]
+type = internal/bspwm
+
+; shows battery info
+[module/battery]
+type = internal/battery
+
+; shows cpu temperature info
+[module/temperature]
+type = internal/temperature
+
+; shows the current keyboard layout
+[module/xkeyboard]
+type = internal/xkeyboard
+
+; shows the info about mounted filesystem
+[module/filesystem]
+type = internal/fs
+
+; shows info related to mpd
+[module/mpd]
+type = internal/mpd
+
+; shows info about output's backlight level
+[module/xbacklight]
+type = internal/xbacklight
+
+; shows info about output's backlight level
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+; shows info about cpu usage
+[module/cpu]
+type = internal/cpu
+
+; shows info about ram usage
+[module/memory]
+type = internal/memory
+
+; shows menu for power options
+[module/powermenu]
+type = custom/menu
