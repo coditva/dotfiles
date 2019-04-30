@@ -11,7 +11,8 @@ set $config_dir ~/.dotfiles/i3
 set $terminal gnome-terminal
 
 # set commands
-set $status_cmd "i3status --config ~/.dotfiles/i3/i3status.conf"
+#set $status_cmd "i3status --config ~/.dotfiles/i3/i3status.conf"
+exec_always --no-startup-id $HOME/.dotfiles/polybar/launch.sh
 set $tilda_cmd  "ps -e | grep tilda || tilda"
 
 # set color scheme for theme
@@ -242,60 +243,60 @@ for_window [title="pynvim"]                 floating enable
 ################################################################################
 
 # toggle hiding and showing bar
-bindsym $mod+m bar mode toggle
+#bindsym $mod+m bar mode toggle
 
-# start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
+## start i3bar to display a workspace bar (plus the system information i3status
+## finds out, if available)
+#bar {
 
-    # load the status bar config
-    status_command $status_cmd
+    ## load the status bar config
+    #status_command $status_cmd
 
-    # make the status bar support transparency (only in i3-gaps)
-    i3bar_command i3bar -t
+    ## make the status bar support transparency (only in i3-gaps)
+    #i3bar_command i3bar -t
 
-    # define bar behavior in hidden state
-    hidden_state hide
-    modifier $mod
+    ## define bar behavior in hidden state
+    #hidden_state hide
+    #modifier $mod
 
-    # place the bar on the top
-    position bottom
+    ## place the bar on the top
+    #position bottom
 
-    # keep it hidden by default
-    mode dock
+    ## keep it hidden by default
+    #mode dock
 
-    # choose colors for the bar
-    # RGBA in i3-gaps
-    colors {
-        background $c_first
-        statusline $c_second
-        separator  $c_first
+    ## choose colors for the bar
+    ## RGBA in i3-gaps
+    #colors {
+        #background $c_first
+        #statusline $c_second
+        #separator  $c_first
 
-        # class             # border    # backg   # text
-        focused_workspace   $c_fifth_l  $c_fifth  $c_first
-        inactive_workspace  $c_third_l  $c_third  $c_second
-        urgent_workspace    $c_fourth_l $c_fourth $c_first
-        binding_mode        $c_third_l  $c_third  $c_second
-    }
+        ## class             # border    # backg   # text
+        #focused_workspace   $c_fifth_l  $c_fifth  $c_first
+        #inactive_workspace  $c_third_l  $c_third  $c_second
+        #urgent_workspace    $c_fourth_l $c_fourth $c_first
+        #binding_mode        $c_third_l  $c_third  $c_second
+    #}
 
-    # add a system tray to the primary monitor
-    tray_output primary
+    ## add a system tray to the primary monitor
+    #tray_output primary
 
-    # use a different font for the bar
-    font pango:San Francisco Display Medium 11
+    ## use a different font for the bar
+    #font pango:San Francisco Display Medium 11
 
-    # use a custom separator symbol
-    separator_symbol " | "
+    ## use a custom separator symbol
+    #separator_symbol " | "
 
-    # choose if you want workspace buttons
-    workspace_buttons yes
+    ## choose if you want workspace buttons
+    #workspace_buttons yes
 
-    # show the binding mode indicator
-    binding_mode_indicator yes
+    ## show the binding mode indicator
+    #binding_mode_indicator yes
 
-    # dont show the numbers of the workspaces
-    strip_workspace_numbers yes
-}
+    ## dont show the numbers of the workspaces
+    #strip_workspace_numbers yes
+#}
 
 
 
@@ -340,6 +341,7 @@ gaps outer 0
 
 # make it smart
 smart_gaps on
+smart_borders no_gaps
 
 
 
