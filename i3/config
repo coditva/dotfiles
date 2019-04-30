@@ -1,0 +1,354 @@
+# set the mod key
+set $mod Mod4
+set $mod4 Ctrl+Mod1
+
+# set the config directory
+set $config_dir ~/.dotfiles/i3
+#set $volscript  ~/.dotfiles/i3/volume.sh
+
+# set favourite terminal
+#set $terminal i3-sensible-terminal
+set $terminal gnome-terminal
+
+# set commands
+set $status_cmd "i3status --config ~/.dotfiles/i3/i3status.conf"
+set $tilda_cmd  "ps -e | grep tilda || tilda"
+
+# set color scheme for theme
+set $c_first    #111111dd
+set $c_second   #efefefdd
+set $c_third    #232323dd
+set $c_third_l  #3a3a3add
+set $c_fourth   #c91808dd
+set $c_fourth_l #e52312dd
+set $c_fifth    #0ba4c6dd
+set $c_fifth_l  #0fb4d8dd
+set $c_border   #000000ff
+
+# start a terminal
+bindsym $mod+Return exec $terminal
+
+# start dmenu-desktop
+bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
+    --dmenu="dmenu -i -p 'App:' -f \
+        -nb '#111111' \
+        -nf '#efefef' \
+        -sb '#232323' \
+        -fn 'SanFranciscoText Bold-10'"\
+    --usage-log=$HOME"/.dmenu_usage.log"
+
+# start tilda
+exec_always --no-startup-id $tilda_cmd
+
+# screenshot
+set $screenshot       --no-startup-id gnome-screenshot
+set $screenshot-media --no-startup-id gnome-screenshot -i
+bindsym Print         exec $screenshot
+bindsym Shift+Print   exec $screenshot-media
+
+
+
+################################################################################
+# Configure navigation control
+################################################################################
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# split in horizontal orientation
+bindsym $mod+b split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# default layout strategy
+workspace_layout tabbed
+
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# in fullscreen mode, display the popup if it belongs to the fullscreen
+# application only
+popup_during_fullscreen smart
+
+# set the font used by the windows
+font pango:San Francisco Display Medium 0
+
+
+
+################################################################################
+# Configure workspaces
+################################################################################
+
+# name the workspaces
+set $w1 1:
+set $w2 2:
+set $w3 3:
+set $w4 4:
+set $w5 5:
+set $w6 6:
+set $w7 7:
+set $w8 8:
+set $w9 9:
+set $w10 10:
+
+# switch to workspace
+bindsym $mod+1 workspace $w1
+bindsym $mod+2 workspace $w2
+bindsym $mod+3 workspace $w3
+bindsym $mod+4 workspace $w4
+bindsym $mod+5 workspace $w5
+bindsym $mod+6 workspace $w6
+bindsym $mod+7 workspace $w7
+bindsym $mod+8 workspace $w8
+bindsym $mod+9 workspace $w9
+bindsym $mod+0 workspace $w10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $w1
+bindsym $mod+Shift+2 move container to workspace $w2
+bindsym $mod+Shift+3 move container to workspace $w3
+bindsym $mod+Shift+4 move container to workspace $w4
+bindsym $mod+Shift+5 move container to workspace $w5
+bindsym $mod+Shift+6 move container to workspace $w6
+bindsym $mod+Shift+7 move container to workspace $w7
+bindsym $mod+Shift+8 move container to workspace $w8
+bindsym $mod+Shift+9 move container to workspace $w9
+bindsym $mod+Shift+0 move container to workspace $w10
+
+# switch to next and prev workspaces
+bindsym $mod+Tab        workspace next
+bindsym $mod+Shift+Tab  workspace prev
+
+# assign workspaces
+for_window [class="Google-chrome"]      move container to workspace $w1
+for_window [class="(Evince|okular)"]    move container to workspace $w5
+for_window [class="Spotify"]            move container to workspace $w9
+
+
+
+################################################################################
+# Configure i3 specific key bindings
+################################################################################
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Ctrl+Delete exec "i3-msg exit"
+
+
+
+################################################################################
+# Configure mouse behaviour
+################################################################################
+
+# mouse plays no role in focus
+focus_follows_mouse no
+
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+
+
+################################################################################
+# Configure screen locking
+################################################################################
+
+# locker
+set $locker "/usr/bin/physlock -mp 'Locked, obviously.'"
+
+# lock screen with $mod4+l
+bindsym $mod4+l exec --no-startup-id $locker
+
+
+
+################################################################################
+# Make multimedia keys useful
+################################################################################
+
+# sound controls
+#bindsym XF86AudioRaiseVolume        exec --no-startup-id $volscript + 5
+#bindsym XF86AudioLowerVolume        exec --no-startup-id $volscript - 5
+#bindsym Shift+XF86AudioRaiseVolume  exec --no-startup-id $volscript + 10
+#bindsym Shift+XF86AudioLowerVolume  exec --no-startup-id $volscript - 10
+#bindsym XF86AudioMute               exec --no-startup-id $volscript toggle
+
+# screen brightness controls
+bindsym XF86MonBrightnessUp         exec --no-startup-id xbacklight -inc 3
+bindsym XF86MonBrightnessDown       exec --no-startup-id xbacklight -dec 3
+
+# playback controls
+bindsym XF86AudioPlay               exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext               exec --no-startup-id playerctl next
+bindsym XF86AudioPrev               exec --no-startup-id playerctl previous
+
+
+
+################################################################################
+# Define styles for windows
+################################################################################
+
+# new window defaults
+new_window pixel 1
+
+# class                 border    backgr.   text      indicatr  child_border
+client.focused          $c_fifth  $c_fifth  $c_second $c_border $c_border
+client.focused_inactive $c_fifth  $c_fifth  $c_second $c_border $c_border
+client.unfocused        $c_third  $c_third  $c_second $c_border $c_border
+client.urgent           $c_fourth $c_fourth $c_second $c_border $c_border
+client.placeholder      $c_fourth $c_fourth $c_second $c_border $c_border
+
+# application specific styles for windows
+for_window [class=".*"]                     border pixel 0
+for_window [class="terminal"]               border pixel 10
+for_window [title="TrueCrypt|Google Keep"]  floating enable
+for_window [title="pynvim"]                 floating enable
+
+
+
+################################################################################
+# Configure the status bar
+################################################################################
+
+# toggle hiding and showing bar
+bindsym $mod+m bar mode toggle
+
+# start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+
+    # load the status bar config
+    status_command $status_cmd
+
+    # make the status bar support transparency (only in i3-gaps)
+    i3bar_command i3bar -t
+
+    # define bar behavior in hidden state
+    hidden_state hide
+    modifier $mod
+
+    # place the bar on the top
+    position bottom
+
+    # keep it hidden by default
+    mode dock
+
+    # choose colors for the bar
+    # RGBA in i3-gaps
+    colors {
+        background $c_first
+        statusline $c_second
+        separator  $c_first
+
+        # class             # border    # backg   # text
+        focused_workspace   $c_fifth_l  $c_fifth  $c_first
+        inactive_workspace  $c_third_l  $c_third  $c_second
+        urgent_workspace    $c_fourth_l $c_fourth $c_first
+        binding_mode        $c_third_l  $c_third  $c_second
+    }
+
+    # add a system tray to the primary monitor
+    tray_output primary
+
+    # use a different font for the bar
+    font pango:San Francisco Display Medium 11
+
+    # use a custom separator symbol
+    separator_symbol " | "
+
+    # choose if you want workspace buttons
+    workspace_buttons yes
+
+    # show the binding mode indicator
+    binding_mode_indicator yes
+
+    # dont show the numbers of the workspaces
+    strip_workspace_numbers yes
+}
+
+
+
+################################################################################
+# Configure modes
+################################################################################
+
+# stop navigation keys
+bindsym $mod+Shift+Delete mode "No mappings"
+mode "No mappings" {
+    bindsym Escape mode "default"
+}
+
+# resize window (you can also use the mouse for that)
+bindsym $mod+r mode "Resize"
+mode "Resize" {
+    set $resize_step 2
+    set $resize_step_large 7
+
+    bindsym h resize shrink width  $resize_step px
+    bindsym j resize grow   height $resize_step px
+    bindsym k resize shrink height $resize_step px
+    bindsym l resize grow   width  $resize_step px
+
+    bindsym Shift+h resize shrink width  $resize_step_large px
+    bindsym Shift+j resize grow   height $resize_step_large px
+    bindsym Shift+k resize shrink height $resize_step_large px
+    bindsym Shift+l resize grow   width  $resize_step_large px
+
+    bindsym Escape mode "default"
+}
+
+
+
+################################################################################
+# i3-gaps specific configuration
+################################################################################
+
+# set the gaps
+gaps inner 5
+gaps outer 0
+
+# make it smart
+smart_gaps on
+
+
+
+################################################################################
+# Scratchpad
+################################################################################
+
+# make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# show the first scratchpad window
+bindsym $mod+minus scratchpad show
