@@ -80,7 +80,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # default layout strategy
-workspace_layout tabbed
+workspace_layout default
 
 
 # toggle tiling / floating
