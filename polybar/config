@@ -22,12 +22,14 @@ module_background   = #DDE7E7E7
 [bar/top]
 
 modules-left    = i3 xwindow
-modules-right   = spotify docker wlan eth volume date
+modules-center  = spotify
+modules-right   = docker wlan eth volume date
 
 bottom          = false
 height          = 20
 width           = 100%
 radius          = 0.0
+fixed-center    = true
 
 background      = ${colors.background}
 foreground      = ${colors.foreground}
@@ -118,7 +120,7 @@ format-prefix-background    = ${colors.spotify}
 [module/xwindow]
 type            = internal/xwindow
 label           = %title%
-label-maxlen    = 75
+label-maxlen    = 60
 label-padding   = 2
 
 
