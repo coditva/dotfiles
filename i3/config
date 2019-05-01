@@ -298,6 +298,10 @@ for_window [title="pynvim"]                 floating enable
     #strip_workspace_numbers yes
 #}
 
+# toggle hiding/showing polybar
+# disable when using i3status
+bindsym $mod+m exec --no-startup-id polybar-msg cmd toggle
+
 
 
 ################################################################################
