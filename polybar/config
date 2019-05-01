@@ -1,21 +1,21 @@
 ; vi: ft=dosini
 
 [colors]
-background      = #ddeeeeee
-background-alt  = #eeeeee
+background      = #DDEEEEEE
+background-alt  = #EEEEEE
 foreground      = #000000
 foreground-alt  = #000000
 
-workspace       = #8B6EFF
-spotify         = #FF6B6B
-wlan            = #9BCAFF
-eth             = #DEFF9B
-volume          = #B5FF6B
-date            = #FFB56B
+workspace       = #DD8B6EFF
+spotify         = #DDFF6B6B
+wlan            = #DD9BCAFF
+eth             = #DDDEFF9B
+volume          = #DDB5FF6B
+date            = #DDFFB56B
 
 border              = ${self.background}
 module_foreground   = #000000
-module_background   = #DDDDDD
+module_background   = #DDE7E7E7
 
 
 [bar/top]
@@ -47,7 +47,6 @@ tray-position       = left
 tray-padding        = 2
 tray-transparent    = right
 tray-detached       = false
-;tray-background    = #0063ff
 
 override-redirect   = false
 
@@ -121,19 +120,19 @@ strip-wsnumbers = true
 
 label-mode                  = %mode%
 label-mode-padding          = 0
-label-mode-foreground       = #000000
+label-mode-foreground       = ${colors.module_foreground}
 label-mode-background       = ${colors.module_background}
 
 ; focused = Active workspace on focused monitor
 label-focused               = %index%
-label-focused-foreground    = #000000
+label-focused-foreground    = ${colors.module_foreground}
 label-focused-background    = ${colors.workspace}
 label-focused-underline     = ${colors.background}
 label-focused-padding       = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused             = %index%
-label-unfocused-foreground  = #000000
+label-unfocused-foreground  = ${colors.module_foreground}
 label-unfocused-background  = ${colors.module_background}
 label-unfocused-underline   = ${colors.background}
 label-unfocused-padding     = ${self.label-focused-padding}
