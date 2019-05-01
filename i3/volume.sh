@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#depends on notify-send.sh
+
 # some config
 urgency="low"
 expire_time=1
@@ -39,10 +41,11 @@ function get_icon() {
 
 # send a notification
 function send_notification() {
-    notify-send --icon "$icon" \
+    notify-send.sh --icon "$icon" \
         --hint int:value:$volume \
         --urgency $urgency \
         --expire-time $expire_time \
+         --replace-file=/tmp/volumenotification \
         Volume
 }
 
