@@ -12,6 +12,7 @@ wlan            = #DD9BCAFF
 eth             = #DDDEFF9B
 volume          = #DDB5FF6B
 date            = #DDFFB56B
+docker          = #DD8FFCC4
 
 border              = ${self.background}
 module_foreground   = #000000
@@ -21,13 +22,12 @@ module_background   = #DDE7E7E7
 [bar/top]
 
 modules-left    = i3 xwindow
-modules-right   = spotify wlan eth volume date
+modules-right   = spotify docker wlan eth volume date
 
 bottom          = false
 height          = 20
 width           = 100%
 radius          = 0.0
-fixed-center    = true
 
 background      = ${colors.background}
 foreground      = ${colors.foreground}
@@ -43,9 +43,9 @@ padding-right   = 0
 module-margin-left  = 1
 module-margin-right = 1
 
-tray-position       = left
+tray-position       = right
 tray-padding        = 2
-tray-transparent    = right
+tray-transparent    = true
 tray-detached       = false
 
 override-redirect   = false
@@ -81,6 +81,18 @@ margin-bottom       = 0
 ;-------------------------------------------------------------------------------
 ; MODULES CONFIG
 ;-------------------------------------------------------------------------------
+
+[module/docker]
+type            = custom/script
+exec            = sh $HOME/.dotfiles/polybar/scripts/is_file.sh /run/docker.pid
+interval        = 1
+
+label           = 
+format          = <label>
+
+format-padding              = 2
+format-background           = ${colors.docker}
+format-foreground           = ${colors.module_foreground}
 
 ; shows song info from spotify.
 ; script from https://github.com/Jvanrhijn/polybar-spotify
@@ -203,7 +215,7 @@ format-foreground           = ${colors.module_foreground}
 
 label-padding               = 2
 
-format-prefix               = 
+format-prefix               = 
 format-prefix-padding       = 2
 format-prefix-foreground    = ${colors.module_foreground}
 format-prefix-background    = ${colors.date}
