@@ -18,13 +18,13 @@ module_foreground   = #000000
 module_background   = #DDDDDD
 
 
-[bar/bottom]
+[bar/top]
 
 modules-left    = i3 xwindow
 modules-right   = spotify wlan eth volume date
 
-bottom          = true
-height          = 23
+bottom          = false
+height          = 20
 width           = 100%
 radius          = 0.0
 fixed-center    = true
@@ -51,10 +51,10 @@ tray-detached       = false
 
 override-redirect   = false
 
-font-0          = San Francisco Display:size=12:weight=normal;3
-font-1          = FontAwesome:size=12:weight=normal;3
-font-2          = unifont:fontformat=truetype:size=12:antialias=false;0
-font-3          = siji:pixelsize=12;1
+font-0          = San Francisco Display:size=11:weight=normal;2
+font-1          = FontAwesome:size=10:weight=normal;2
+font-2          = unifont:fontformat=truetype:size=11:antialias=false;0
+font-3          = siji:pixelsize=11;1
 
 wm-restack      = i3
 
