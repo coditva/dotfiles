@@ -45,6 +45,8 @@ set hidden                              " allow hiding modified buffers
 
 syntax enable                           " enable syntax highlighting
 
+call mkdir($HOME . "/.vim_backup", "p")
+
 set backupdir=~/.vim_backup,.,/tmp      " keep project directories uncluttered
 set directory=~/.vim_backup,.,/tmp      " by using a custom directory for all
 set undodir=~/.vim_backup,.,/tmp        " vim stuff
