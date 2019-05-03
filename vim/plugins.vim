@@ -1,7 +1,4 @@
-" --------------------------------------------------
-" Plugins for vimrc file
-" Author: Utkarsh Maheshwari (github.com/UtkarshMe)
-" --------------------------------------------------
+" plugins.vim: plugins and addons
 
 filetype off                                    " Required for vundle
 

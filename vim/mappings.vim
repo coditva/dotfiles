@@ -1,7 +1,4 @@
-" --------------------------------------------------
-" Mappings file
-" Author: Utkarsh Maheshwari (github.com/UtkarshMe)
-" --------------------------------------------------
+" mappings.vim: define key bindings
 
 " because jk is easier to type
 imap jk <Esc>

@@ -1,7 +1,4 @@
-" --------------------------------------------------
-" Vimrc file
-" Author: Utkarsh Maheshwari (github.com/UtkarshMe)
-" --------------------------------------------------
+" theme.vim: theme and eye candy stuff
 
 " Nvim specific stuff
 if (has("nvim"))

@@ -1,7 +1,4 @@
-" --------------------------------------------------
-" Autocmds file
-" Author: Utkarsh Maheshwari (github.com/UtkarshMe)
-" --------------------------------------------------
+" autocmds.vim: autocmds and file specific settings
 
 " remember last position in file
 autocmd BufReadPost * if line("'\'") > 0 && line("'\'") <= line("$")

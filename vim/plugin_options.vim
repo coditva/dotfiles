@@ -1,7 +1,4 @@
-" --------------------------------------------------
-" Plugin options file
-" Author: Utkarsh Maheshwari (github.com/UtkarshMe)
-" --------------------------------------------------
+" plugin_options.vim: configuration for plugings
 
 " Set options for vim snippets
 let g:UltiSnipsExpandTrigger="<tab>"

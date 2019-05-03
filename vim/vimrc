@@ -1,7 +1,3 @@
-" --------------------------------------------------
-" Vimrc file
-" Author: Utkarsh Maheshwari (github.com/UtkarshMe)
-" --------------------------------------------------
 
 " Load vundle and plugin stuff
 if isdirectory($HOME . "/.vim/bundle/Vundle.vim")
@@ -23,7 +19,7 @@ source $HOME/.dotfiles/vim/mappings.vim
 " Load colors and theme
 source $HOME/.dotfiles/vim/theme.vim
 
-" Load volatile changes which are not needed on every system
+" Load system specific volatile changes which are not checked into git
 if filereadable($HOME . "/.dotfiles/vim/volatile.vim")
     source $HOME/.dotfiles/vim/volatile.vim
 endif

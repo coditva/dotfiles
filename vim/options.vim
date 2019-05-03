@@ -1,7 +1,4 @@
-" --------------------------------------------------
-" Options file
-" Author: Utkarsh Maheshwari (github.com/UtkarshMe)
-" --------------------------------------------------
+" options.vim: settings and config for vim
 
 set nocompatible                        " improved mode
 
@@ -17,10 +14,10 @@ set hlsearch                            " highlight searches
 set incsearch                           " search as I type
 set ignorecase                          " ignore if all lower
 
+set shiftround                          " indent properly
 set tabstop=4                           " 4 is sexy...
 set shiftwidth=4
 set softtabstop=4
-set shiftround                          " indent properly
 
 set copyindent                          " ...or whatever the file already has
 set autoindent                          " autoindent
@@ -45,7 +42,7 @@ set hidden                              " allow hiding modified buffers
 
 syntax enable                           " enable syntax highlighting
 
-call mkdir($HOME . "/.vim_backup", "p")
+call mkdir($HOME . "/.vim_backup", "p") " create backup directory if not already
 
 set backupdir=~/.vim_backup,.,/tmp      " keep project directories uncluttered
 set directory=~/.vim_backup,.,/tmp      " by using a custom directory for all
