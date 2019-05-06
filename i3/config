@@ -233,7 +233,7 @@ client.placeholder      $c_fourth $c_fourth $c_second $c_border $c_border
 
 # application specific styles for windows
 for_window [class=".*"]                     border pixel 0
-for_window [class="terminal"]               border pixel 10
+for_window [class="terminal|Alacritty"]     border pixel 10
 for_window [title="TrueCrypt|Google Keep"]  floating enable
 for_window [title="pynvim"]                 floating enable
 
