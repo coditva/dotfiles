@@ -5,6 +5,7 @@ set $mod4 Ctrl+Mod1
 # set the config directory
 set $config_dir ~/.dotfiles/i3
 set $volscript  ~/.dotfiles/i3/volume.sh
+set $backlightscript ~/.dotfiles/i3/backlight.sh
 
 # set favourite terminal
 #set $terminal i3-sensible-terminal
@@ -206,8 +207,8 @@ bindsym Shift+XF86AudioLowerVolume  exec --no-startup-id $volscript - 10
 bindsym XF86AudioMute               exec --no-startup-id $volscript toggle
 
 # screen brightness controls
-bindsym XF86MonBrightnessUp         exec --no-startup-id xbacklight -inc 3
-bindsym XF86MonBrightnessDown       exec --no-startup-id xbacklight -dec 3
+bindsym XF86MonBrightnessUp         exec --no-startup-id $backlightscript + 3
+bindsym XF86MonBrightnessDown       exec --no-startup-id $backlightscript - 3
 
 # playback controls
 bindsym XF86AudioPlay               exec --no-startup-id playerctl play-pause

@@ -45,7 +45,7 @@ function send_notification() {
         --hint int:value:$volume \
         --urgency $urgency \
         --expire-time $expire_time \
-         --replace-file=/tmp/volumenotification \
+        --replace-file=/tmp/volumenotification \
         Volume
 }
 
