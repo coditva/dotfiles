@@ -30,13 +30,17 @@ set $c_border   #000000ff
 # start a terminal
 bindsym $mod+Return exec $terminal
 
-# start dmenu-desktop
+
+# rofi to launch
 bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
-    --dmenu="dmenu -i -p 'App:' -f \
-        -nb '#111111' \
-        -nf '#efefef' \
-        -sb '#232323' \
-        -fn 'SanFranciscoText Bold-10'"\
+    --dmenu="rofi -i -p 'App' -show run -dmenu \
+        -lines 5 \
+        -show run \
+        -no-lazy-grab \
+        -matching fuzzy \
+        -padding 10 \
+        -scroll-method 1" \
+    --term="i3-sensible-terminal" \
     --usage-log=$HOME"/.dmenu_usage.log"
 
 # start tilda
