@@ -46,6 +46,9 @@ bindsym Ctrl+space exec --no-startup-id j4-dmenu-desktop\
 # start tilda
 exec_always --no-startup-id $tilda_cmd
 
+# start nm-applet
+exec_always --no-startup-id nm-applet
+
 # screenshot
 set $screenshot       --no-startup-id gnome-screenshot
 set $screenshot-media --no-startup-id gnome-screenshot -i
