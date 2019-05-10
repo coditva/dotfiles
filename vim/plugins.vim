@@ -12,6 +12,7 @@ Plug 'jistr/vim-nerdtree-tabs'                  " Seperate tree from tabs
 Plug 'vim-syntastic/syntastic'                  " Syntax checker
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 Plug 'tpope/vim-fugitive'                       " Git blame
+Plug 'junegunn/fzf.vim'                         " Fuzzy searching with fzf
 
 " ----- Eyecandy -----
 Plug 'mhinz/vim-startify'                       " Startup page
