@@ -10,7 +10,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-if g:has_vundle == v:true
+if g:has_plugins == v:true
     set background=dark
     let theme = 'gruvbox'
     colorscheme gruvbox

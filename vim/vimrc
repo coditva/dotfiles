@@ -1,10 +1,10 @@
 
-" Load vundle and plugin stuff
-if isdirectory($HOME . "/.vim/bundle/Vundle.vim")
-    let g:has_vundle = v:true
-    source $HOME/.dotfiles/vim/plugins.vim
+" Load plugins
+if empty(glob('~/.vim/autoload/plug.vim'))
+    let g:has_plugins = v:false
 else
-    let g:has_vundle = v:false
+    source $HOME/.dotfiles/vim/plugins.vim
+    let g:has_plugins = v:true
 endif
 
 " Load options
