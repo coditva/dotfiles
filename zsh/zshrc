@@ -1,11 +1,17 @@
 source /usr/share/zsh/share/antigen.zsh
 
+# Set fzf installation directory
+export FZF_BASE=/usr/bin/fzf
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
 antigen bundle gitfast
 antigen bundle archlinux
+antigen bundle docker
+antigen bundle fzf
 
 # Syntax highlighting bundle.
 antigen bundle zdharma/fast-syntax-highlighting
