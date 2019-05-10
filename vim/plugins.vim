@@ -1,38 +1,32 @@
 " plugins.vim: plugins and addons
 
-filetype off                                    " Required for vundle
-
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'                   " The plugin manager
+" Set the runtime path to include vim-plug and initialize
+call plug#begin('~/.vim/autoload')
 
 " ----- Workflow -----
-Plugin 'airblade/vim-gitgutter'                 " Live git diff symbols
-Plugin 'SirVer/ultisnips'                       " Snippets engine
-Plugin 'honza/vim-snippets'                     " Snippets
-Plugin 'scrooloose/nerdtree'                    " Source tree
-Plugin 'jistr/vim-nerdtree-tabs'                " Seperate tree from tabs
-Plugin 'vim-syntastic/syntastic'                " Syntax checker
-Plugin 'scrooloose/nerdcommenter'               " Shortcut for commenting
-Plugin 'tpope/vim-fugitive'                     " Git blame
+Plug 'airblade/vim-gitgutter'                   " Live git diff symbols
+Plug 'SirVer/ultisnips'                         " Snippets engine
+Plug 'honza/vim-snippets'                       " Snippets
+Plug 'scrooloose/nerdtree'                      " Source tree
+Plug 'jistr/vim-nerdtree-tabs'                  " Seperate tree from tabs
+Plug 'vim-syntastic/syntastic'                  " Syntax checker
+Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
+Plug 'tpope/vim-fugitive'                       " Git blame
 
 " ----- Eyecandy -----
-Plugin 'mhinz/vim-startify'                     " Startup page
-Plugin 'vim-airline/vim-airline'                " A nice little statusline
+Plug 'mhinz/vim-startify'                       " Startup page
+Plug 'vim-airline/vim-airline'                  " A nice little statusline
 
 " ----- Themes -----
-Plugin 'morhetz/gruvbox'                        " Gruvbox theme
+Plug 'morhetz/gruvbox'                          " Gruvbox theme
 
 " ----- Language support -----
-"Plugin 'pangloss/vim-javascript'                " JavaScript
-"Plugin 'moll/vim-node'                          " NodeJS
-"Plugin 'tkztmk/vim-vala'                        " Vala
+"Plug 'pangloss/vim-javascript'                  " JavaScript
+"Plug 'moll/vim-node'                            " NodeJS
+"Plug 'tkztmk/vim-vala'                          " Vala
 
 " All of Plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 " Load plugin options
 source ~/.dotfiles/vim/plugin_options.vim
