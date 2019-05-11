@@ -234,15 +234,10 @@ label-muted-foreground  = ${colors.module_foreground}
 label-muted-background  = ${colors.volume}
 label-muted-padding     = 3
 
-label-volume            = %percentage%
+label-volume            = 
 label-volume-foreground = ${colors.module_foreground}
-label-volume-background = ${colors.module_background}
+label-volume-background = ${colors.volume}
 label-volume-padding    = 2
-
-format-volume-prefix               = 
-format-volume-prefix-padding       = 2
-format-volume-prefix-foreground    = ${colors.module_foreground}
-format-volume-prefix-background    = ${colors.volume}
 
 
 ; shows info about bspwm things
