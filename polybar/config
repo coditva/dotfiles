@@ -23,7 +23,7 @@ module_background   = #DDE7E7E7
 
 modules-left    = i3 xwindow
 modules-center  = spotify
-modules-right   = docker wlan eth volume date
+modules-right   = wlan eth docker volume date
 
 bottom          = false
 height          = 20
