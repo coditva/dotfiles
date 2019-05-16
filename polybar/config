@@ -1,7 +1,7 @@
 ; vi: ft=dosini
 
 [colors]
-background      = #DDEEEEEE
+background      = #88EEEEEE
 background-alt  = #EEEEEE
 foreground      = #000000
 foreground-alt  = #000000
@@ -42,13 +42,17 @@ border-color    = ${colors.border}
 padding-left    = 0
 padding-right   = 0
 
-module-margin-left  = 1
-module-margin-right = 1
+module-margin-left  = 0
+module-margin-right = 0
 
 tray-position       = right
 tray-padding        = 2
-tray-transparent    = true
+tray-transparent    = false
+tray-background     = ${colors.module_background}
 tray-detached       = false
+tray-scale          = 1.0
+tray-offset-x       = 0
+tray-offset-y       = 0
 
 override-redirect   = false
 
