@@ -6,13 +6,13 @@ background-alt  = #EEEEEE
 foreground      = #000000
 foreground-alt  = #000000
 
-workspace       = #DD8B6EFF
-spotify         = #DDFF6B6B
-wlan            = #DD9BCAFF
-eth             = #DDDEFF9B
-volume          = #DDB5FF6B
-date            = #DDFFB56B
-docker          = #DD8FFCC4
+workspace       = #998B6EFF
+spotify         = #99FF6B6B
+wlan            = #999BCAFF
+eth             = #99DEFF9B
+volume          = #99B5FF6B
+date            = #99FFB56B
+docker          = #998FFCC4
 
 border              = ${self.background}
 module_foreground   = #000000
@@ -221,7 +221,7 @@ format-foreground           = ${colors.module_foreground}
 
 label-padding               = 2
 
-format-prefix               = 
+;format-prefix               = 
 format-prefix-padding       = 2
 format-prefix-foreground    = ${colors.module_foreground}
 format-prefix-background    = ${colors.date}
