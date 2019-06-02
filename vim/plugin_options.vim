@@ -48,3 +48,5 @@ let g:fzf_colors =
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 let g:fzf_nvim_statusline = 0
+
+let g:one_allow_italics = 1

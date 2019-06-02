@@ -11,17 +11,15 @@ if (has("termguicolors"))
 endif
 
 if g:has_plugins == v:true
-    set background=dark
-    let theme = 'gruvbox'
-    colorscheme gruvbox
-
-    if theme == 'material'
-        let g:material_theme_style = &background
-    elseif theme == 'gruvbox'
-        let g:gruvbox_contrast_dark = 'hard'
-        set cursorline
+    colorscheme one
+    if $ITERM_PROFILE  == 'Dark'
+        set background=dark
+    else
+        set background=light
     endif
 
-    let g:airline_theme = theme
+    let g:airline_theme='one'
 
+    " Use the background color of the terminal
+    hi Normal guibg=NONE ctermbg=NONE
 endif

@@ -19,7 +19,8 @@ Plug 'mhinz/vim-startify'                       " Startup page
 Plug 'vim-airline/vim-airline'                  " A nice little statusline
 
 " ----- Themes -----
-Plug 'morhetz/gruvbox'                          " Gruvbox theme
+"Plug 'morhetz/gruvbox'                          " Gruvbox theme
+Plug 'rakr/vim-one'                              " OneDark+OneLight
 
 " ----- Language support -----
 "Plug 'pangloss/vim-javascript'                  " JavaScript
