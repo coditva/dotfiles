@@ -27,6 +27,7 @@ fi
 
 # use vim as text editor
 export VISUAL="vim"
+export MANPAGER="nvim -c 'set ft=man' -"
 
 # add anaconda to path if present
 if [ -d "$HOME/bin/anaconda3" ]; then
