@@ -1,5 +1,3 @@
-# make opening easy
-alias open="xdg-open"
 
 # if hub is installed, alias it as git
 if which hub > /dev/null; then
