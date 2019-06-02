@@ -15,14 +15,14 @@ augroup vimScript " {
 augroup END " }
 
 " html specific commands
-autocmd filetype html setlocal 
+autocmd filetype html setlocal
             \ tabstop=2 shiftwidth=2 softtabstop=2      " smaller indent
             \ textwidth=0                               " allow larger lines
 
 " javascript specific commands
-autocmd filetype javascript setlocal 
+autocmd filetype javascript setlocal
             \ tabstop=2 shiftwidth=2 softtabstop=2      " smaller indent
-autocmd filetype json setlocal 
+autocmd filetype json setlocal
             \ tabstop=2 shiftwidth=2 softtabstop=2      " smaller indent
 
 " gitcommit specific commands
