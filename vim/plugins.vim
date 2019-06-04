@@ -27,6 +27,9 @@ Plug 'rakr/vim-one'                              " OneDark+OneLight
 "Plug 'moll/vim-node'                            " NodeJS
 "Plug 'tkztmk/vim-vala'                          " Vala
 
+
+Plug '/usr/local/opt/fzf'
+
 " All of Plugins must be added before the following line
 call plug#end()
 
