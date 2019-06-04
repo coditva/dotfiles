@@ -26,6 +26,7 @@ set smartindent                         " make it smarter
 set showmatch                           " show matching braces
 set showcmd                             " show commands in the statusbar
 set ruler                               " show cursor position
+set cursorline                          " highlight cursor row
 set title                               " show title of the file
 
 set expandtab                           " spaces over tabs
