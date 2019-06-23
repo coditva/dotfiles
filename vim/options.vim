@@ -12,7 +12,8 @@ set laststatus=1                        " only show statusline if window > 1
 
 set hlsearch                            " highlight searches
 set incsearch                           " search as I type
-set ignorecase                          " ignore if all lower
+set ignorecase                          " ignore if all lower...
+set smartcase                           " ...unless the query contains case
 
 set shiftround                          " indent properly
 set tabstop=4                           " 4 is sexy...
