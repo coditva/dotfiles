@@ -48,3 +48,7 @@ iterm_toggle_profile() {
         iterm_profile Dark
     fi
 }
+
+# Setting for the new UTF-8 terminal support
+LC_CTYPE="en_US.UTF-8"
+LC_ALL="en_US.UTF-8"
