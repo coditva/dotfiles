@@ -14,3 +14,6 @@ nnoremap <tab> >>
 nnoremap <s-tab> <<
 vnoremap <tab> >
 vnoremap <s-tab> <
+
+" open files using fzf
+nnoremap <c-space> :Files <return>
