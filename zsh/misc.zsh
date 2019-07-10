@@ -57,6 +57,12 @@ if [ -f  "/usr/local/opt/nvm/nvm.sh" ]; then
     [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
 fi
 
+# use ag for fzf
+if which ag > /dev/null ; then
+    export FZF_DEFAULT_COMMAND='ag --hidden -g "" --no-color'
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
+
 
 _zsh_cli_fg() { fg; }
 zle -N _zsh_cli_fg
