@@ -13,6 +13,7 @@ Plug 'vim-syntastic/syntastic'                  " Syntax checker
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 Plug 'tpope/vim-fugitive'                       " Git blame
 Plug 'junegunn/fzf.vim'                         " Fuzzy searching with fzf
+Plug 'tpope/vim-sleuth'                         " adjusts indent based on file
 
 " ----- Eyecandy -----
 Plug 'mhinz/vim-startify'                       " Startup page
