@@ -43,3 +43,21 @@ fi
 if [ -d "$HOME/.cargo/bin" ]; then
     export PATH="$PATH:$HOME/.cargo/bin"
 fi
+
+# add ruby gem bin directory in the path
+if [ -d "$HOME/.gem/ruby/2.3.0/bin" ]; then
+    export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
+fi
+
+
+if [ -f  "/usr/local/opt/nvm/nvm.sh" ]; then
+    mkdir -p "$HOME/.nvm"
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+fi
+
+
+_zsh_cli_fg() { fg; }
+zle -N _zsh_cli_fg
+bindkey '^Z' _zsh_cli_fg
