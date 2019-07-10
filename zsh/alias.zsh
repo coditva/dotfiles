@@ -15,3 +15,7 @@ fi
 if [[ -f "$HOME/.spacevim/init.vim" ]]; then
     alias svim="nvim -u $HOME/.spacevim/init.vim"
 fi
+
+if which jsctags > /dev/null; then
+    alias jstags="find . -type f -iregex '.*\.js$' -not -path './node_modules/*' -exec jsctags {} -f \; | sed '/^$/d' | LANG=C sort > tags"
+fi
