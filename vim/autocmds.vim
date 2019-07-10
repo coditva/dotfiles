@@ -28,3 +28,7 @@ autocmd filetype json setlocal
 " gitcommit specific commands
 autocmd filetype gitcommit setlocal
             \ colorcolumn=72                            " commit messages are 72 chars
+
+" map page specific commands
+autocmd filetype man nnoremap d <c-d>
+autocmd filetype man nnoremap u <c-u>

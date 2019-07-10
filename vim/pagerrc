@@ -1,0 +1,8 @@
+"vi:ft=vim
+
+source ~/.vimrc
+
+set filetype=man
+
+nnoremap d <c-d>
+nnoremap u <c-u>
