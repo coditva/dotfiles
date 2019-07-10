@@ -24,7 +24,7 @@ Plug 'vim-airline/vim-airline'                  " A nice little statusline
 Plug 'rakr/vim-one'                              " OneDark+OneLight
 
 " ----- Language support -----
-"Plug 'pangloss/vim-javascript'                  " JavaScript
+Plug 'pangloss/vim-javascript'                  " JavaScript
 "Plug 'moll/vim-node'                            " NodeJS
 "Plug 'tkztmk/vim-vala'                          " Vala
 
