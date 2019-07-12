@@ -16,4 +16,7 @@ vnoremap <tab> >
 vnoremap <s-tab> <
 
 " open files using fzf
-nnoremap <c-space> :Files <return>
+nnoremap <leader><space> :Files <return>
+
+" search inside files with the silver searcher
+nnoremap <leader>f :Ag <return>
