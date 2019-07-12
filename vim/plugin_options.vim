@@ -28,25 +28,59 @@ set noshowmode
 " Set shortcut for nerd-tree
 map <F3> :NERDTreeToggle<CR>
 
-" Customize fzf colors to match your color scheme
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
-
-" Enable per-command history
+" Set options for fuzzy finder
+let g:fzf_colors = {
+      \ 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
-
 let g:fzf_nvim_statusline = 0
-
 let g:one_allow_italics = 1
+
+" Set options for ale
+let g:ale_lint_on_text_changed = 1
+let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_filetype_changed = 1
+let g:ale_set_highlights = 1
+let g:ale_set_quickfix = 1      " populate quickfix list with errors
+let g:ale_set_signs = 1
+let g:ale_fix_on_save = 1
+let g:ale_lint_delay = 1000     " 1 second
+let g:ale_sign_error = '»'
+let g:ale_sign_warning = '●'
+let g:ale_use_global_executables = 1
+let g:ale_fixers = {
+      \ 'javascript': [
+      \     'eslint',
+      \     'importjs',
+      \     'prettier',
+      \     'jshint',
+      \     'remove_trailing_lines',
+      \     'trim_whitespace' ],
+      \ 'json': [
+      \     'jsonlint',
+      \     'prettier' ],
+      \ 'c': [
+      \     'clang',
+      \     'gcc',
+      \     'clang-tidy',
+      \     'clang-format' ],
+      \ 'git commit': [
+      \     'gitlint' ],
+      \ '*': [
+      \     'prettier',
+      \     'remove_trailing_lines',
+      \     'trim_whitespace' ]
+      \ }

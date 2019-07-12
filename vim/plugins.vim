@@ -9,11 +9,12 @@ Plug 'SirVer/ultisnips'                         " Snippets engine
 Plug 'honza/vim-snippets'                       " Snippets
 Plug 'scrooloose/nerdtree'                      " Source tree
 Plug 'jistr/vim-nerdtree-tabs'                  " Seperate tree from tabs
-Plug 'vim-syntastic/syntastic'                  " Syntax checker
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 Plug 'tpope/vim-fugitive'                       " Git blame
 Plug 'junegunn/fzf.vim'                         " Fuzzy searching with fzf
-Plug 'tpope/vim-sleuth'                         " adjusts indent based on file
+Plug 'tpope/vim-sleuth'                         " Adjusts indent based on file
+Plug 'w0rp/ale'                                 " Async ftw!
+"Plug 'vim-syntastic/syntastic'                  " Syntax checker
 
 " ----- Eyecandy -----
 Plug 'mhinz/vim-startify'                       " Startup page
@@ -21,7 +22,7 @@ Plug 'vim-airline/vim-airline'                  " A nice little statusline
 
 " ----- Themes -----
 "Plug 'morhetz/gruvbox'                          " Gruvbox theme
-Plug 'rakr/vim-one'                              " OneDark+OneLight
+Plug 'rakr/vim-one'                             " OneDark+OneLight
 
 " ----- Language support -----
 Plug 'pangloss/vim-javascript'                  " JavaScript
