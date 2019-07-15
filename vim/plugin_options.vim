@@ -84,3 +84,18 @@ let g:ale_fixers = {
       \     'remove_trailing_lines',
       \     'trim_whitespace' ]
       \ }
+
+let g:startify_session_persistence = 1      " save sessions automatically
+let g:startify_change_to_vcs_root = 1
+let g:startify_custom_header = ''
+let g:startify_custom_footer = 'startify#fortune#cowsay()'
+let g:startify_custom_indices = ['f', 'g', 'h', 'j', 'd', 'k', 's', 'l', 'a']
+let g:startify_fortune_use_unicode = 1
+let g:startify_padding_left = 5
+let g:startify_lists = [
+      \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+      \ { 'type': 'files',     'header': ['   MRU']            },
+      \ { 'type': 'sessions',  'header': ['   Sessions']       },
+      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+      \ { 'type': 'commands',  'header': ['   Commands']       },
+      \ ]
