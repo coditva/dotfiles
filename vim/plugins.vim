@@ -26,6 +26,7 @@ Plug 'rakr/vim-one'                             " OneDark+OneLight
 
 " ----- Language support -----
 Plug 'pangloss/vim-javascript'                  " JavaScript
+Plug 'mxw/vim-jsx'                              " JSX
 "Plug 'moll/vim-node'                            " NodeJS
 "Plug 'tkztmk/vim-vala'                          " Vala
 
