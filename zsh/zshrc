@@ -20,7 +20,7 @@ antigen bundle zdharma/fast-syntax-highlighting
 DEFAULT_USER="me"
 
 # Load the theme.
-antigen theme fishy
+antigen theme fishy_mod
 
 # Tell antigen that you're done.
 antigen apply
