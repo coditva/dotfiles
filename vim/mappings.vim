@@ -13,4 +13,8 @@ nnoremap $ g$
 nnoremap <leader><space> :Files <return>
 
 " search inside files with the silver searcher
-nnoremap <leader>f :Ag <return>
+nnoremap <leader>f :Ag<space>
+nnoremap <leader>F :execute "Ag " . expand("<cword>") <return>
+
+nnoremap <leader><tab> :bn<return>
+nnoremap <leader><s-tab> :bp<return>
