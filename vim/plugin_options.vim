@@ -53,7 +53,7 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_filetype_changed = 1
-let g:ale_set_highlights = 1
+let g:ale_set_highlights = 0
 let g:ale_set_quickfix = 1      " populate quickfix list with errors
 let g:ale_set_signs = 1
 let g:ale_fix_on_save = 0
@@ -62,6 +62,7 @@ let g:ale_sign_error = '»'
 let g:ale_sign_warning = '●'
 let g:ale_use_global_executables = 1
 let g:ale_javascript_jshint_use_global = 1
+let g:ale_sign_column_always = 1
 let g:ale_fixers = {
       \ 'javascript': [
       \     'eslint',
