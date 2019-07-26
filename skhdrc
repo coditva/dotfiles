@@ -111,9 +111,6 @@ cmd - j : chunkc tiling::window --focus south
 cmd - k : chunkc tiling::window --focus north
 cmd - l : chunkc tiling::window --focus east
 
-#cmd - j : chunkc tiling::window --focus prev
-#cmd - k : chunkc tiling::window --focus next
-
 # move window
 shift + cmd - h : chunkc tiling::window --warp west
 shift + cmd - j : chunkc tiling::window --warp south
@@ -121,18 +118,18 @@ shift + cmd - k : chunkc tiling::window --warp north
 shift + cmd - l : chunkc tiling::window --warp east
 
 # focus monitor
-ctrl + alt - z  : chunkc tiling::monitor -f prev
-ctrl + alt - c  : chunkc tiling::monitor -f next
-ctrl + alt - 1  : chunkc tiling::monitor -f 1
-ctrl + alt - 2  : chunkc tiling::monitor -f 2
-ctrl + alt - 3  : chunkc tiling::monitor -f 3
+#cmd + shift - h  : chunkc tiling::monitor -f prev
+#cmd + shift - l  : chunkc tiling::monitor -f next
+cmd + shift - 1  : chunkc tiling::monitor -f 1
+cmd + shift - 2  : chunkc tiling::monitor -f 2
+cmd + shift - 3  : chunkc tiling::monitor -f 3
 
 # send window to monitor and follow focus
-ctrl + cmd - z  : chunkc tiling::window --send-to-monitor prev; chunkc tiling::monitor -f prev
-ctrl + cmd - c  : chunkc tiling::window --send-to-monitor next; chunkc tiling::monitor -f next
-ctrl + cmd - 1  : chunkc tiling::window --send-to-monitor 1; chunkc tiling::monitor -f 1
-ctrl + cmd - 2  : chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
-ctrl + cmd - 3  : chunkc tiling::window --send-to-monitor 3; chunkc tiling::monitor -f 3
+alt + cmd - z  : chunkc tiling::window --send-to-monitor prev; chunkc tiling::monitor -f prev
+alt + cmd - c  : chunkc tiling::window --send-to-monitor next; chunkc tiling::monitor -f next
+alt + cmd - 1  : chunkc tiling::window --send-to-monitor 1; chunkc tiling::monitor -f 1
+alt + cmd - 2  : chunkc tiling::window --send-to-monitor 2; chunkc tiling::monitor -f 2
+alt + cmd - 3  : chunkc tiling::window --send-to-monitor 3; chunkc tiling::monitor -f 3
 
 # resize
 cmd + alt + shift - h : chunkc tiling::window --use-temporary-ratio 0.02 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.02 --adjust-window-edge east
@@ -160,8 +157,8 @@ cmd + shift - space : chunkc tiling::window --toggle float;\
                       chunkc tiling::window --grid-layout 6:6:1:1:4:4
 
 # change layout of desktop
-cmd - a : chunkc tiling::desktop --layout bsp
-cmd - s : chunkc tiling::desktop --layout monocle
-cmd - d : chunkc tiling::desktop --layout float
+cmd + shift - a : chunkc tiling::desktop --layout bsp
+cmd + shift - s : chunkc tiling::desktop --layout monocle
+cmd + shift - d : chunkc tiling::desktop --layout float
 
 ctrl + alt - w : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
