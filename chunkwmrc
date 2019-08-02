@@ -46,7 +46,7 @@ chunkc set bsp_split_mode                optimal
 chunkc set bsp_split_ratio               0.5
 
 chunkc set monitor_focus_cycle           1
-chunkc set window_focus_cycle            none
+chunkc set window_focus_cycle            all
 
 chunkc set mouse_follows_focus           on
 chunkc set window_float_next             0
@@ -107,5 +107,7 @@ chunkc core::load tiling.so
 #
 
 chunkc tiling::rule --owner Finder --name Copy --state float &
+chunkc tiling::rule --owner Todoist --state float &
+chunkc tiling::rule --owner Slack --state float &
 chunkc tiling::rule --owner \"App Store\" --state float &
 chunkc tiling::rule --owner Emacs --except "^$" --state tile &
