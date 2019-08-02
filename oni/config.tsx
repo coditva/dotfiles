@@ -32,13 +32,13 @@ export const configuration = {
 
     "editor.definition.enabled": true,
     "editor.quickInfo.enabled": true,
-    "editor.quickInfo.delay": 5000,
-    "editor.completions.mode": "oni",
+    "editor.quickInfo.delay": 1000,
+    "editor.completions.mode": "native",
 
     "editor.fontSize": "16px",
-    "editor.fontFamily": "'Fira Code'"
+    "editor.fontFamily": "FiraCode-Medium"
     "editor.fontLigatures": true
-    "editor.linePadding": 1,
+    "editor.linePadding": 0,
 
     "learning.enabled": false,
     "achievements.enabled": false,
