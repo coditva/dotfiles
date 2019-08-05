@@ -141,6 +141,8 @@ cmd + shift - return : chunkc tiling::window --toggle native-fullscreen
 # toggle window parent zoom
 cmd + shift - i : chunkc tiling::window --toggle parent
 
+cmd + shift - y : chunkc tiling::desktop --move next
+
 # toggle window split type
 cmd + shift - o : chunkc tiling::window --toggle split
 
@@ -153,7 +155,19 @@ cmd + shift - a : chunkc tiling::desktop --layout bsp
 cmd + shift - s : chunkc tiling::desktop --layout monocle
 cmd + shift - d : chunkc tiling::desktop --layout float
 
-ctrl + alt - w : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
+cmd + alt + ctrl + shift - 1 : chunkc tiling::desktop --serialize ~/.chunkwm_layouts/dev_1
+cmd + alt + ctrl + shift - 2 : chunkc tiling::desktop --serialize ~/.chunkwm_layouts/dev_2
+cmd + alt + ctrl + shift - 3 : chunkc tiling::desktop --serialize ~/.chunkwm_layouts/dev_3
+cmd + alt + ctrl + shift - 4 : chunkc tiling::desktop --serialize ~/.chunkwm_layouts/dev_4
+cmd + alt + ctrl + shift - 5 : chunkc tiling::desktop --serialize ~/.chunkwm_layouts/dev_5
+cmd + alt + ctrl + shift - 6 : chunkc tiling::desktop --serialize ~/.chunkwm_layouts/dev_6
+
+cmd + alt + ctrl + fn - 1 : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
+cmd + alt + ctrl + fn - 2 : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_2
+cmd + alt + ctrl + fn - 3 : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_3
+cmd + alt + ctrl + fn - 4 : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_4
+cmd + alt + ctrl + fn - 5 : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_5
+cmd + alt + ctrl + fn - 6 : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_6
 
 
 # resize mode
