@@ -18,6 +18,7 @@ let g:syntastic_cpp_compiler_options="--std=c++11"
 " Set options for airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#ale#enabled = 1
 let g:airline_symbols_ascii = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
@@ -63,6 +64,8 @@ let g:ale_sign_warning = '●'
 let g:ale_use_global_executables = 1
 let g:ale_javascript_jshint_use_global = 1
 let g:ale_sign_column_always = 1
+let g:ale_completion_enabled = 1
+let g:ale_close_preview_on_insert = 1
 let g:ale_fixers = {
       \ 'javascript': [
       \     'eslint',
