@@ -130,7 +130,6 @@ cmd + alt + ctrl - 2  : chunkc tiling::window --send-to-monitor 2; chunkc tiling
 cmd + alt + ctrl - 3  : chunkc tiling::window --send-to-monitor 3; chunkc tiling::monitor -f 3
 
 # equalize size of windows
-cmd + alt + shift - 0 : chunkc tiling::desktop --equalize
 
 # toggle window fullscreen
 cmd + shift - f : chunkc tiling::window --toggle fullscreen
@@ -177,4 +176,5 @@ resize < h : chunkc tiling::window --use-temporary-ratio 0.02 --adjust-window-ed
 resize < j : chunkc tiling::window --use-temporary-ratio 0.02 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.02 --adjust-window-edge north
 resize < k : chunkc tiling::window --use-temporary-ratio 0.02 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.02 --adjust-window-edge south
 resize < l : chunkc tiling::window --use-temporary-ratio 0.02 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.02 --adjust-window-edge west
+resize < 0 : chunkc tiling::desktop --equalize
 resize < escape ; default
