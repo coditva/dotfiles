@@ -43,6 +43,9 @@ set updatetime=100                      " reduce updatetime to 100ms
 set hidden                              " allow hiding modified buffers
 set autoread                            " read file again on change outside vim
 
+set splitbelow                          " open splits just like my window
+set splitright                          " manager
+
 set mouse=a                             " turn on mouse interaction
 
 syntax enable                           " enable syntax highlighting

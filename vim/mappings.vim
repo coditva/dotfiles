@@ -19,7 +19,10 @@ nnoremap <leader>F :execute "Ag " . expand("<cword>") <return>
 nnoremap <leader><tab> :bn<return>
 nnoremap <leader><s-tab> :bp<return>
 
+nnoremap <leader>h :Startify<return>
+
 " use language server capabilities
 nnoremap <silent> <leader>d :ALEGoToDefinition<CR>
+nnoremap <silent> gd :ALEGoToDefinition<CR>
 nnoremap <silent> <leader>s :ALEGoToDefinitionInSplit<CR>
 nnoremap <silent> <leader>r :ALEFindReferences<CR>

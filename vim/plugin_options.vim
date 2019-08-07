@@ -19,11 +19,13 @@ let g:syntastic_cpp_compiler_options="--std=c++11"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#ale#enabled = 1
-let g:airline_symbols_ascii = 1
+let g:airline_symbols_ascii = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
 let g:airline_skip_empty_sections = 1
 let g:airline_highlighting_cache = 1
+
+" Hide showing "--INSERT--" on command line when using airline
 set noshowmode
 
 " Set shortcut for nerd-tree
