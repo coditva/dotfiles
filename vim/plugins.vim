@@ -7,8 +7,8 @@ call plug#begin('~/.vim/autoload')
 Plug 'airblade/vim-gitgutter'                   " Live git diff symbols
 Plug 'SirVer/ultisnips'                         " Snippets engine
 Plug 'honza/vim-snippets'                       " Snippets
-Plug 'scrooloose/nerdtree'                      " Source tree
-Plug 'jistr/vim-nerdtree-tabs'                  " Seperate tree from tabs
+"Plug 'scrooloose/nerdtree'                      " Source tree
+"Plug 'jistr/vim-nerdtree-tabs'                  " Seperate tree from tabs
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 Plug 'tpope/vim-fugitive'                       " Git blame
 Plug 'junegunn/fzf.vim'                         " Fuzzy searching with fzf
