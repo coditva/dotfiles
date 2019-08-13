@@ -19,6 +19,7 @@ let g:syntastic_cpp_compiler_options="--std=c++11"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'default'
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1     " show buffer numbers in the tabline
 let g:airline_symbols_ascii = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'dark'
@@ -67,6 +68,7 @@ let g:ale_use_global_executables = 1
 let g:ale_javascript_jshint_use_global = 1
 let g:ale_sign_column_always = 1
 let g:ale_completion_enabled = 1
+set completeopt=menu,menuone,preview,noselect,noinsert      " :h ale-completion-completopt-bug
 let g:ale_close_preview_on_insert = 1
 let g:ale_fixers = {
       \ 'javascript': [
@@ -98,9 +100,9 @@ let g:startify_custom_header = ['   coditva''s Neovim']
 let g:startify_fortune_use_unicode = 1
 let g:startify_padding_left = 5
 let g:startify_lists = [
+      \ { 'type': 'sessions',  'header': ['   Sessions']       },
       \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
       \ { 'type': 'files',     'header': ['   MRU']            },
-      \ { 'type': 'sessions',  'header': ['   Sessions']       },
       \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
       \ { 'type': 'commands',  'header': ['   Commands']       },
       \ ]
