@@ -11,6 +11,8 @@ nnoremap $ g$
 
 " open files using fzf
 nnoremap <leader><space> :Files <return>
+nnoremap <leader>b :Buffers<return>
+nnoremap <leader>` <c-^>
 
 " search inside files with the silver searcher
 nnoremap <leader>f :Ag<space>
