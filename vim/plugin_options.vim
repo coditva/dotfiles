@@ -29,12 +29,17 @@ let g:syntastic_cpp_compiler_options    = '--std=c++11'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Airline                                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline#extensions#tabline#enabled        = 1
-let g:airline#extensions#tabline#formatter      = 'default'
-" show buffer numbers in the tabline
-let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#enabled            = 1
+let g:airline#extensions#tabline#formatter          = 'default'
+let g:airline#extensions#tabline#exclude_preview    = 1
+let g:airline#extensions#tabline#overflow_marker    = '…'
+let g:airline#extensions#tabline#close_symbol       = '✕'
+let g:airline#extensions#tabline#left_sep       = ''
+let g:airline#extensions#tabline#right_alt_sep  = ''
 
-let g:airline#extensions#ale#enabled            = 1
+let g:airline#extensions#tabline#buffer_nr_show     = 1
+let g:airline#extensions#tabline#buffers_label      = ''
+let g:airline#extensions#tabline#buffer_min_count   = 2
 
 let g:airline#extensions#coc#enabled            = 1
 let g:airline#extensions#coc#error_symbol       = 'E:'
@@ -44,6 +49,21 @@ let g:airline_symbols_ascii         = 0
 let g:airline_powerline_fonts       = 1
 let g:airline_skip_empty_sections   = 1
 let g:airline_highlighting_cache    = 1
+let g:airline_exclude_preview       = 1
+let g:airline#parts#ffenc#skip_expected_string = 'utf-8[unix]'
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep = '┊'
+let g:airline_right_alt_sep = '┊'
+let g:airline_symbols.dirty     = '!'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.spell     = 'Ꞩ'
+let g:airline_symbols.paste     = 'ρ'
+let g:airline_symbols.linenr    = ''
 
 " Hide showing "--INSERT--" on command line when using airline
 set noshowmode
