@@ -1,0 +1,30 @@
+{
+  "suggest.noselect"          : false,    // select the first suggested item
+  "suggest.snippetIndicator"  : " ➡",     // indicator to add to snippets' name
+
+  // signs to be shown in the signcolumn
+  "diagnostic.errorSign": "»",
+  "diagnostic.warningSign": "●",
+  "diagnostic.infoSign": "›",
+  "diagnostic.hintSign": "⚠",
+
+  "javascript.suggestionActions.enabled": false,
+
+  "languageserver": {
+    "cquery": {                           // C language server
+      "command": "cquery",
+      "args": ["--log-file=/tmp/cq.log"],
+      "filetypes": ["c", "cpp"],
+      "rootPatterns": [
+        "compile_flags.txt",
+        "compile_commands.json",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ],
+      "initializationOptions": {
+        "cacheDirectory": "/tmp/cquery"
+      }
+    }
+  }
+}
