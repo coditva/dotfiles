@@ -1,25 +1,27 @@
 
+let $VIMRC_DIR = $HOME . '/.dotfiles/vim'
+
 " Load plugins
-if empty(glob('~/.vim/autoload/plug.vim'))
+if empty(glob($HOME . '/.vim/autoload/plug.vim'))
     let g:has_plugins = v:false
 else
-    source $HOME/.dotfiles/vim/plugins.vim
     let g:has_plugins = v:true
+    source $VIMRC_DIR/plugins.vim
 endif
 
 " Load options
-source $HOME/.dotfiles/vim/options.vim
+source $VIMRC_DIR/options.vim
 
 " Load autocmds
-source $HOME/.dotfiles/vim/autocmds.vim
+source $VIMRC_DIR/autocmds.vim
 
 " Load mappings
-source $HOME/.dotfiles/vim/mappings.vim
+source $VIMRC_DIR/mappings.vim
 
 " Load colors and theme
-source $HOME/.dotfiles/vim/theme.vim
+source $VIMRC_DIR/theme.vim
 
 " Load system specific volatile changes which are not checked into git
-if filereadable($HOME . "/.dotfiles/vim/volatile.vim")
-    source $HOME/.dotfiles/vim/volatile.vim
+if filereadable($VIMRC_DIR . '/volatile.vim')
+    source $VIMRC_DIR/volatile.vim
 endif

@@ -37,6 +37,7 @@ set wrap                                " dont let text overflow
 set linebreak                           " better wrapping
 set showbreak=>\                        " show the wrapping
 set colorcolumn=80,120                  " show a guide at column 80
+set signcolumn=yes                      " always show signcolumn
 
 set pastetoggle=<F2>                    " enable easy clipboard pasting
 set updatetime=100                      " reduce updatetime to 100ms
