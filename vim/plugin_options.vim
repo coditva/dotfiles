@@ -1,5 +1,8 @@
 " plugin_options.vim: configuration for plugings
 
+if $VIMRC_DIR == ''
+  let $VIMRC_DIR = $HOME . '.dotfiles/vim/'
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Ultisnips                                 "
@@ -170,12 +173,14 @@ let g:startify_lists = [
 "                                    Coc                                     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " use <c-n> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
+if exists('coc#refresh')
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+  endfunction
 
-inoremap <silent><expr> <C-n>
-      \ pumvisible() ? '\<C-n>' :
-      \ <SID>check_back_space() ? '\<C-n>' :
-      \ coc#refresh()
+  inoremap <silent><expr> <C-n>
+        \ pumvisible() ? '\<C-n>' :
+        \ <SID>check_back_space() ? '\<C-n>' :
+        \ coc#refresh()
+endif

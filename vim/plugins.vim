@@ -42,8 +42,8 @@ Plug 'rakr/vim-one'                             " OneDark+OneLight
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                        Syntax highlighting and LSP                         "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Language servers
-"Plug 'w0rp/ale'                                 " Language servers and linters
+"Plug 'neoclide/coc.nvim', {'branch': 'release'} " Language servers
+Plug 'w0rp/ale'                                 " Language servers and linters
 
 Plug 'moll/vim-node'                            " NodeJS
 Plug 'pangloss/vim-javascript'                  " JavaScript
@@ -55,4 +55,4 @@ Plug 'justinmk/vim-syntax-extra'                " C, Bison, Flex highlights
 
 call plug#end()         " All of Plugins must be added before this line
 
-source $VIMRC_DIR/plugin_options.vim       " Load plugin options
+source $VIMRC_DIR/plugin_options.vim          " Load plugin options

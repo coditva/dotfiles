@@ -51,7 +51,7 @@ nnoremap <leader>F :execute 'Ag ' . expand('<cword>') <return>
 nnoremap <leader>h :Startify<return>
 
 " use language server capabilities
-nnoremap <silent> gd <Plug>(coc-definition)
-nnoremap <silent> gy <Plug>(coc-type-definition)
-nnoremap <silent> gi <Plug>(coc-implementation)
-nnoremap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gd :ALEGoToDefinition<cr>
+nnoremap <silent> gy :ALEGoToTypeDefinition<cr>
+nnoremap <silent> gi :ALEGoToDefinition<cr>
+nnoremap <silent> gr :ALEFindReferences<cr>
