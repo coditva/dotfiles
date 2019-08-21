@@ -1,6 +1,7 @@
 [user]
 	name = Utkarsh Maheshwari
 	email = coditva@gmail.com
+	signingkey = 62CB3E5A978B4F0B
 [core]
 	editor = nvim
 	excludesfile = /home/me/.gitignore
