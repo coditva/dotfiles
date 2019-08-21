@@ -55,3 +55,4 @@ nnoremap <silent> gd :ALEGoToDefinition<cr>
 nnoremap <silent> gy :ALEGoToTypeDefinition<cr>
 nnoremap <silent> gi :ALEGoToDefinition<cr>
 nnoremap <silent> gr :ALEFindReferences<cr>
+nnoremap <silent> K  :ALEHover<cr>
