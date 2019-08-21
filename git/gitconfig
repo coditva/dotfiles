@@ -9,7 +9,7 @@
 [push]
 	default = simple
 [credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
+	helper = osxkeychain
 [color]
 	ui = auto
 [diff]
@@ -18,3 +18,13 @@
 	tool = vimdiff
 [commit]
 	gpgsign = true
+[gpg]
+	program = gpg
+[grep]
+	lineNumber = true
+[rerere]
+	enabled = true
+[rebase]
+	autoStash = true
+[pull]
+	rebase = true
