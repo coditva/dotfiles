@@ -63,3 +63,11 @@ nnoremap <silent> gy :ALEGoToTypeDefinition<cr>
 nnoremap <silent> gi :ALEGoToDefinition<cr>
 nnoremap <silent> gr :ALEFindReferences<cr>
 nnoremap <silent> K  :ALEHover<cr>
+
+" easier control for git hunks
+nnoremap <silent><leader>gn     :GitGutterNextHunk<cr>
+nnoremap <silent><leader>gN     :GitGutterPrevHunk<cr>
+nnoremap <silent><leader>ga     :GitGutterStageHunk<cr>
+nnoremap <silent><leader>gu     :GitGutterUndoHunk<cr>
+nnoremap <silent><leader>gs     :GitGutterPreviewHunk<cr>
+nnoremap <silent><leader>gz     :GitGutterFoldHunk<cr>
