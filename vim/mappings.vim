@@ -29,10 +29,22 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
 " open a 15 lines terminal window at the bottom
-nnoremap <c-t> :below 15split<cr>:term<cr>
+nnoremap <silent><c-t> :below 15split<cr>:term<cr>
 
-nnoremap <leader><space> :Files <return>
-nnoremap <leader>b :Buffers<return>
+" mappings for fzf
+nnoremap <silent><leader>z<space>   :Files <return>
+nnoremap <silent><leader><space>    :Files <return>
+nnoremap <silent><leader>zf         :Ag<return>
+nnoremap <silent><leader>f          :Ag<return>
+nnoremap <silent><leader>zb         :Buffers<return>
+nnoremap <silent><leader>zh         :History<return>
+nnoremap <silent><leader>zc         :BCommits<return>
+nnoremap <silent><leader>zC         :Commits<return>
+nnoremap <silent><leader>zl         :BLines<return>
+nnoremap <silent><leader>zL         :Lines<return>
+nnoremap <silent><leader>zg         :GFiles?<return>
+" search for the word under the cursor
+nnoremap <silent><leader>zF         :execute 'Ag ' . expand('<cword>')<return>
 
 " easier switching between buffers
 "   5<leader>` switches to the buffer number 5
@@ -42,11 +54,6 @@ nnoremap <leader>` <c-^>
 " easier jumping between buffers
 nnoremap <leader><tab> :bn<return>
 nnoremap <leader><s-tab> :bp<return>
-
-" search inside files with the silver searcher
-nnoremap <leader>f :Ag<CR>
-" search for the word under the cursor
-nnoremap <leader>F :execute 'Ag ' . expand('<cword>') <return>
 
 nnoremap <leader>h :Startify<return>
 
