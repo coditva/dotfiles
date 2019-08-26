@@ -19,6 +19,9 @@ let g:UltiSnipsSnippetsDir  = $VIMRC_DIR . '/snippets/'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeDirArrowExpandable    = '▸'
 let g:NERDTreeDirArrowCollapsible   = '▾'
+let g:nerdtree_tabs_autoclose       = 0
+let g:nerdtree_tabs_startup_cd      = 1
+let g:nerdtree_tabs_no_startup_for_diff = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

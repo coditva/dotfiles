@@ -22,8 +22,8 @@ Plug 'tpope/vim-repeat'                         " Use `.` with plugins
 Plug 'tpope/vim-surround'                       " Change/delete surroundings
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 
-"Plug 'scrooloose/nerdtree'                      " Source tree
-"Plug 'jistr/vim-nerdtree-tabs'                  " Seperate tree from tabs
+Plug 'scrooloose/nerdtree'                      " Source tree
+Plug 'jistr/vim-nerdtree-tabs'                  " Seperate tree from tabs
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
