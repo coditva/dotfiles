@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install dependencies
       run: |
-        pip3 install -U pip3 setuptools 
+        pip3 install -U setuptools 
         pip3 install vim-vint
     - name: Lint vimscript
       run: vint vim/*.vim
