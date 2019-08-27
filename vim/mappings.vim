@@ -37,7 +37,8 @@ nnoremap <silent><leader><space>    :Files <return>
 nnoremap <silent><leader>zf         :Ag<return>
 nnoremap <silent><leader>f          :Ag<return>
 nnoremap <silent><leader>zb         :Buffers<return>
-nnoremap <silent><leader>zh         :History<return>
+nnoremap <silent><leader>zh         :Helptags<return>
+nnoremap <silent><leader>zr         :History<return>
 nnoremap <silent><leader>zc         :BCommits<return>
 nnoremap <silent><leader>zC         :Commits<return>
 nnoremap <silent><leader>zl         :BLines<return>
