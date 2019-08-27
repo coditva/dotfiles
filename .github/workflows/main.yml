@@ -13,5 +13,6 @@ jobs:
       run: |
         pip3 install -U setuptools 
         pip3 install vim-vint
+        export PATH="$PATH:/usr/local/lib"
     - name: Lint vimscript
       run: vint vim/*.vim
