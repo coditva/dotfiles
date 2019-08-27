@@ -1,7 +1,5 @@
 " options.vim: settings and config for vim
 
-set nocompatible                        " improved mode
-
 set number                              " line numbers
 set relativenumber                      " make the numbers relative
 set scrolloff=5                         " leave space at start and end

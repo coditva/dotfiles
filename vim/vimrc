@@ -1,6 +1,9 @@
 
 let $VIMRC_DIR = $HOME . '/.dotfiles/vim'
 
+" vint: next-line -ProhibitSetNoCompatible
+set nocompatible
+
 " Load plugins
 if empty(glob($HOME . '/.vim/autoload/plug.vim'))
   let g:has_plugins = v:false

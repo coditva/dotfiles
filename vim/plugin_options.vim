@@ -1,6 +1,8 @@
 " plugin_options.vim: configuration for plugings
 
-if $VIMRC_DIR == ''
+scriptencoding utf-8
+
+if $VIMRC_DIR ==# ''
   let $VIMRC_DIR = $HOME . '.dotfiles/vim/'
 endif
 
@@ -179,7 +181,7 @@ let g:startify_lists = [
 if exists('coc#refresh')
   function! s:check_back_space() abort
     let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
+    return !col || getline('.')[col - 1]  =~# '\s'
   endfunction
 
   inoremap <silent><expr> <C-n>
