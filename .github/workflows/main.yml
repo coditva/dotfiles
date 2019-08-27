@@ -13,7 +13,7 @@ jobs:
       run: |
         pip3 install -U setuptools 
         pip3 install vim-vint
-        ls /usr/local/lib/
+        ls /usr/local/bin/
         echo $(which vint)
     - name: Lint vimscript
-      run: /usr/local/lib/vint vim/*.vim
+      run: /usr/local/bin/vint vim/*.vim
