@@ -10,6 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install dependencies
-      run: pip3 install --user setuptools vim-vint
+      run: |
+        pip install -U --user pip setuptools 
+        pip3 install --user vim-vint
     - name: Lint vimscript
       run: vint vim/*.vim
