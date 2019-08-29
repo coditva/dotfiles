@@ -9,11 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    - name: Install dependencies
+    - name: Install vint linter
       run: |
         pip install virtualenv
         virtualenv /tmp/vint && source /tmp/vint/bin/activate && pip install vim-vint
-    - name: Lint
+    - name: Check for linting errors
       run: |
         which vint
         which vim-vint
