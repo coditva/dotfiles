@@ -42,3 +42,16 @@ augroup misc
         \ | nnoremap <buffer><silent><esc> :pc<cr>
         \ | endif
 augroup END
+
+augroup terminal
+  autocmd!
+
+  " close the terminal by pressing enter rather than typing command again when
+  " terminal process is running
+  autocmd TermOpen *          setlocal confirm
+
+  " change to insert mode automatically on switching to terminal
+  autocmd WinEnter *          if &buftype ==# 'terminal'
+        \ | :startinsert
+        \ | endif
+augroup END
