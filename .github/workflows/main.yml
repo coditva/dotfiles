@@ -14,4 +14,7 @@ jobs:
         pip install -U setuptools
         pip install vim-vint
     - name: Lint
-      run: /usr/local/bin/vint vim/*.vim
+      run: |
+        which vint
+        which vim-vint
+        vint vim/*.vim
