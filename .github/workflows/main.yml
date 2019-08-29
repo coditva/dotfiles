@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Install vint linter
-      run: pip install --user vim-vint
+      run: pip3 install --user --verbose vim-vint
     - name: Check for linting errors
       run: |
         which vint
