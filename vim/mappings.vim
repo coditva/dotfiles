@@ -72,3 +72,8 @@ nnoremap <silent><leader>ga     :GitGutterStageHunk<cr>
 nnoremap <silent><leader>gu     :GitGutterUndoHunk<cr>
 nnoremap <silent><leader>gs     :GitGutterPreviewHunk<cr>
 nnoremap <silent><leader>gz     :GitGutterFoldHunk<cr>
+
+" theme switching
+nnoremap <silent><leader>tt     :call ToggleTheme()<cr>
+nnoremap <silent><leader>tl     :call SetTheme('light')<cr>
+nnoremap <silent><leader>td     :call SetTheme('dark')<cr>
