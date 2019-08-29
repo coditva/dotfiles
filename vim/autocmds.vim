@@ -36,4 +36,9 @@ augroup misc
 
   " add syntax highlighting for JS style comments in JSON
   autocmd FileType json       syntax match Comment +\/\/.\+$+
+
+  " close the preview window with esc
+  autocmd WinEnter *          if &previewwindow
+        \ | nnoremap <buffer><silent><esc> :pc<cr>
+        \ | endif
 augroup END
