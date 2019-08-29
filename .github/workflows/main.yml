@@ -10,9 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Install vint linter
-      run: |
-        pip install virtualenv
-        virtualenv /tmp/vint && source /tmp/vint/bin/activate && pip install vim-vint
+      run: pip install --user vim-vint
     - name: Check for linting errors
       run: |
         which vint
