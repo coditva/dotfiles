@@ -10,6 +10,9 @@ call plug#begin('~/.vim/autoload')
 Plug 'SirVer/ultisnips'                         " Snippets engine
 Plug 'honza/vim-snippets'                       " Snippets
 
+Plug 'kkoomen/vim-doge',                        " DOcumentation GEneration
+      \ { 'on': 'DogeGenerate' }
+
 Plug 'junegunn/fzf.vim'                         " Fuzzy searching with fzf
 Plug '/usr/local/opt/fzf'
 
@@ -22,13 +25,15 @@ Plug 'tpope/vim-repeat'                         " Use `.` with plugins
 Plug 'tpope/vim-surround'                       " Change/delete surroundings
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 
-Plug 'scrooloose/nerdtree'                      " Source tree
+Plug 'scrooloose/nerdtree',                     " Source tree
+      \ { 'on':  'NERDTreeToggle' }
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Eye candy                                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'mhinz/vim-startify'                       " Startup page
+Plug 'mhinz/vim-startify',                      " Startup page
+      \ { 'on': 'Startify' }
 Plug 'vim-airline/vim-airline'                  " A nice little statusline
 
 
@@ -41,15 +46,15 @@ Plug 'rakr/vim-one'                             " OneDark+OneLight
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                        Syntax highlighting and LSP                         "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Plug 'neoclide/coc.nvim', {'branch': 'release'} " Language servers
 Plug 'w0rp/ale'                                 " Language servers and linters
 
-Plug 'moll/vim-node'                            " NodeJS
-Plug 'pangloss/vim-javascript'                  " JavaScript
-Plug 'mxw/vim-jsx'                              " JSX
-Plug 'mustache/vim-mustache-handlebars'         " Mustache templating
-Plug 'leafgarland/typescript-vim'               " Typescript
-Plug 'justinmk/vim-syntax-extra'                " C, Bison, Flex highlights
+Plug 'moll/vim-node',                     { 'for': ['javascript'] }
+Plug 'pangloss/vim-javascript',           { 'for': ['javascript'] }
+Plug 'mxw/vim-jsx',                       { 'for': ['javascript'] }
+Plug 'mustache/vim-mustache-handlebars',  { 'for': 'mustache' }
+Plug 'leafgarland/typescript-vim',        { 'for': 'typescript' }
+Plug 'justinmk/vim-syntax-extra',         { 'for': ['c', 'yacc', 'lex'] }
+Plug 'elzr/vim-json',                     { 'for': 'json' }
 
 
 call plug#end()         " All of Plugins must be added before this line
