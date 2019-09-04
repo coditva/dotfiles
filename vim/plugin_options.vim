@@ -27,6 +27,16 @@ let g:nerdtree_tabs_no_startup_for_diff = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               NerdCommenter                                "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDSpaceDelims         = 1
+let g:NERDCommentEmptyLines   = 1
+let g:NERDToggleCheckAllLines = 1
+let g:NERDDefaultAlign        = 'left'
+let g:NERDTrimTrailingWhitespace  = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Syntastic                                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_check_on_open           = 1
