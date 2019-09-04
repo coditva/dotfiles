@@ -18,6 +18,9 @@ source $VIMRC_DIR/options.vim
 " Load autocmds
 source $VIMRC_DIR/autocmds.vim
 
+" Load custom commands
+source $VIMRC_DIR/commands.vim
+
 " Load mappings
 source $VIMRC_DIR/mappings.vim
 
