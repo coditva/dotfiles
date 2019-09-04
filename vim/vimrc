@@ -1,5 +1,6 @@
 
 let $VIMRC_DIR = $HOME . '/.dotfiles/vim'
+let g:vim_sessions_dir = '~/.local/share/nvim/session'
 
 " vint: next-line -ProhibitSetNoCompatible
 set nocompatible

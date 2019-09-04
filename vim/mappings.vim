@@ -32,8 +32,8 @@ nnoremap <c-l> <c-w>l
 nnoremap <silent><c-t> :below 15split<cr>:term<cr>i
 
 " mappings for fzf
-nnoremap <silent><leader>z<space>   :Files <return>
-nnoremap <silent><leader><space>    :Files <return>
+nnoremap <silent><leader>z<space>   :Files<return>
+nnoremap <silent><leader><space>    :Files<return>
 nnoremap <silent><leader>zf         :Ag<return>
 nnoremap <silent><leader>f          :Ag<return>
 nnoremap <silent><leader>zb         :Buffers<return>
@@ -44,6 +44,7 @@ nnoremap <silent><leader>zC         :Commits<return>
 nnoremap <silent><leader>zl         :BLines<return>
 nnoremap <silent><leader>zL         :Lines<return>
 nnoremap <silent><leader>zg         :GFiles?<return>
+nnoremap <silent><leader>zo         :Sessions<return>
 " search for the word under the cursor
 nnoremap <silent><leader>zF         :execute 'Ag ' . expand('<cword>')<return>
 

@@ -8,3 +8,13 @@ command! -bang -nargs=* Ag
       \       'options': '--delimiter : --nth 4..'
       \     }, 'up:60%'),
       \   <bang>0)
+
+" Fuzzy search sessions
+command! Sessions
+      \ call fzf#run(fzf#wrap({
+      \   'dir': g:vim_sessions_dir,
+      \   'options': '--prompt "Session> "',
+      \   'sink*': {
+      \     lines -> execute('SLoad ' . join(lines, "\n"))
+      \   }
+      \ }))
