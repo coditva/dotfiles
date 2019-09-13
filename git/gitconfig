@@ -19,6 +19,7 @@
 	tool = vimdiff
 [commit]
 	gpgsign = true
+	verbose = true
 [gpg]
 	program = gpg
 [grep]
@@ -29,3 +30,6 @@
 	autoStash = true
 [pull]
 	rebase = true
+[branch]
+	autosetupmerge = always
+	autosetuprebase = always
