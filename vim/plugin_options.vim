@@ -218,8 +218,8 @@ let g:gitgutter_map_keys = 0
 let g:lsp_diagnostics_echo_cursor = 0
 let g:lsp_hover_conceal           = 0
 
-highlight link LspErrorText       NonText
-highlight link LspWarningLine     NonText
+highlight link LspErrorText       ErrorMsg
+highlight link LspWarningText     NonText
 highlight link LspHintText        NonText
 highlight link LspInformationText NonText
 
