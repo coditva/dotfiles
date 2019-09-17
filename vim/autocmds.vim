@@ -96,4 +96,13 @@ augroup lspvim
           \ })
     autocmd FileType javascript,javascript.jsx,javascriptreact setlocal omnifunc=lsp#complete
   endif
+
+  if executable('clangd')
+    au User lsp_setup call lsp#register_server({
+          \ 'name': 'clangd',
+          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'clangd']},
+          \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+          \ 'whitelist': ['c', 'cpp']
+          \ })
+  endif
 augroup END
