@@ -46,7 +46,11 @@ Plug 'rakr/vim-one'                             " OneDark+OneLight
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                        Syntax highlighting and LSP                         "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'w0rp/ale'                                 " Language servers and linters
+Plug 'prabirshrestha/vim-lsp'                   " LSP client
+Plug 'prabirshrestha/async.vim'                 " Dependency for vim-lsp
+Plug 'thomasfaingnaert/vim-lsp-ultisnips'       " Use snippets with vim-lsp
+
+Plug 'w0rp/ale'                                 " Linting
 
 Plug 'moll/vim-node',                     { 'for': ['javascript'] }
 Plug 'pangloss/vim-javascript',           { 'for': ['javascript'] }

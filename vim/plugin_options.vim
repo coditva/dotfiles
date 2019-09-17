@@ -116,6 +116,8 @@ let g:one_allow_italics     = 1
 " See :h ale-completion-completopt-bug
 set completeopt=menu,menuone,preview,noselect,noinsert
 
+let g:ale_disable_lsp       = 1         " let vim-lsp do that
+
 let g:ale_lint_on_filetype_changed  = 1
 let g:ale_lint_on_text_changed  = 1
 let g:ale_lint_on_insert_leave  = 1
@@ -132,8 +134,10 @@ let g:ale_set_signs         = 1
 let g:ale_sign_error        = '»'
 let g:ale_sign_warning      = '●'
 
-let g:ale_sign_column_always    = 1
-let g:ale_completion_enabled    = 1
+let g:ale_completion_enabled              = 1
+let g:ale_completion_tsserver_autoimport  = 1
+
+let g:ale_sign_column_always            = 1
 let g:ale_use_global_executables        = 1
 let g:ale_close_preview_on_insert       = 1
 let g:ale_javascript_jshint_use_global  = 1
@@ -205,3 +209,25 @@ endif
 "                                 GitGutter                                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_map_keys = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  lsp-vim                                   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NOTE: go to autocmds.vim to setup language servers to use
+
+let g:lsp_diagnostics_echo_cursor = 0
+let g:lsp_hover_conceal           = 0
+
+highlight link LspErrorText       NonText
+highlight link LspWarningLine     NonText
+highlight link LspHintText        NonText
+highlight link LspInformationText NonText
+
+highlight clear LspErrorHighlight
+highlight clear LspWarningHighlight
+highlight clear LspHintHighlight
+highlight clear LspInformationHighlight
+
+let g:lsp_signs_error   = { 'text': '»' }
+let g:lsp_signs_warning = { 'text': '●' }
+let g:lsp_signs_hint    = { 'text': '‣' }

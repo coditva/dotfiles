@@ -60,11 +60,16 @@ nnoremap <leader><s-tab> :bp<return>
 nnoremap <leader>h :Startify<return>
 
 " use language server capabilities
-nnoremap <silent> gd :ALEGoToDefinition<cr>
-nnoremap <silent> gy :ALEGoToTypeDefinition<cr>
-nnoremap <silent> gi :ALEGoToDefinition<cr>
-nnoremap <silent> gr :ALEFindReferences<cr>
-nnoremap <silent> K  :ALEHover<cr>
+nnoremap <silent> gd    :LspDefinition<cr>
+nnoremap <silent> gD    :LspPeekDefinition<cr>
+nnoremap <silent> gy    :LspTypeDefinition<cr>
+nnoremap <silent> gY    :LspPeekTypeDefinition<cr>
+nnoremap <silent> gi    :LspImplementation<cr>
+nnoremap <silent> gI    :LspPeekImplementation<cr>
+nnoremap <silent> gu    :LspDeclaration<cr>
+nnoremap <silent> gU    :LspPeekDeclaration<cr>
+nnoremap <silent> gr    :LspReferences<cr>
+nnoremap <silent> K     :LspHover<cr>
 
 " easier control for git hunks
 nnoremap <silent><leader>gn     :GitGutterNextHunk<cr>
