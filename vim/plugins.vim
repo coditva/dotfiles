@@ -22,7 +22,7 @@ Plug 'tpope/vim-fugitive'                       " Git blame
 Plug 'tpope/vim-sleuth'                         " Adjusts indent based on file
 Plug 'tpope/vim-repeat'                         " Use `.` with plugins
 
-Plug 'tpope/vim-surround'                       " Change/delete surroundings
+Plug 'machakann/vim-sandwich'                   " Change/delete surroundings
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 
 Plug 'scrooloose/nerdtree',                     " Source tree
