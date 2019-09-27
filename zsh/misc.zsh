@@ -54,6 +54,11 @@ if [ -d "$HOME/.gem/ruby/2.3.0/bin" ]; then
     export PATH="$PATH:$HOME/.gem/ruby/2.3.0/bin"
 fi
 
+# add llvm bin directory in the path
+if [ -d "/usr/local/Cellar/llvm/8.0.1/bin" ]; then
+    export PATH="$PATH:/usr/local/Cellar/llvm/8.0.1/bin"
+fi
+
 
 if [ -f  "/usr/local/opt/nvm/nvm.sh" ]; then
     mkdir -p "$HOME/.nvm"
