@@ -106,3 +106,10 @@ augroup lspvim
           \ })
   endif
 augroup END
+
+augroup lsp_folding
+  autocmd!
+  autocmd FileType javascript,javascript.jsx,javascriptreact setlocal
+        \ foldexpr=lsp#ui#vim#folding#foldexpr()
+        \ foldtext=lsp#ui#vim#folding#foldtext()
+augroup end

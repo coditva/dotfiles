@@ -243,3 +243,7 @@ highlight clear LspInformationHighlight
 let g:lsp_signs_error   = { 'text': '»' }
 let g:lsp_signs_warning = { 'text': '●' }
 let g:lsp_signs_hint    = { 'text': '‣' }
+let g:lsp_signs_information   = { 'text': '‣' }
+let g:lsp_preview_max_height  = 15
+let g:lsp_preview_max_width   = 80
+let g:lsp_virtual_text_prefix = '  ‣ '
