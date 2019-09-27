@@ -75,6 +75,7 @@ nnoremap <silent> K     :LspHover<cr>
 nnoremap <silent><leader>gn     :GitGutterNextHunk<cr>
 nnoremap <silent><leader>gN     :GitGutterPrevHunk<cr>
 nnoremap <silent><leader>ga     :GitGutterStageHunk<cr>
+nnoremap <silent><leader>gA     :!git add %<cr><cr>
 nnoremap <silent><leader>gu     :GitGutterUndoHunk<cr>
 nnoremap <silent><leader>gs     :GitGutterPreviewHunk<cr>
 nnoremap <silent><leader>gz     :GitGutterFoldHunk<cr>
