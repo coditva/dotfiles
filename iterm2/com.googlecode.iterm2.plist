@@ -2905,7 +2905,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>560 588 918 423 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 877 0 0 1440 877 </string>
+	<string>2 2 1436 874 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>176 70 570 452 0 0 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_E546A819-7C6C-4540-B229-82AEF8EC555D</key>
@@ -4242,7 +4242,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>583005472.40849698</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>1</integer>
+	<integer>5</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -4935,6 +4935,10 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncSearchHistory</key>
+	<array>
+		<string>whoa</string>
+	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>582449544.40905201</real>
 	<key>NoSyncTipsDisabled</key>
@@ -5003,8 +5007,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-01T10:45:19Z</date>
+	<date>2019-09-05T06:06:58Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>Selection Respects Soft Boundaries</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
