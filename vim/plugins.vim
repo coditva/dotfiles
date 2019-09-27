@@ -25,8 +25,7 @@ Plug 'tpope/vim-repeat'                         " Use `.` with plugins
 Plug 'machakann/vim-sandwich'                   " Change/delete surroundings
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 
-Plug 'scrooloose/nerdtree',                     " Source tree
-      \ { 'on':  'NERDTreeToggle' }
+Plug 'https://github.com/tpope/vim-vinegar'     " Source tree
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
