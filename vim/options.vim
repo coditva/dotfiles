@@ -49,6 +49,8 @@ set mouse=a                             " turn on mouse interaction
 
 syntax enable                           " enable syntax highlighting
 
+" set shared data options for storing vim info between sessions
+set shada='1000                         " 1000 files for mark
 
 set backupdir=~/.vim_backup,.,/tmp      " keep project directories uncluttered
 set directory=~/.vim_backup,.,/tmp      " by using a custom directory for all
