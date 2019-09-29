@@ -20,7 +20,7 @@ augroup customMappings
   autocmd FileType man        nnoremap <buffer> u <c-u>
   autocmd FileType nerdtree   nnoremap <buffer> <silent> <esc> :NERDTreeClose<cr>
   autocmd FileType help       nnoremap <buffer> <silent> <esc> :bd<cr>
-  autocmd FileType fzf        tnoremap <buffer> <silent> <esc> <c-\><c-n>:q<cr>
+  autocmd FileType fzf        tnoremap <buffer> <silent> <esc> <c-d>
 augroup END
 
 augroup misc
