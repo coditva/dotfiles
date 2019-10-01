@@ -7,7 +7,7 @@ if $VIMRC_DIR ==# ''
 endif
 
 " settings for :Explore
-let g:netrw_bufsettings = 
+let g:netrw_bufsettings =
       \ 'relativenumver nomodifiable nomodified nowrap readonly nobuflisted'
 let g:netrw_liststyle   = 3
 let g:netrw_winsize     = 25
@@ -16,7 +16,7 @@ let g:netrw_banner      = 0
 let g:netrw_preview     = 1
 let g:netrw_alto        = 1
 
-autocmd FileType netrw setl bufhidden=wipe
+autocmd FileType netrw setl bufhidden=delete
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Ultisnips                                 "
