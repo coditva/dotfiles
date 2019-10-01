@@ -51,13 +51,7 @@ Plug 'thomasfaingnaert/vim-lsp-ultisnips'       " Use snippets with vim-lsp
 
 Plug 'w0rp/ale'                                 " Linting
 
-Plug 'moll/vim-node',                     { 'for': ['javascript'] }
-Plug 'pangloss/vim-javascript',           { 'for': ['javascript'] }
-Plug 'mxw/vim-jsx',                       { 'for': ['javascript'] }
-Plug 'mustache/vim-mustache-handlebars',  { 'for': 'mustache' }
-Plug 'leafgarland/typescript-vim',        { 'for': 'typescript' }
-Plug 'justinmk/vim-syntax-extra',         { 'for': ['c', 'yacc', 'lex'] }
-Plug 'elzr/vim-json',                     { 'for': 'json' }
+Plug 'sheerun/vim-polyglot'                     " Language packs for everyone!
 
 
 call plug#end()         " All of Plugins must be added before this line
