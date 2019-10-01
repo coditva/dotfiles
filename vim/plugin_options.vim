@@ -225,7 +225,46 @@ let g:gitgutter_map_keys = 0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  lsp-vim                                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NOTE: go to autocmds.vim to setup language servers to use
+augroup vimlsp
+  autocmd!
+
+  " use esc key to close preview window if opened
+  autocmd User lsp_float_opened nmap <buffer> <silent> <esc>
+        \ <Plug>(lsp-preview-close)
+  autocmd User lsp_float_closed nunmap <buffer> <esc>
+
+  " setup language servers to use with their filetypes and completions
+  if executable('javascript-typescript-stdio') && v:false
+    au User lsp_setup call lsp#register_server({
+          \ 'name': 'javascript-typescript-stdio',
+          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'javascript-typescript-stdio']},
+          \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+          \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact']
+          \ })
+    autocmd FileType javascript,javascript.jsx,javascriptreact setlocal omnifunc=lsp#complete
+  endif
+  if executable('typescript-language-server')
+    au User lsp_setup call lsp#register_server({
+          \ 'name': 'typescript-language-server',
+          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+          \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+          \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact']
+          \ })
+    autocmd FileType javascript,javascript.jsx,javascriptreact setlocal omnifunc=lsp#complete
+  endif
+  if executable('clangd')
+    au User lsp_setup call lsp#register_server({
+          \ 'name': 'clangd',
+          \ 'cmd': { server_info->[&shell, &shellcmdflag, 'clangd']},
+          \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
+          \ 'whitelist': ['c', 'cpp']
+          \ })
+  endif
+
+  autocmd FileType javascript,javascript.jsx,javascriptreact setlocal
+        \ foldexpr=lsp#ui#vim#folding#foldexpr()
+        \ foldtext=lsp#ui#vim#folding#foldtext()
+augroup END
 
 let g:lsp_diagnostics_echo_cursor = 0
 let g:lsp_hover_conceal           = 0
