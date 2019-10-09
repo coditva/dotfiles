@@ -1,0 +1,29 @@
+# vi: ft=toml
+
+[Editor]
+    FontFamily      = "Fira Code"
+    FontSize        = 16
+    Linespace       = 0
+    ExtCmdline      = true
+    ExtWildmenu     = true
+    ExtPopupmenu    = true
+    ExtTabline      = true
+    Clipboard       = true
+    StartFullscreen = false
+
+
+[SideBar]
+    Visible         = true
+    DropShadow      = true
+    Width           = 300
+
+
+[Statusline]
+    Visible         = true
+    ModeIndicatorType   = "background"
+
+
+[Workspace]
+    PathStyle       = "minimum"
+    RestoreSession  = true
+    FileExplorerOpenCmd = ":e"
