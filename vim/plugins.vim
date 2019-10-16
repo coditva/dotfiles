@@ -28,6 +28,7 @@ Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 
 Plug 'https://github.com/tpope/vim-vinegar'     " Source tree
 
+Plug 'https://github.com/tpope/vim-vinegar'     " Source tree
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Eye candy                                  "
