@@ -131,7 +131,8 @@ let g:one_allow_italics     = 1
 " See :h ale-completion-completopt-bug
 set completeopt=menu,menuone,preview,noselect,noinsert
 
-let g:ale_disable_lsp       = 1         " let vim-lsp do that
+" let vim-lsp do that (because it has diagnostics)
+let g:ale_disable_lsp       = 1
 
 let g:ale_lint_on_filetype_changed  = 1
 let g:ale_lint_on_text_changed  = 1
