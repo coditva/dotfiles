@@ -16,7 +16,10 @@ let g:netrw_banner      = 0
 let g:netrw_preview     = 1
 let g:netrw_alto        = 1
 
-autocmd FileType netrw setl bufhidden=delete
+augroup netrw
+  autocmd!
+  autocmd FileType netrw setl bufhidden=delete
+augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Ultisnips                                 "
