@@ -154,6 +154,10 @@ let g:ale_use_global_executables        = 1
 let g:ale_close_preview_on_insert       = 1
 let g:ale_javascript_jshint_use_global  = 1
 
+let g:ale_echo_cursor         = 0
+let g:ale_virtualtext_cursor  = 1
+let g:ale_virtualtext_prefix  = '   '
+
 let g:ale_fixers = {
       \ 'javascript': [
       \     'eslint',
