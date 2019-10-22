@@ -13,6 +13,7 @@ Plug 'honza/vim-snippets'                       " Snippets
 Plug 'kkoomen/vim-doge',                        " DOcumentation GEneration
       \ { 'on': 'DogeGenerate' }
 
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'           " Use .gitignore
 Plug 'junegunn/fzf.vim'                         " Fuzzy searching with fzf
 Plug '/usr/local/opt/fzf'
 
