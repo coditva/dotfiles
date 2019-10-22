@@ -61,15 +61,15 @@ nnoremap <leader>w        :bd<cr>
 nnoremap <leader>h :Startify<return>
 
 " use language server capabilities
-nnoremap <silent> gd    :LspDefinition<cr>
-nnoremap <silent> gD    :LspPeekDefinition<cr>
-nnoremap <silent> gy    :LspTypeDefinition<cr>
-nnoremap <silent> gY    :LspPeekTypeDefinition<cr>
+nnoremap <silent> gd    :ALEGoToDefinition<cr>
+nnoremap <silent> gD    :ALEGoToDefinitionInSplit<cr>
+nnoremap <silent> gy    :ALEGoToTypeDefinition<cr>
+nnoremap <silent> gY    :ALEGoToTypeDefinitionInSplit<cr>
 nnoremap <silent> gi    :LspImplementation<cr>
 nnoremap <silent> gI    :LspPeekImplementation<cr>
 nnoremap <silent> gu    :LspDeclaration<cr>
 nnoremap <silent> gU    :LspPeekDeclaration<cr>
-nnoremap <silent> gr    :LspReferences<cr>
+nnoremap <silent> gr    :ALEFindReferences<cr>
 nnoremap <silent> K     :LspHover<cr>
 
 " easier control for git hunks

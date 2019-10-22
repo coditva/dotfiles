@@ -132,7 +132,7 @@ let g:one_allow_italics     = 1
 set completeopt=menu,menuone,preview,noselect,noinsert
 
 " let vim-lsp do that (because it has diagnostics)
-let g:ale_disable_lsp       = 1
+let g:ale_disable_lsp       = 0
 
 let g:ale_lint_on_filetype_changed  = 1
 let g:ale_lint_on_text_changed  = 1
@@ -162,6 +162,17 @@ let g:ale_echo_cursor         = 0
 let g:ale_virtualtext_cursor  = 1
 let g:ale_virtualtext_prefix  = '   '
 
+let g:ale_c_parse_compile_commands = 0
+let g:ale_c_parse_makefile = 0
+
+let g:ale_linters = {
+      \ 'c': [
+      \     'clangtidy',
+      \     'clangd',
+      \     'flawfinder',
+      \     'cquery' ]
+      \ }
+
 let g:ale_fixers = {
       \ 'javascript': [
       \     'eslint',
@@ -173,9 +184,7 @@ let g:ale_fixers = {
       \     'jsonlint',
       \     'prettier' ],
       \ 'c': [
-      \     'clang',
-      \     'gcc',
-      \     'clang-tidy',
+      \     'clangtidy',
       \     'clang-format' ],
       \ 'git commit': [
       \     'gitlint' ],
