@@ -54,9 +54,11 @@ nnoremap <silent><leader>zF         :execute 'Ag ' . expand('<cword>')<return>
 nnoremap <leader>` <c-^>
 
 " easier jumping between buffers
-nnoremap <leader><tab>    :bn<cr>
-nnoremap <leader><s-tab>  :bp<cr>
-nnoremap <leader>w        :bd<cr>
+nnoremap <silent><leader><tab>    :bn<cr>
+nnoremap <silent>gn               :bn<cr>
+nnoremap <silent><leader><s-tab>  :bp<cr>
+nnoremap <silent>gN               :bp<cr>
+nnoremap <leader>w                :bd<cr>
 
 nnoremap <leader>h :Startify<return>
 
