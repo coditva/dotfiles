@@ -55,8 +55,8 @@ if [ -d "$HOME/.gem/ruby/2.3.0/bin" ]; then
 fi
 
 # add llvm bin directory in the path
-if [ -d "/usr/local/Cellar/llvm/8.0.1/bin" ]; then
-    export PATH="$PATH:/usr/local/Cellar/llvm/8.0.1/bin"
+if [ -d "/usr/local/opt/llvm/bin" ]; then
+    export PATH="$PATH:/usr/local/opt/llvm/bin"
 fi
 
 
