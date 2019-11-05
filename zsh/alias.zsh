@@ -6,6 +6,8 @@ fi
 
 if which nvim > /dev/null; then
     alias vim=nvim
+    alias e=nvim
+    alias vimrc="vim ~/.dotfiles/vim/*.vim"
 fi
 
 if which vlc > /dev/null; then
