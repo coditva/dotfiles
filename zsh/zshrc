@@ -38,7 +38,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Change iterm profile from the command line
 iterm_profile() {
-    echo -e "\033]50;SetProfile=$1\x7"
+    ~/.dotfiles/iterm2/change_session_profile.py $1
     ITERM_PROFILE=$1
 }
 iterm_toggle_profile() {
