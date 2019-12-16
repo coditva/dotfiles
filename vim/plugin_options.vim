@@ -94,8 +94,8 @@ let g:airline_left_alt_sep = '┊'
 let g:airline_right_alt_sep = '┊'
 let g:airline_symbols.dirty     = '!'
 let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.spell     = 'Ꞩ'
-let g:airline_symbols.paste     = 'ρ'
+let g:airline_symbols.spell     = 'S'
+let g:airline_symbols.paste     = 'P'
 let g:airline_symbols.linenr    = ''
 
 " Hide showing "--INSERT--" on command line when using airline
@@ -239,6 +239,23 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_map_keys = 0
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  vim-clap                                  "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" input bar when it's empty
+hi default link ClapInput                     Visual
+
+" the whole window
+hi default link ClapDisplay                   Visual
+
+hi default link ClapCurrentSelection          CursorLine
+
+hi default link ClapMatches                   NonText
+
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  lsp-vim                                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -303,3 +320,11 @@ let g:lsp_signs_information   = { 'text': '‣' }
 let g:lsp_preview_max_height  = 15
 let g:lsp_preview_max_width   = 80
 let g:lsp_virtual_text_prefix = '  ‣ '
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                              Highlighted yank                              "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:highlightedyank_highlight_duration = 150
+
+highlight link HighlightedyankRegion NonText

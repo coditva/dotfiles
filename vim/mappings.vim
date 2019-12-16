@@ -72,7 +72,7 @@ nnoremap <silent> gI    :LspPeekImplementation<cr>
 nnoremap <silent> gu    :LspDeclaration<cr>
 nnoremap <silent> gU    :LspPeekDeclaration<cr>
 nnoremap <silent> gr    :ALEFindReferences<cr>
-nnoremap <silent> K     :LspHover<cr>
+nnoremap <silent> K     :ALEHover<cr>
 
 " easier control for git hunks
 nnoremap <silent><leader>gn     :GitGutterNextHunk<cr>

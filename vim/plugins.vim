@@ -26,8 +26,11 @@ Plug 'tpope/vim-unimpaired'                     " Mappings!
 
 Plug 'machakann/vim-sandwich'                   " Change/delete surroundings
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
+Plug 'scrooloose/nerdtree'                      " Shortcut for commenting
 
 Plug 'https://github.com/tpope/vim-vinegar'     " Source tree
+
+Plug 'wellle/targets.vim'                       " More targets to work on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Eye candy                                  "
@@ -36,6 +39,9 @@ Plug 'mhinz/vim-startify',                      " Startup page
       \ { 'on': 'Startify' }
 Plug 'vim-airline/vim-airline'                  " A nice little statusline
 
+Plug 'machakann/vim-highlightedyank'
+
+Plug 'psliwka/vim-smoothie'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Themes                                   "
