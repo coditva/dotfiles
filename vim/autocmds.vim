@@ -52,9 +52,9 @@ augroup terminal
   autocmd TermOpen *          setlocal confirm
 
   " change to insert mode automatically on switching to terminal
-  autocmd WinEnter *          if &buftype ==# 'terminal'
-        \ | :startinsert
-        \ | endif
+  " autocmd WinEnter *          if &buftype ==# 'terminal'
+  "       \ | :startinsert
+  "       \ | endif
 augroup END
 
 augroup plugins
