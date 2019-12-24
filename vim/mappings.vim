@@ -3,33 +3,33 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Mappings in all modes                           "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <silent><Leader>n :NERDTreeToggle<CR>
+noremap <silent><Leader>n           :NERDTreeToggle<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Insert mode mappings                            "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " because jk is easier to type
-inoremap jk <Esc>
+inoremap jk                         <Esc>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Normal mode mappings                            "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " better navigation for wrapped text
-nnoremap j gj
-nnoremap k gk
-nnoremap 0 h0
-nnoremap $ g$
+nnoremap j                          gj
+nnoremap k                          gk
+nnoremap 0                          h0
+nnoremap $                          g$
 
 " easier window navigation
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
+nnoremap <c-h>                      <c-w>h
+nnoremap <c-j>                      <c-w>j
+nnoremap <c-k>                      <c-w>k
+nnoremap <c-l>                      <c-w>l
 
 " open a 15 lines terminal window at the bottom
-nnoremap <silent><c-t> :below 15split<cr>:term<cr>i
+nnoremap <silent><c-t>              :below 15split<cr>:term<cr>i
 
 " mappings for fzf
 nnoremap <silent><leader>z<space>   :Files<return>
@@ -54,42 +54,42 @@ nnoremap <silent><leader>zF         :execute 'Ag ' . expand('<cword>')<return>
 nnoremap <leader>` <c-^>
 
 " easier jumping between buffers
-nnoremap <silent><leader><tab>    :bn<cr>
-nnoremap <silent>gn               :bn<cr>
-nnoremap <silent><leader><s-tab>  :bp<cr>
-nnoremap <silent>gN               :bp<cr>
-nnoremap <leader>w                :bd<cr>
+nnoremap <silent><leader><tab>      :bn<cr>
+nnoremap <silent>gn                 :bn<cr>
+nnoremap <silent><leader><s-tab>    :bp<cr>
+nnoremap <silent>gN                 :bp<cr>
+nnoremap <leader>w                  :bd<cr>
 
-nnoremap <leader>h :Startify<return>
+nnoremap <leader>h                  :Startify<return>
 
 " use language server capabilities
-nnoremap <silent> gd    :ALEGoToDefinition<cr>
-nnoremap <silent> gD    :ALEGoToDefinitionInSplit<cr>
-nnoremap <silent> gy    :ALEGoToTypeDefinition<cr>
-nnoremap <silent> gY    :ALEGoToTypeDefinitionInSplit<cr>
-nnoremap <silent> gi    :LspImplementation<cr>
-nnoremap <silent> gI    :LspPeekImplementation<cr>
-nnoremap <silent> gu    :LspDeclaration<cr>
-nnoremap <silent> gU    :LspPeekDeclaration<cr>
-nnoremap <silent> gr    :ALEFindReferences<cr>
-nnoremap <silent> K     :ALEHover<cr>
+nnoremap <silent> gd                :ALEGoToDefinition<cr>
+nnoremap <silent> gD                :ALEGoToDefinitionInSplit<cr>
+nnoremap <silent> gy                :ALEGoToTypeDefinition<cr>
+nnoremap <silent> gY                :ALEGoToTypeDefinitionInSplit<cr>
+nnoremap <silent> gi                :LspImplementation<cr>
+nnoremap <silent> gI                :LspPeekImplementation<cr>
+nnoremap <silent> gu                :LspDeclaration<cr>
+nnoremap <silent> gU                :LspPeekDeclaration<cr>
+nnoremap <silent> gr                :ALEFindReferences<cr>
+nnoremap <silent> K                 :ALEHover<cr>
 
 " easier control for git hunks
-nnoremap <silent><leader>gn     :GitGutterNextHunk<cr>
-nnoremap <silent><leader>gN     :GitGutterPrevHunk<cr>
-nnoremap <silent><leader>ga     :GitGutterStageHunk<cr>
-nnoremap <silent><leader>gA     :!git add %<cr><cr>
-nnoremap <silent><leader>gu     :GitGutterUndoHunk<cr>
-nnoremap <silent><leader>gs     :GitGutterPreviewHunk<cr>
-nnoremap <silent><leader>gz     :GitGutterFoldHunk<cr>
+nnoremap <silent><leader>gn         :GitGutterNextHunk<cr>
+nnoremap <silent><leader>gN         :GitGutterPrevHunk<cr>
+nnoremap <silent><leader>ga         :GitGutterStageHunk<cr>
+nnoremap <silent><leader>gA         :!git add %<cr><cr>
+nnoremap <silent><leader>gu         :GitGutterUndoHunk<cr>
+nnoremap <silent><leader>gs         :GitGutterPreviewHunk<cr>
+nnoremap <silent><leader>gz         :GitGutterFoldHunk<cr>
 
 " theme switching
-nnoremap <silent><leader>tt     :call ToggleTheme()<cr>
-nnoremap <silent><leader>tl     :call SetTheme('light')<cr>
-nnoremap <silent><leader>td     :call SetTheme('dark')<cr>
+nnoremap <silent><leader>tt         :call ToggleTheme()<cr>
+nnoremap <silent><leader>tl         :call SetTheme('light')<cr>
+nnoremap <silent><leader>td         :call SetTheme('dark')<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                         Mappings in terminal mode                          "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-tnoremap <Esc>    <C-\><C-n>
+tnoremap <Esc>                      <C-\><C-n>
