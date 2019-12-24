@@ -39,9 +39,8 @@ Plug 'mhinz/vim-startify',                      " Startup page
       \ { 'on': 'Startify' }
 Plug 'vim-airline/vim-airline'                  " A nice little statusline
 
-Plug 'machakann/vim-highlightedyank'
-
-Plug 'psliwka/vim-smoothie'
+Plug 'machakann/vim-highlightedyank'            " Flashes the text on yanking
+Plug 'psliwka/vim-smoothie'                     " Scrolling, smooth af!
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Themes                                   "
