@@ -47,9 +47,11 @@ augroup END
 augroup terminal
   autocmd!
 
-  " close the terminal by pressing enter rather than typing command again when
-  " terminal process is running
-  autocmd TermOpen *          setlocal confirm
+  if has('nvim')
+    " close the terminal by pressing enter rather than typing command again when
+    " terminal process is running
+    autocmd TermOpen *          setlocal confirm
+  endif
 
   " change to insert mode automatically on switching to terminal
   " autocmd WinEnter *          if &buftype ==# 'terminal'

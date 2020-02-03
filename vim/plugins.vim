@@ -7,7 +7,9 @@ call plug#begin('~/.vim/autoload')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Workflow                                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'SirVer/ultisnips'                         " Snippets engine
+if has('nvim')
+      Plug 'SirVer/ultisnips'                   " Snippets engine
+endif
 Plug 'honza/vim-snippets'                       " Snippets
 
 Plug 'kkoomen/vim-doge',                        " DOcumentation GEneration
