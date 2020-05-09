@@ -1,0 +1,132 @@
+{
+    "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.vimrc.enable": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["g", "n"],
+            "commands": ["workbench.action.nextEditor"],
+ 
+        },
+        {
+            "before": ["g", "N"],
+            "commands": ["workbench.action.previousEditor"],
+        },
+        {
+            "before": ["leader", "w"],
+            "commands": ["workbench.action.closeActiveEditor"]
+        },
+        {
+            "before": ["leader", "c", "space"],
+            "commands": ["editor.action.commentLine"]
+        },
+        {
+            "before": ["leader", "space"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["leader", "tt"],
+            "commands": ["workbench.action.terminal.new"],
+            "when": "!terminalFocus"
+        },
+        {
+            "before": ["leader", "f"],
+            "commands": ["workbench.action.findInFiles"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.panel.terminal.focus"]
+        },
+
+        // lsp stuff
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["g", "r"],
+            "commands": ["editor.action.goToReferences"]
+        },
+        {
+            "before": ["g", "R"],
+            "commands": ["editor.action.referenceSearch.trigger"]
+        },
+        {
+            "before": ["g", "d"],
+            "commands": ["editor.action.revealDefinition"],
+            "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        },
+        {
+            "before": ["g", "D"],
+            "commands": ["editor.action.peekDefinition"],
+            "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        },
+        {
+            "before": ["g", "i"],
+            "commands": ["editor.action.goToImplementation"],
+            "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+        },
+        {
+            "before": ["g", "I"],
+            "commands": ["editor.action.peekImplementation"],
+            "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+        },
+        {
+            "before": ["g", "y"],
+            "commands": ["editor.action.goToTypeDefinition"]
+        },
+        {
+            "before": ["g", "Y"],
+            "commands": ["editor.action.peekTypeDefinition"]
+        }
+    ],
+    "editor.rulers": [80, 100, 120],
+    "window.zoomLevel": 0,
+    "editor.fontSize": 15,
+    "editor.fontFamily": "FiraCode-Retina, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingOvertype": "never",
+    "editor.dragAndDrop": false,
+    "Vsnips.VarFiles": [
+        "Users/coditva/.vimrc"
+    ],
+    "Vsnips.SnipsDir": [
+        "Users/coditva/.vim/autoload/vim-snippets/UltiSnips"
+    ],
+    "editor.lineNumbers": "relative",
+    "vim.foldfix": true,
+    "vim.highlightedyank.enable": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontSize": 15,
+    "terminal.integrated.fontFamily": "FiraCode-Retina, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "files.associations": {
+    
+    },
+    "vim.statusBarColorControl": true,
+    "cSpell.userWords": [
+        "component",
+        "debounced",
+        "mobx",
+        "resizer",
+        "unmount",
+        "will"
+    ],
+    "codemetrics.basics.DecorationModeEnabled": false,
+    "codemetrics.basics.EnabledForJSX": false,
+    "codemetrics.basics.OverviewRulerModeEnabled": false,
+    "workbench.activityBar.visible": true
+}
