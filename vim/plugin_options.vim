@@ -321,6 +321,12 @@ let g:lsp_preview_max_height  = 15
 let g:lsp_preview_max_width   = 80
 let g:lsp_virtual_text_prefix = '  ‣ '
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                   Blamer                                   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:blamer_relative_time = 1
+highlight Blamer guifg=lightgrey
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              Highlighted yank                              "

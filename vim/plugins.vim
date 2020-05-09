@@ -44,6 +44,8 @@ Plug 'vim-airline/vim-airline'                  " A nice little statusline
 Plug 'machakann/vim-highlightedyank'            " Flashes the text on yanking
 Plug 'psliwka/vim-smoothie'                     " Scrolling, smooth af!
 
+Plug 'APZelos/blamer.nvim'                      " Add blames at the end of line
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Themes                                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
