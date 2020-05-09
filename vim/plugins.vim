@@ -30,6 +30,8 @@ Plug 'machakann/vim-sandwich'                   " Change/delete surroundings
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 Plug 'scrooloose/nerdtree'                      " Shortcut for commenting
 
+Plug 'AndrewRadev/splitjoin.vim'                " Split and join code
+
 Plug 'https://github.com/tpope/vim-vinegar'     " Source tree
 
 Plug 'wellle/targets.vim'                       " More targets to work on
