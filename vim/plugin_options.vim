@@ -295,7 +295,7 @@ augroup vimlsp
           \ 'name': 'javascript-typescript-stdio',
           \ 'cmd': { server_info->[&shell, &shellcmdflag, 'javascript-typescript-stdio']},
           \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
-          \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact']
+          \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact', 'javascriptreact', 'typescript', 'typescriptreact', 'typescript.tsx']
           \ })
     autocmd FileType javascript,javascript.jsx,javascriptreact setlocal omnifunc=lsp#complete
   endif
@@ -304,7 +304,7 @@ augroup vimlsp
           \ 'name': 'typescript-language-server',
           \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
           \ 'root_uri': { server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_directory(lsp#utils#get_buffer_path(), '.git/..'))},
-          \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact']
+          \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact', 'javascriptreact', 'typescript', 'typescriptreact', 'typescript.tsx']
           \ })
     autocmd FileType javascript,javascript.jsx,javascriptreact setlocal omnifunc=lsp#complete
   endif
