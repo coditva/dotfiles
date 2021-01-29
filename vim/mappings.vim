@@ -3,7 +3,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                            Mappings in all modes                           "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <silent><Leader>n           :NERDTreeToggle<CR>
+nnoremap <silent><leader>nn         :NERDTreeToggle<cr>
+nnoremap <silent><leader>nf         :NERDTreeFind<cr>
+nnoremap <silent><leader>nw         :NERDTreeClose<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,21 +60,29 @@ nnoremap <silent><leader><tab>      :bn<cr>
 nnoremap <silent>gn                 :bn<cr>
 nnoremap <silent><leader><s-tab>    :bp<cr>
 nnoremap <silent>gN                 :bp<cr>
-nnoremap <leader>w                  :bd<cr>
+nnoremap <leader>w                  :CloseBuffer<cr>
 
 nnoremap <leader>h                  :Startify<return>
 
 " use language server capabilities
-nnoremap <silent> gd                :ALEGoToDefinition<cr>
-nnoremap <silent> gD                :ALEGoToDefinitionInSplit<cr>
-nnoremap <silent> gy                :ALEGoToTypeDefinition<cr>
-nnoremap <silent> gY                :ALEGoToTypeDefinitionInSplit<cr>
+nnoremap <silent> gd                :LspDefinition<cr>
+nnoremap <silent> gD                :LspPeekDefinition<cr>
+nnoremap <silent> gy                :LspTypeDefinition<cr>
+nnoremap <silent> gY                :LspPeekTypeDefinition<cr>
 nnoremap <silent> gi                :LspImplementation<cr>
 nnoremap <silent> gI                :LspPeekImplementation<cr>
 nnoremap <silent> gu                :LspDeclaration<cr>
 nnoremap <silent> gU                :LspPeekDeclaration<cr>
-nnoremap <silent> gr                :ALEFindReferences<cr>
-nnoremap <silent> K                 :ALEHover<cr>
+nnoremap <silent> gr                :LspReferences<cr>
+nnoremap <silent> K                 :LspHover<cr>
+
+" autocmd Filetype rust,python,go,c,cpp setl omnifunc=lsp#omnifunc
+" nnoremap <silent> ;d                :call lsp#text_document_definition()<CR>
+" nnoremap <silent> ;i                :call lsp#text_document_implementation()<CR>
+" nnoremap <silent> ;y                :call lsp#text_document_declaration()<CR>
+" nnoremap <silent> ;h                :call lsp#text_document_hover()<CR>
+" nnoremap <silent> ;s                :call lsp#text_document_signature_help()<CR>
+" nnoremap <silent> ;t                :call lsp#text_document_type_definition()<CR>
 
 " easier control for git hunks
 nnoremap <silent><leader>gn         :GitGutterNextHunk<cr>
