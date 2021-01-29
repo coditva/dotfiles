@@ -22,4 +22,17 @@ if which jsctags > /dev/null; then
     alias jstags="find . -type f -iregex '.*\.js$' -not -path './node_modules/*' -exec jsctags {} -f \; | sed '/^$/d' | LANG=C sort > tags"
 fi
 
+if which npm > /dev/null; then
+    alias nr="npm run"
+fi
+
+# fuzzy branch checkout
+if which fzf > /dev/null; then
+    if [ -d "$HOME/.dotfiles/fzf-gems/" ]; then
+        alias gcof='git checkout `fzf-gitgb`'
+    else
+        alias gcof='git checkout `git branch | fzf`'
+    fi
+fi
+
 alias rmrf="rm -rf"

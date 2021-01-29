@@ -14,7 +14,7 @@ antigen bundle docker
 antigen bundle fzf
 
 # Syntax highlighting bundle.
-antigen bundle zdharma/fast-syntax-highlighting
+# antigen bundle zdharma/fast-syntax-highlighting
 
 # Setting default user for agnoster theme
 DEFAULT_USER="me"
@@ -41,7 +41,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Change iterm profile from the command line
 iterm_profile() {
-    ~/.dotfiles/iterm2/change_session_profile.py $1
+    # ~/.dotfiles/iterm2/change_session_profile.py $1
     ITERM_PROFILE=$1
 }
 iterm_toggle_profile() {
@@ -51,6 +51,8 @@ iterm_toggle_profile() {
         iterm_profile Dark
     fi
 }
+
+export FPATH="${FPATH}:${HOME}/.dotfiles/zsh/site-functions"
 
 # Setting for the new UTF-8 terminal support
 LC_CTYPE="en_US.UTF-8"
