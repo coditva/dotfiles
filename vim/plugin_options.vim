@@ -121,8 +121,15 @@ let g:fzf_colors = {
       \ 'header':  ['fg', 'Comment']
       \ }
 let g:fzf_history_dir       = '~/.local/share/fzf-history'
-let g:fzf_nvim_statusline   = 0
+let g:fzf_nvim_statusline   = 1
 let g:one_allow_italics     = 1
+let g:fzf_layout = { 'window': {
+      \ 'width': 0.8,
+      \ 'height': 0.6,
+      \ 'yoffset': 0.1,
+      \ 'highlight': 'Comment',
+      \ 'border': 'rounded'
+      \ } }
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
