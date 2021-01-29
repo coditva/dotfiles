@@ -23,6 +23,12 @@ augroup customMappings
   autocmd FileType fzf        tnoremap <buffer> <silent> <esc> <c-c>
 augroup END
 
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave % silent! mkview
+  autocmd BufWinEnter % silent! loadview
+augroup END
+
 augroup misc
   autocmd!
 
