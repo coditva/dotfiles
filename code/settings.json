@@ -128,5 +128,6 @@
     "codemetrics.basics.DecorationModeEnabled": false,
     "codemetrics.basics.EnabledForJSX": false,
     "codemetrics.basics.OverviewRulerModeEnabled": false,
-    "workbench.activityBar.visible": true
+    "workbench.activityBar.visible": true,
+    "extensions.ignoreRecommendations": true
 }
