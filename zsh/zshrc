@@ -33,6 +33,9 @@ source ~/.dotfiles/zsh/misc.zsh
 
 source ~/.profile
 
+source ~/.dotfiles/fzf-gems/fzf_git_functions.sh
+source ~/.dotfiles/fzf-gems/fzf_git_keybindings.zsh
+
 # Add iterm shell integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

@@ -1,0 +1,3 @@
+[submodule "fzf-gems"]
+	path = fzf-gems
+	url = https://github.com/teto/fzf-gems
