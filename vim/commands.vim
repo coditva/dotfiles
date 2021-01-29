@@ -18,3 +18,22 @@ command! Sessions
       \     lines -> execute('SLoad ' . join(lines, "\n"))
       \   }
       \ }))
+
+function CloseBuffer ()
+      let l:isOpen = 0
+
+      if exists("g:NERDTree") && g:NERDTree.IsOpen()
+            let l:isOpen = 1
+            NERDTreeClose
+      endif
+
+      bd
+
+      if l:isOpen
+            NERDTreeToggle
+            wincmd w
+      endif
+endfunction
+
+command! CloseBuffer
+      \ call CloseBuffer()
