@@ -31,10 +31,6 @@ augroup misc
         \ | exe "normal g'\""
         \ | endif
 
-  " hide status line when running an FZF command
-  autocmd FileType fzf        set laststatus=0 noshowmode noruler
-        \ | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-
   " add syntax highlighting for JS style comments in JSON
   autocmd FileType json       syntax match Comment +\/\/.\+$+
 
