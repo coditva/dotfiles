@@ -142,27 +142,28 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_disable_lsp       = 0
 
 let g:ale_lint_on_filetype_changed  = 1
-let g:ale_lint_on_text_changed  = 1
+let g:ale_lint_on_text_changed  = 'normal'
 let g:ale_lint_on_insert_leave  = 1
 let g:ale_lint_on_enter     = 1
 let g:ale_lint_on_save      = 1
 let g:ale_lint_delay        = 1000      " 1 second
 
-let g:ale_fix_on_save       = 0
+let g:ale_fix_on_save       = 1
 
 let g:ale_set_highlights    = 0
-let g:ale_set_quickfix      = 1         " populate quickfix list with errors
+let g:ale_set_quickfix      = 0         " populate quickfix list with errors
+let g:ale_set_loclist       = 0
 let g:ale_set_signs         = 1
 
 let g:ale_sign_error        = '»'
 let g:ale_sign_warning      = '●'
 
-let g:ale_completion_enabled              = 1
-let g:ale_completion_tsserver_autoimport  = 1
+let g:ale_completion_enabled            = 0
+let g:ale_completion_autoimport         = 1
 
 let g:ale_sign_column_always            = 1
 let g:ale_use_global_executables        = 1
-let g:ale_close_preview_on_insert       = 1
+let g:ale_close_preview_on_insert       = 0
 let g:ale_javascript_jshint_use_global  = 1
 
 let g:ale_echo_cursor         = 0
@@ -184,12 +185,10 @@ let g:ale_fixers = {
       \ 'javascript': [
       \     'eslint',
       \     'importjs',
-      \     'prettier',
       \     'remove_trailing_lines',
       \     'trim_whitespace' ],
       \ 'json': [
-      \     'jsonlint',
-      \     'prettier' ],
+      \     'jsonlint' ],
       \ 'c': [
       \     'clangtidy',
       \     'clang-format' ],
@@ -199,7 +198,7 @@ let g:ale_fixers = {
       \     'vint'
       \ ],
       \ '*': [
-      \     'prettier',
+      \     'es-lint',
       \     'remove_trailing_lines',
       \     'trim_whitespace' ]
       \ }
