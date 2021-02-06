@@ -265,17 +265,13 @@ let g:gitgutter_map_keys = 0
 "                                  vim-clap                                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" input bar when it's empty
 hi default link ClapInput                     Visual
-
-" the whole window
 hi default link ClapDisplay                   Visual
-
 hi default link ClapCurrentSelection          CursorLine
-
 hi default link ClapMatches                   NonText
-
-
+hi default link ClapDefaultSelected           Visual
+hi default link ClapDefaultCurrentSelection   Normal
+hi default link ClapPreview                   Normal
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  lsp-vim                                   "
