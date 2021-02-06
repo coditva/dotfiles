@@ -139,7 +139,7 @@ let g:fzf_layout = { 'window': {
 set completeopt=menu,menuone,preview,noselect,noinsert
 
 " let vim-lsp do that (because it has diagnostics)
-let g:ale_disable_lsp       = 0
+let g:ale_disable_lsp       = 1
 
 let g:ale_lint_on_filetype_changed  = 1
 let g:ale_lint_on_text_changed  = 'normal'
@@ -159,7 +159,6 @@ let g:ale_sign_error        = '»'
 let g:ale_sign_warning      = '●'
 
 let g:ale_completion_enabled            = 0
-let g:ale_completion_autoimport         = 1
 
 let g:ale_sign_column_always            = 1
 let g:ale_use_global_executables        = 1
