@@ -56,11 +56,9 @@ Plug 'rakr/vim-one'                             " OneDark+OneLight
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                        Syntax highlighting and LSP                         "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'prabirshrestha/vim-lsp'                   " LSP client
-Plug 'prabirshrestha/async.vim'                 " Dependency for vim-lsp
-Plug 'thomasfaingnaert/vim-lsp-ultisnips'       " Use snippets with vim-lsp
-
 Plug 'w0rp/ale'                                 " Linting
+
+Plug 'neovim/nvim-lspconfig'                    " Use nvim's LSP
 
 Plug 'sheerun/vim-polyglot'                     " Language packs for everyone!
 
