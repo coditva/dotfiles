@@ -27,16 +27,13 @@ Plug 'tpope/vim-repeat'                         " Use `.` with plugins
 Plug 'tpope/vim-unimpaired'                     " Mappings!
 
 Plug 'machakann/vim-sandwich'                   " Change/delete surroundings
+
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
-Plug 'scrooloose/nerdtree'                      " Shortcut for commenting
+Plug 'scrooloose/nerdtree'                      " File explorer
 
 Plug 'pechorin/any-jump.vim'                    " Jump/Search
 
 Plug 'AndrewRadev/splitjoin.vim'                " Split and join code
-
-Plug 'https://github.com/tpope/vim-vinegar'     " Source tree
-
-Plug 'wellle/targets.vim'                       " More targets to work on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Eye candy                                  "
@@ -49,8 +46,6 @@ Plug 'ryanoasis/vim-devicons'                   " Icons in vim
 
 Plug 'machakann/vim-highlightedyank'            " Flashes the text on yanking
 Plug 'psliwka/vim-smoothie'                     " Scrolling, smooth af!
-
-Plug 'APZelos/blamer.nvim'                      " Add blames at the end of line
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Themes                                   "
