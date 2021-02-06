@@ -262,18 +262,6 @@ let g:gitgutter_map_keys = 0
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                  vim-clap                                  "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-hi default link ClapInput                     Visual
-hi default link ClapDisplay                   Visual
-hi default link ClapCurrentSelection          CursorLine
-hi default link ClapMatches                   NonText
-hi default link ClapDefaultSelected           Visual
-hi default link ClapDefaultCurrentSelection   Normal
-hi default link ClapPreview                   Normal
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  lsp-vim                                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 augroup vimlsp
