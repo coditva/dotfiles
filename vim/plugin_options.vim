@@ -135,9 +135,6 @@ let g:fzf_layout = { 'window': {
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                    Ale                                     "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" See :h ale-completion-completopt-bug
-set completeopt=menu,menuone,preview,noselect,noinsert
-
 " let vim-lsp do that (because it has diagnostics)
 let g:ale_disable_lsp       = 1
 
@@ -274,3 +271,30 @@ highlight Blamer guifg=lightgrey
 let g:highlightedyank_highlight_duration = 150
 
 highlight link HighlightedyankRegion NonText
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                 Nvim Compe                                 "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:compe                   = {}
+let g:compe.autocomplete      = v:false
+let g:compe.min_length        = 3
+let g:compe.preselect         = 'always'
+
+let g:compe.source                  = {}
+let g:compe.source.path             = v:true
+let g:compe.source.buffer           = v:false
+let g:compe.source.spell            = v:true
+let g:compe.source.tags             = v:true
+let g:compe.source.calc             = v:true
+let g:compe.source.nvim_lua         = v:true
+let g:compe.source.vsnip            = v:true
+let g:compe.source.nvim_lsp         = v:true
+let g:compe.source.snippets_nvim    = v:true
+let g:compe.source.treesitter       = v:true
+
+set completeopt=menu,menuone,noselect
+
+inoremap <silent><expr> <C-Space> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')

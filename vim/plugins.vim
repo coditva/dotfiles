@@ -9,6 +9,7 @@ call plug#begin('~/.vim/autoload')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('nvim')
       Plug 'SirVer/ultisnips'                   " Snippets engine
+      Plug 'hrsh7th/nvim-compe'                 " Completion engine
 endif
 Plug 'honza/vim-snippets'                       " Snippets
 
