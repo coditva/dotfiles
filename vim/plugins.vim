@@ -59,7 +59,9 @@ Plug 'rakr/vim-one'                             " OneDark+OneLight
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'w0rp/ale'                                 " Linting
 
-Plug 'neovim/nvim-lspconfig'                    " Use nvim's LSP
+if has('nvim')
+      Plug 'neovim/nvim-lspconfig'              " Use nvim's LSP
+endif
 
 Plug 'sheerun/vim-polyglot'                     " Language packs for everyone!
 

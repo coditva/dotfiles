@@ -28,7 +28,10 @@ source $VIMRC_DIR/mappings.vim
 " Load colors and theme
 source $VIMRC_DIR/theme.vim
 
-source $VIMRC_DIR/lsp.vim
+" Load LSP specific configuration
+if has('nvim')
+  source $VIMRC_DIR/lsp.vim
+endif
 
 " Load system specific volatile changes which are not checked into git
 if filereadable($VIMRC_DIR . '/volatile.vim')
