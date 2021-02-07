@@ -182,21 +182,18 @@ let g:ale_fixers = {
       \     'eslint',
       \     'importjs',
       \     'remove_trailing_lines',
-      \     'trim_whitespace' ],
-      \ 'json': [
-      \     'jsonlint' ],
+      \     'trim_whitespace'
+      \ ],
+      \ 'json': [ 'jsonlint' ],
       \ 'c': [
       \     'clangtidy',
-      \     'clang-format' ],
-      \ 'git commit': [
-      \     'gitlint' ],
-      \ 'vim': [
-      \     'vint'
+      \     'clang-format'
       \ ],
+      \ 'git commit': [ 'gitlint' ],
       \ '*': [
-      \     'es-lint',
       \     'remove_trailing_lines',
-      \     'trim_whitespace' ]
+      \     'trim_whitespace'
+      \ ]
       \ }
 
 
