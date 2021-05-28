@@ -184,7 +184,6 @@ let g:ale_fixers = {
       \     'remove_trailing_lines',
       \     'trim_whitespace'
       \ ],
-      \ 'json': [ 'jsonlint' ],
       \ 'c': [
       \     'clangtidy',
       \     'clang-format'
@@ -195,6 +194,8 @@ let g:ale_fixers = {
       \     'trim_whitespace'
       \ ]
       \ }
+
+let g:ale_javascript_eslint_executable    = '/usr/local/bin/eslint'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
