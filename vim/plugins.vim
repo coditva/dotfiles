@@ -36,6 +36,8 @@ Plug 'pechorin/any-jump.vim'                    " Jump/Search
 
 Plug 'AndrewRadev/splitjoin.vim'                " Split and join code
 
+Plug 'wellle/context.vim'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                 Eye candy                                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

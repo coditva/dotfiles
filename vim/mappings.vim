@@ -77,6 +77,10 @@ nnoremap <silent><leader>tt         :call ToggleTheme()<cr>
 nnoremap <silent><leader>tl         :call SetTheme('light')<cr>
 nnoremap <silent><leader>td         :call SetTheme('dark')<cr>
 
+" context
+nnoremap <leader>x<space>           :ContextPeek<cr>
+nnoremap <leader>xx                 :ContextToggle<cr>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                         Mappings in terminal mode                          "
