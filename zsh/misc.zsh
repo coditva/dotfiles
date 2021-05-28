@@ -23,7 +23,14 @@ fi
 if [ -d "$HOME/.local/bin" ]; then
     export PATH="$PATH:$HOME/.local/bin"
 fi
-export PATH="$PATH:/Users/coditva/Library/Python/2.7/bin"
+
+if [ -d "/Users/coditva/Library/Python/2.7/bin" ]; then
+    export PATH="$PATH:/Users/coditva/Library/Python/2.7/bin"
+fi
+
+if [ -d "/Users/coditva/Library/Python/3.9/bin" ]; then
+    export PATH="$PATH:/Users/coditva/Library/Python/3.9/bin"
+fi
 
 # initialize nvm
 if [ -f "/usr/share/nvm/init-nvm.sh" ]; then
