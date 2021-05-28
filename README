@@ -1,2 +1,4 @@
 clone to ~/.dotfiles
 symlink .vimrc, .zshrc, .xinitrc
+copy .gitconfig
+setup ssh, gpg
