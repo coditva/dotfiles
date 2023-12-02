@@ -1,15 +1,26 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
 #source /usr/share/zsh/share/antigen.zsh
 source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
 
 # Set fzf installation directory
 export FZF_BASE=/usr/local/opt/fzf
 
+export NVM_LAZY=1
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-# antigen bundle git
+antigen bundle git
 antigen bundle gitfast
+# antigen bundle git-extras
+# antigen bundle nvm
 # antigen bundle docker
 antigen bundle fzf
 
@@ -17,10 +28,10 @@ antigen bundle fzf
 # antigen bundle zdharma/fast-syntax-highlighting
 
 # Setting default user for agnoster theme
-DEFAULT_USER="me"
+# DEFAULT_USER="me"
 
 # Load the theme.
-antigen theme fishy_mod
+# antigen theme fishy_mod
 
 # Tell antigen that you're done.
 antigen apply
@@ -31,13 +42,14 @@ source ~/.dotfiles/zsh/alias.zsh
 # Setting up misc things
 source ~/.dotfiles/zsh/misc.zsh
 
-source ~/.profile
+#source ~/.profile
 
 source ~/.dotfiles/fzf-gems/fzf_git_functions.sh
 source ~/.dotfiles/fzf-gems/fzf_git_keybindings.zsh
 
 # Add iterm shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && \
+#     source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Change iterm profile from the command line
 # iterm_profile() {
@@ -52,8 +64,14 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #     fi
 # }
 
-export FPATH="${FPATH}:${HOME}/.dotfiles/zsh/site-functions"
+# export FPATH="${FPATH}:${HOME}/.dotfiles/zsh/site-functions"
 
 # Setting for the new UTF-8 terminal support
 LC_CTYPE="en_US.UTF-8"
 LC_ALL="en_US.UTF-8"
+LANG="en_US.UTF-8"
+
+# test -e "${HOME}/.sh_exports" && source "${HOME}/.sh_exports"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
