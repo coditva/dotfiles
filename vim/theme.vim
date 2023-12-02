@@ -17,7 +17,7 @@ function SetTheme (theme)
 
   if g:no_background == v:true
     " Use the background color of the terminal
-    hi Normal guibg=NONE ctermbg=NONE
+    " hi Normal guibg=NONE ctermbg=NONE
   endif
 endfunction
 
@@ -37,6 +37,6 @@ elseif $ITERM_PROFILE ==# 'Light'
   let g:no_background = v:true
   call SetTheme('light')
 else
-  let g:no_background = v:false
-  call SetTheme('dark')
+  let g:no_background = v:true
+  call SetTheme('light')
 endif

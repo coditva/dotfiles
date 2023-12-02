@@ -1,10 +1,11 @@
 " autocmds.vim: autocmds and file specific settings
 
-augroup customOptions
-  autocmd!
-  autocmd FileType gitcommit  setlocal spell colorcolumn=72
-  autocmd FileType markdown   setlocal spell
-augroup END
+" spell is enabled by default in options.vim
+" augroup customOptions
+"   autocmd!
+"   autocmd FileType gitcommit  setlocal spell colorcolumn=72
+"   autocmd FileType markdown   setlocal spell
+" augroup END
 
 augroup customIndent
   autocmd!
@@ -23,17 +24,18 @@ augroup customMappings
   autocmd FileType fzf        tnoremap <buffer> <silent> <esc> <c-c>
 augroup END
 
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave % silent! mkview
-  autocmd BufWinEnter % silent! loadview
-augroup END
+" augroup remember_folds
+"   autocmd!
+"   " autocmd BufWinLeave ?* silent! mkview | filetype detect
+"   autocmd BufWinEnter ? silent! loadview | filetype detect
+" augroup END
 
 augroup misc
   autocmd!
 
   " remember last position in file
-  autocmd BufReadPost *       if line("'\'") > 0 && line("'\'") <= line('$')
+  autocmd BufReadPost *
+        \ if line("'\'") > 0 && line("'\'") <= line('$')
         \ | exe "normal g'\""
         \ | endif
 
@@ -61,19 +63,19 @@ augroup terminal
   "       \ | endif
 augroup END
 
-augroup plugins
-  autocmd!
-
-  " automatically install vim-plug
-  if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-  endif
-
-  " install plugins on startup
-  autocmd VimEnter *          if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-        \|   PlugInstall --sync | q
-        \| endif
-augroup END
+" augroup plugins
+"   autocmd!
+"
+"   " automatically install vim-plug
+"   if empty(glob('~/.vim/autoload/plug.vim'))
+"     silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+"           \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"
+"     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+"   endif
+"
+"   " install plugins on startup
+"   autocmd VimEnter *          if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+"         \|   PlugInstall --sync | q
+"         \| endif
+" augroup END

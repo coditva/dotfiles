@@ -29,4 +29,8 @@ if which fzf > /dev/null; then
     fi
 fi
 
+alias gfoc='git fetch origin `git branch --show-current`'
+
 alias rmrf="rm -rf"
+
+alias note='mkdir -p `date "+$HOME/notes/%Y/%m/"` && e `date "+$HOME/notes/%Y/%m/%d.md"`'

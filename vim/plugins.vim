@@ -8,19 +8,21 @@ call plug#begin('~/.vim/autoload')
 "                                  Workflow                                  "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has('nvim')
-      Plug 'SirVer/ultisnips'                   " Snippets engine
+      " Plug 'SirVer/ultisnips'                   " Snippets engine
       Plug 'hrsh7th/nvim-compe'                 " Completion engine
 endif
 Plug 'honza/vim-snippets'                       " Snippets
 
-Plug 'kkoomen/vim-doge',                        " DOcumentation GEneration
-      \ { 'on': 'DogeGenerate' }
+" Plug 'kkoomen/vim-doge',                        " DOcumentation GEneration
+"       \ { 'on': 'DogeGenerate' }
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'           " Use .gitignore
 Plug 'junegunn/fzf.vim'                         " Fuzzy searching with fzf
 Plug '/usr/local/opt/fzf'
 
-Plug 'airblade/vim-gitgutter'                   " Live git diff symbols
+" Plug 'airblade/vim-gitgutter'                   " Live git diff symbols
+Plug 'nvim-lua/plenary.nvim'                    " Required by gitsigns
+Plug 'lewis6991/gitsigns.nvim'                  " Live git diff symbols
 Plug 'tpope/vim-fugitive'                       " Git blame
 
 Plug 'tpope/vim-sleuth'                         " Adjusts indent based on file
@@ -31,6 +33,12 @@ Plug 'machakann/vim-sandwich'                   " Change/delete surroundings
 
 Plug 'scrooloose/nerdcommenter'                 " Shortcut for commenting
 Plug 'scrooloose/nerdtree'                      " File explorer
+
+" Plug 'ms-jpq/chadtree',
+"       \ {
+"       \   'branch': 'chad',
+"       \   'do': 'python3 -m chadtree deps'
+"       \ }
 
 Plug 'pechorin/any-jump.vim'                    " Jump/Search
 
@@ -63,10 +71,17 @@ Plug 'w0rp/ale'                                 " Linting
 
 if has('nvim')
       Plug 'neovim/nvim-lspconfig'              " Use nvim's LSP
+      Plug 'nvim-lua/lsp-status.nvim'           " LSP statusline
+
+      Plug 'jose-elias-alvarez/null-ls.nvim'    " Dependency for prettier.nvim
+      Plug 'MunifTanjim/prettier.nvim'
 endif
 
 Plug 'sheerun/vim-polyglot'                     " Language packs for everyone!
 
+Plug 'github/copilot.vim'
+
+" Plug 'stevearc/aerial.nvim'
 
 call plug#end()         " All of Plugins must be added before this line
 

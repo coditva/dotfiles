@@ -36,6 +36,7 @@ let g:UltiSnipsSnippetsDir  = $VIMRC_DIR . '/snippets/'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeDirArrowExpandable    = '▸'
 let g:NERDTreeDirArrowCollapsible   = '▾'
+let g:NERDTreeShowLineNumbers       = 1
 let g:nerdtree_tabs_autoclose       = 0
 let g:nerdtree_tabs_startup_cd      = 1
 let g:nerdtree_tabs_no_startup_for_diff = 1
@@ -78,6 +79,8 @@ let g:airline#extensions#coc#enabled            = 1
 let g:airline#extensions#coc#error_symbol       = 'E:'
 let g:airline#extensions#coc#warning_symbol     = 'W:'
 
+let g:airline#extensions#branch#enabled         = 0
+
 let g:airline_symbols_ascii         = 0
 let g:airline_powerline_fonts       = 1
 let g:airline_skip_empty_sections   = 1
@@ -97,6 +100,11 @@ let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.spell     = 'S'
 let g:airline_symbols.paste     = 'P'
 let g:airline_symbols.linenr    = ''
+
+call airline#parts#define_function('lsp_status', 'LspStatus')
+call airline#parts#define_condition('lsp_status', 'luaeval("#vim.lsp.buf_get_clients() > 0")')
+let g:airline#extensions#nvimlsp#enabled = 1
+let g:airline_section_x = airline#section#create_right(['lsp_status'])
 
 " Hide showing "--INSERT--" on command line when using airline
 set noshowmode
@@ -124,12 +132,11 @@ let g:fzf_history_dir       = '~/.local/share/fzf-history'
 let g:fzf_nvim_statusline   = 1
 let g:one_allow_italics     = 1
 let g:fzf_layout = { 'window': {
-      \ 'width': 0.8,
-      \ 'height': 0.6,
+      \ 'width': 0.9,
+      \ 'height': 0.9,
       \ 'yoffset': 0.1,
-      \ 'highlight': 'Comment',
-      \ 'border': 'rounded'
       \ } }
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -174,16 +181,10 @@ let g:ale_linters = {
       \     'clangtidy',
       \     'clangd',
       \     'flawfinder',
-      \     'cquery' ]
-      \ }
+      \     'cquery'
+      \ ]}
 
 let g:ale_fixers = {
-      \ 'javascript': [
-      \     'eslint',
-      \     'importjs',
-      \     'remove_trailing_lines',
-      \     'trim_whitespace'
-      \ ],
       \ 'c': [
       \     'clangtidy',
       \     'clang-format'
@@ -192,10 +193,10 @@ let g:ale_fixers = {
       \ '*': [
       \     'remove_trailing_lines',
       \     'trim_whitespace'
-      \ ]
-      \ }
+      \ ]}
 
 let g:ale_javascript_eslint_executable    = '/usr/local/bin/eslint'
+let g:ale_javascript_prettier_executable  = '~/.nvm/versions/node/v18.16.0/bin/prettier'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -296,6 +297,8 @@ set completeopt=menu,menuone,noselect
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-u>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                context.vim                                 "

@@ -5,6 +5,20 @@ let g:vim_sessions_dir = '~/.local/share/nvim/session'
 " vint: next-line -ProhibitSetNoCompatible
 set nocompatible
 
+" For VSCode only
+if exists('g:vscode')
+  " Load mappings
+  source $VIMRC_DIR/mappings.vim
+
+  " Load options
+  source $VIMRC_DIR/options.vim
+
+  let g:has_plugins = v:true
+  source $VIMRC_DIR/plugins.vim
+
+  finish
+endif
+
 " Load plugins
 if empty(glob($HOME . '/.vim/autoload/plug.vim'))
   let g:has_plugins = v:false

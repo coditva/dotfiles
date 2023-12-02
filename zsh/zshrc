@@ -8,9 +8,9 @@ export FZF_BASE=/usr/local/opt/fzf
 antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
+# antigen bundle git
 antigen bundle gitfast
-antigen bundle docker
+# antigen bundle docker
 antigen bundle fzf
 
 # Syntax highlighting bundle.
@@ -40,17 +40,17 @@ source ~/.dotfiles/fzf-gems/fzf_git_keybindings.zsh
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Change iterm profile from the command line
-iterm_profile() {
-    # ~/.dotfiles/iterm2/change_session_profile.py $1
-    ITERM_PROFILE=$1
-}
-iterm_toggle_profile() {
-    if [[ $ITERM_PROFILE == "Dark" ]]; then
-        iterm_profile Light
-    else
-        iterm_profile Dark
-    fi
-}
+# iterm_profile() {
+#     # ~/.dotfiles/iterm2/change_session_profile.py $1
+#     ITERM_PROFILE=$1
+# }
+# iterm_toggle_profile() {
+#     if [[ $ITERM_PROFILE == "Dark" ]]; then
+#         iterm_profile Light
+#     else
+#         iterm_profile Dark
+#     fi
+# }
 
 export FPATH="${FPATH}:${HOME}/.dotfiles/zsh/site-functions"
 

@@ -31,14 +31,14 @@ set title                               " show title of the file
 set expandtab                           " spaces over tabs
 set smarttab                            " insert and delete spaces smartly
 
-set wrap                                " dont let text overflow
+set nowrap                              " don't mess up my view on small screen
 set linebreak                           " better wrapping
 set showbreak=>\                        " show the wrapping
 set colorcolumn=80,100,120              " show a guide at standard columns
 set signcolumn=yes                      " always show signcolumn
 
 set pastetoggle=<F2>                    " enable easy clipboard pasting
-set updatetime=100                      " reduce updatetime to 100ms
+set updatetime=2000                     " reduce updatetime to 2000ms
 set hidden                              " allow hiding modified buffers
 set autoread                            " read file again on change outside vim
 au FocusGained * :checktime             " re-read file changes on editor focus
@@ -47,6 +47,8 @@ set splitbelow                          " open splits just like my window
 set splitright                          " manager
 
 set mouse=a                             " turn on mouse interaction
+
+set spell                               " spell checking
 
 syntax enable                           " enable syntax highlighting
 
@@ -58,3 +60,6 @@ endif
 set backupdir=~/.vim_backup,.,/tmp      " keep project directories uncluttered
 set directory=~/.vim_backup,.,/tmp      " by using a custom directory for all
 set undodir=~/.vim_backup,.,/tmp        " vim stuff
+
+let $PATH = '/usr/local/bin:' . $PATH
+" let g:node_host_prog = '/usr/local/bin/neovim-node-host'

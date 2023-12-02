@@ -6,6 +6,9 @@
 nnoremap <silent><leader>nn         :NERDTreeToggle<cr>
 nnoremap <silent><leader>nf         :NERDTreeFind<cr>
 nnoremap <silent><leader>nw         :NERDTreeClose<cr>
+" nnoremap <silent><leader>nn         :CHADopen<cr>
+" nnoremap <silent><leader>nf         :CHADopen<cr>
+" nnoremap <silent><leader>nw         :CHADopen<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -19,10 +22,10 @@ inoremap jk                         <Esc>
 "                            Normal mode mappings                            "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " better navigation for wrapped text
-nnoremap j                          gj
-nnoremap k                          gk
-nnoremap 0                          h0
-nnoremap $                          g$
+" nnoremap j                          gj
+" nnoremap k                          gk
+" nnoremap 0                          h0
+" nnoremap $                          g$
 
 " easier window navigation
 nnoremap <c-h>                      <c-w>h
@@ -65,12 +68,12 @@ nnoremap <leader>w                  :CloseBuffer<cr>
 nnoremap <leader>h                  :Startify<return>
 
 " easier control for git hunks
-nnoremap <silent><leader>gn         :GitGutterNextHunk<cr>
-nnoremap <silent><leader>gN         :GitGutterPrevHunk<cr>
-nnoremap <silent><leader>ga         :GitGutterStageHunk<cr>
-nnoremap <silent><leader>gA         :!git add %<cr><cr>
-nnoremap <silent><leader>gu         :GitGutterUndoHunk<cr>
-nnoremap <silent><leader>gs         :GitGutterPreviewHunk<cr>
+" nnoremap <silent><leader>gn         :GitGutterNextHunk<cr>
+" nnoremap <silent><leader>gN         :GitGutterPrevHunk<cr>
+" nnoremap <silent><leader>ga         :GitGutterStageHunk<cr>
+" nnoremap <silent><leader>gA         :!git add %<cr><cr>
+" nnoremap <silent><leader>gu         :GitGutterUndoHunk<cr>
+" nnoremap <silent><leader>gs         :GitGutterPreviewHunk<cr>
 
 " theme switching
 nnoremap <silent><leader>tt         :call ToggleTheme()<cr>
@@ -81,6 +84,9 @@ nnoremap <silent><leader>td         :call SetTheme('dark')<cr>
 nnoremap <leader>x<space>           :ContextPeek<cr>
 nnoremap <leader>xx                 :ContextToggle<cr>
 
+" smooth scroll
+" nnoremap <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
+" nnoremap <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                         Mappings in terminal mode                          "
