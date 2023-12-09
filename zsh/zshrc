@@ -6,10 +6,11 @@
 # fi
 
 #source /usr/share/zsh/share/antigen.zsh
-source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
+# source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
 
 # Set fzf installation directory
-export FZF_BASE=/usr/local/opt/fzf
+export FZF_BASE=/opt/homebrew/bin/fzf
 
 export NVM_LAZY=1
 
