@@ -62,4 +62,7 @@ set directory=~/.vim_backup,.,/tmp      " by using a custom directory for all
 set undodir=~/.vim_backup,.,/tmp        " vim stuff
 
 let $PATH = '/usr/local/bin:' . $PATH
-" let g:node_host_prog = '/usr/local/bin/neovim-node-host'
+let g:node_host_prog = '/opt/homebrew/bin/neovim-node-host'
+let g:loaded_perl_provider = 0
+let g:loaded_python3_provider = 0
+let g:loaded_ruby_provider = 0

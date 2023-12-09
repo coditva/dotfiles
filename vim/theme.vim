@@ -29,14 +29,7 @@ function ToggleTheme ()
   endif
 endfunction
 
-" Switch vim theme based on terminal theme
-if $ITERM_PROFILE  ==# 'Dark'
-  let g:no_background = v:true
-  call SetTheme('dark')
-elseif $ITERM_PROFILE ==# 'Light'
-  let g:no_background = v:true
-  call SetTheme('light')
-else
-  let g:no_background = v:true
-  call SetTheme('light')
-endif
+let g:no_background = v:false
+
+" Default theme
+call SetTheme('light')

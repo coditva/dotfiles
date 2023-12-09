@@ -18,7 +18,7 @@ Plug 'honza/vim-snippets'                       " Snippets
 
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'           " Use .gitignore
 Plug 'junegunn/fzf.vim'                         " Fuzzy searching with fzf
-Plug '/usr/local/opt/fzf'
+Plug '/opt/homebrew/opt/fzf'
 
 " Plug 'airblade/vim-gitgutter'                   " Live git diff symbols
 Plug 'nvim-lua/plenary.nvim'                    " Required by gitsigns
@@ -86,3 +86,17 @@ Plug 'github/copilot.vim'
 call plug#end()         " All of Plugins must be added before this line
 
 source $VIMRC_DIR/plugin_options.vim          " Load plugin options
+
+if has('nvim')
+  " Load LSP specific configuration
+  source $VIMRC_DIR/lsp.vim
+
+  " Git symbols
+  source $VIMRC_DIR/gitsigns.vim
+
+  " Prettier for formatting
+  " source $VIMRC_DIR/prettier.vim
+
+  " Load null-ls
+  " source $VIMRC_DIR/nullls.vim
+endif
