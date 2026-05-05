@@ -1,18 +1,9 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
 #source /usr/share/zsh/share/antigen.zsh
 source /opt/homebrew/share/antigen/antigen.zsh
 # source /usr/local/Cellar/antigen/2.2.3/share/antigen/antigen.zsh
 
 # Set fzf installation directory
-export FZF_BASE=/opt/homebrew/bin/fzf
-
-export NVM_LAZY=1
+export FZF_BASE=/usr/local/opt/fzf
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -20,37 +11,41 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle gitfast
-# antigen bundle git-extras
-# antigen bundle nvm
 # antigen bundle docker
 antigen bundle fzf
+
+export NVM_DIR="$HOME/.nvm"
+export NVM_LAZY_LOAD=true
+export NVM_COMPLETION=true
+export NVM_NO_USE=true
+# export NVM_AUTO_USE=true  # Auto load from .nvmrc
+antigen bundle lukechilds/zsh-nvm
 
 # Syntax highlighting bundle.
 # antigen bundle zdharma/fast-syntax-highlighting
 
 # Setting default user for agnoster theme
-# DEFAULT_USER="me"
+DEFAULT_USER="coditva"
 
 # Load the theme.
-# antigen theme fishy_mod
+antigen theme fishy
 
 # Tell antigen that you're done.
 antigen apply
 
-# Setting up aliases
-source ~/.dotfiles/zsh/alias.zsh
-
 # Setting up misc things
 source ~/.dotfiles/zsh/misc.zsh
 
-#source ~/.profile
+# Setting up aliases
+source ~/.dotfiles/zsh/alias.zsh
 
-source ~/.dotfiles/fzf-gems/fzf_git_functions.sh
-source ~/.dotfiles/fzf-gems/fzf_git_keybindings.zsh
+source ~/.profile
+
+# source ~/.dotfiles/fzf-gems/fzf_git_functions.sh
+# source ~/.dotfiles/fzf-gems/fzf_git_keybindings.zsh
 
 # Add iterm shell integration
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && \
-#     source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Change iterm profile from the command line
 # iterm_profile() {
@@ -65,14 +60,14 @@ source ~/.dotfiles/fzf-gems/fzf_git_keybindings.zsh
 #     fi
 # }
 
-# export FPATH="${FPATH}:${HOME}/.dotfiles/zsh/site-functions"
+export FPATH="${FPATH}:${HOME}/.dotfiles/zsh/site-functions"
 
 # Setting for the new UTF-8 terminal support
 LC_CTYPE="en_US.UTF-8"
 LC_ALL="en_US.UTF-8"
-LANG="en_US.UTF-8"
 
-# test -e "${HOME}/.sh_exports" && source "${HOME}/.sh_exports"
+# Added by Windsurf
+# export PATH="/Users/coditva/.codeium/windsurf/bin:$PATH"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Added by Antigravity
+export PATH="/Users/coditva/.antigravity/antigravity/bin:$PATH"
