@@ -11,6 +11,8 @@ augroup customIndent
   autocmd!
   autocmd FileType html       setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
   autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+  autocmd FileType typescript setlocal tabstop=2 shiftwidth=2 softtabstop=2
+  autocmd FileType typescriptreact setlocal tabstop=2 shiftwidth=2 softtabstop=2
   autocmd FileType json       setlocal tabstop=2 shiftwidth=2 softtabstop=2
   autocmd FileType vim        setlocal tabstop=2 shiftwidth=2 softtabstop=2
 augroup END
@@ -54,7 +56,7 @@ augroup terminal
   if has('nvim')
     " close the terminal by pressing enter rather than typing command again when
     " terminal process is running
-    autocmd TermOpen *          setlocal confirm
+    autocmd TermOpen *          setlocal confirm nospell
   endif
 
   " change to insert mode automatically on switching to terminal

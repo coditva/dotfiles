@@ -6,6 +6,10 @@ else
   echo 'oh no'
 fi
 
+if which opencode > /dev/null; then
+    alias oc="opencode"
+fi
+
 if which vlc > /dev/null; then
     alias vlcrandom="vlc -Z"
 fi

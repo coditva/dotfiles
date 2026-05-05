@@ -75,10 +75,6 @@ let g:airline#extensions#tabline#buffer_nr_show     = 1
 let g:airline#extensions#tabline#buffers_label      = ''
 let g:airline#extensions#tabline#buffer_min_count   = 2
 
-let g:airline#extensions#coc#enabled            = 1
-let g:airline#extensions#coc#error_symbol       = 'E:'
-let g:airline#extensions#coc#warning_symbol     = 'W:'
-
 let g:airline#extensions#branch#enabled         = 0
 
 let g:airline_symbols_ascii         = 0
@@ -102,7 +98,7 @@ let g:airline_symbols.paste     = 'P'
 let g:airline_symbols.linenr    = ''
 
 call airline#parts#define_function('lsp_status', 'LspStatus')
-call airline#parts#define_condition('lsp_status', 'luaeval("#vim.lsp.buf_get_clients() > 0")')
+call airline#parts#define_condition('lsp_status', 'luaeval("#vim.lsp.get_clients() > 0")')
 let g:airline#extensions#nvimlsp#enabled = 1
 let g:airline_section_x = airline#section#create_right(['lsp_status'])
 
@@ -196,7 +192,7 @@ let g:ale_fixers = {
       \ ]}
 
 let g:ale_javascript_eslint_executable    = '/usr/local/bin/eslint'
-let g:ale_javascript_prettier_executable  = '~/.nvm/versions/node/v18.16.0/bin/prettier'
+let g:ale_javascript_prettier_executable  = '/opt/homebrew/bin/prettier'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -204,10 +200,12 @@ let g:ale_javascript_prettier_executable  = '~/.nvm/versions/node/v18.16.0/bin/p
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:startify_session_persistence  = 1      " save sessions automatically
 let g:startify_session_autoload     = 1
-let g:startify_change_to_vcs_root   = 1
+let g:startify_change_to_dir        = 0
+let g:startify_change_to_vcs_root   = 0
 let g:startify_custom_header        = ['   coditva''s Neovim']
 let g:startify_fortune_use_unicode  = 1
 let g:startify_padding_left         = 5
+let g:startify_enable_unsafe        = 0
 
 " returns all modified files of the current git repo
 " `2>/dev/null` makes the command fail quietly, so that when we are not

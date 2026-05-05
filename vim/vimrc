@@ -13,8 +13,8 @@ if exists('g:vscode')
   " Load options
   source $VIMRC_DIR/options.vim
 
-  let g:has_plugins = v:true
-  source $VIMRC_DIR/plugins.vim
+  " let g:has_plugins = v:true
+  " source $VIMRC_DIR/plugins.vim
 
   finish
 endif
@@ -31,6 +31,7 @@ endif
 source $VIMRC_DIR/options.vim
 
 " Load autocmds
+
 source $VIMRC_DIR/autocmds.vim
 
 " Load custom commands

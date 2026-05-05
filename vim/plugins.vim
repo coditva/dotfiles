@@ -40,7 +40,7 @@ Plug 'scrooloose/nerdtree'                      " File explorer
 "       \   'do': 'python3 -m chadtree deps'
 "       \ }
 
-Plug 'pechorin/any-jump.vim'                    " Jump/Search
+" Plug 'pechorin/any-jump.vim'                    " Jump/Search
 
 Plug 'AndrewRadev/splitjoin.vim'                " Split and join code
 
@@ -75,13 +75,19 @@ if has('nvim')
 
       Plug 'jose-elias-alvarez/null-ls.nvim'    " Dependency for prettier.nvim
       Plug 'MunifTanjim/prettier.nvim'
+
+      Plug 'nvim-lua/plenary.nvim'
+      Plug 'MunifTanjim/nui.nvim'
 endif
 
 Plug 'sheerun/vim-polyglot'                     " Language packs for everyone!
 
 Plug 'github/copilot.vim'
+Plug 'nickjvandyke/opencode.nvim'
 
-" Plug 'stevearc/aerial.nvim'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+Plug 'stevearc/aerial.nvim'
 
 call plug#end()         " All of Plugins must be added before this line
 

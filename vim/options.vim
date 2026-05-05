@@ -37,7 +37,6 @@ set showbreak=>\                        " show the wrapping
 set colorcolumn=80,100,120              " show a guide at standard columns
 set signcolumn=yes                      " always show signcolumn
 
-set pastetoggle=<F2>                    " enable easy clipboard pasting
 set updatetime=2000                     " reduce updatetime to 2000ms
 set hidden                              " allow hiding modified buffers
 set autoread                            " read file again on change outside vim

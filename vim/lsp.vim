@@ -10,9 +10,7 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
-local nvim_lsp = require('lspconfig')
 local lsp_status = require('lsp-status')
--- local aerial = require('aerial')
 
 lsp_status.register_progress()
 lsp_status.config({
@@ -60,6 +58,7 @@ local on_attach = function (client, bufnr)
       augroup lsp_document_highlight
         autocmd!
         autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd CursorHoldI <buffer> lua vim.lsp.buf.document_highlight()
         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
       augroup END
     ]], false)
@@ -70,23 +69,81 @@ local on_attach = function (client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Set default client capabilities plus window/workDoneProgress
 capabilities = vim.tbl_extend('keep', capabilities or {}, lsp_status.capabilities)
 
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 -- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches
-local servers = { 'clangd', 'cssls', 'tsserver', 'texlab', 'vimls' }
+local servers = { 'clangd', 'vimls' }
 
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
+  vim.lsp.config[lsp] = {
     on_attach = on_attach,
     capabilities = capabilities,
     flags = {
       debounce_text_changes = 150
     }
   }
+  vim.lsp.enable(lsp)
 end
+
+-- special handling for 'ts_ls'
+vim.lsp.config.ts_ls = {
+  init_options = {
+    maxTsServerMemory = 8192, -- in MB
+  },
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150
+  }
+}
+vim.lsp.enable('ts_ls')
+
+opencode_config = function()
+  ---@type opencode.Opts
+  vim.g.opencode_opts = {}
+
+  vim.o.autoread = true -- Required for `opts.events.reload`
+
+  -- Recommended/example keymaps
+  vim.keymap.set({ "n", "x" }, "<C-a>", function() require("opencode").ask("@this: ", { submit = true }) end, { desc = "Ask opencode…" })
+  vim.keymap.set({ "n", "x" }, "<C-x>", function() require("opencode").select() end,                          { desc = "Execute opencode action…" })
+  vim.keymap.set({ "n", "t" }, "<C-.>", function() require("opencode").toggle() end,                          { desc = "Toggle opencode" })
+
+  vim.keymap.set({ "n", "x" }, "go",  function() return require("opencode").operator("@this ") end,        { desc = "Add range to opencode", expr = true })
+  vim.keymap.set("n",          "goo", function() return require("opencode").operator("@this ") .. "_" end, { desc = "Add line to opencode", expr = true })
+
+  vim.keymap.set("n", "<S-C-u>", function() require("opencode").command("session.half.page.up") end,   { desc = "Scroll opencode up" })
+  vim.keymap.set("n", "<S-C-d>", function() require("opencode").command("session.half.page.down") end, { desc = "Scroll opencode down" })
+
+  -- You may want these if you use the opinionated `<C-a>` and `<C-x>` keymaps above — otherwise consider `<leader>o…` (and remove terminal mode from the `toggle` keymap)
+  vim.keymap.set("n", "+", "<C-a>", { desc = "Increment under cursor", noremap = true })
+  vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement under cursor", noremap = true })
+
+  -- vim.g.opencode_opts.lsp.enabled = true
+
+  -- Handle `opencode` events
+  -- vim.api.nvim_create_autocmd("User", {
+  --     pattern = "OpencodeEvent:*", -- Optionally filter event types
+  --     callback = function(args)
+  --       ---@type opencode.cli.client.Event
+  --       local event = args.data.event
+  --       ---@type number
+  --       local port = args.data.port
+  --
+  --       -- See the available event types and their properties
+  --       -- vim.notify(vim.inspect(event))
+  --       -- Do something useful
+  --       -- if event.type == "session.idle" then
+  --       --   vim.notify("`opencode` finished responding")
+  --       -- end
+  --     end,
+  --   })
+end
+opencode_config()
 
 EOF
